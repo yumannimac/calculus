@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Begin Jekyll SEO tag v2.8.0 -->
+	<title>calculus</title>
+	<meta name="generator" content="Jekyll v3.9.2" />
+	<meta property="og:title" content="calculus" />
+	<meta property="og:locale" content="en_US" />
+	<link rel="canonical" href="https://yumannimac.github.io/calculus/" />
+	<meta property="og:url" content="https://yumannimac.github.io/calculus/" />
+	<meta property="og:site_name" content="calculus" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<meta property="twitter:title" content="calculus" />
+	<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"calculus","name":"calculus","url":"https://yumannimac.github.io/calculus/"}</script>
+	<!-- End Jekyll SEO tag -->
+
+	<link rel="stylesheet" href="/calculus/assets/css/style.css?v=48541eccb572bf1662523e4970e2b8f0c342a5d8">
+	<!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+	<!-- Setup Google Analytics -->
+
+
+
+	<!-- You can set your favicon here -->
+	<!-- link rel="shortcut icon" type="image/x-icon" href="/calculus/favicon.ico" -->
+
+	<!-- end custom head snippets -->
+
+</head>
+
+<body>
+	<div class="container-lg px-3 my-5 markdown-body">
+
+		<h1><a href="https://yumannimac.github.io/calculus/">calculus</a></h1>
+
+
+		<script src="main.js"></script>
+
+		<script type="text/javascript" id="MathJax-script" async=""
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+			</script>
+
+		<script>
+			MathJax = {
+				loader: { load: ['[tex]/physics', '[tex]/newcommand', '[tex]/mathtools'] },
+				tex: {
+					inlineMath: [['$', '$'], ['\\(', '\\)']],
+					packages: { '[+]': ['physics', 'newcommand', 'mathtools'] },
+				},
+				chtml: {
+					matchFontHeight: false
+				}
+			};
+		</script>
+
+		\[\newcommand{\la}{\lambda}
+		\newcommand{\e}{\varepsilon}
+		\renewcommand{\l}{\left}
+		\renewcommand{\r}{\right}
+		\newcommand{\del}{\partial}
+		\newcommand{\q}{\quad}
+		\newcommand{\qq}{\qquad}
+		\newcommand{\dis}{\displaystyle}
+		\newcommand{\dc}{\Leftrightarrow}
+		\def\rank{\mathrm{rank}}
+		\newcommand{\hr}{\hrulefill}
+		\newcommand{\m}{\item}
+		\newcommand{\drac}[2]{\dfrac{#1}{#2}}
+		\newcommand{\delu}[3][]{\drac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}
+		\newcommand{\bm}[1]{\boldsymbol{#1}}
+		\newcommand{\pmat}[1]{\begin{pmatrix}#1\end{pmatrix}}
+		\newcommand{\vmat}[1]{\begin{vmatrix}#1\end{vmatrix}}\]
+
+
+
+
+<h1 id="微分積分学">微分積分学</h1>
+<h3 id="一様収束">一様収束</h3>
+<div class="theorem">
+<p><span id="項別積分可能性"
+label="項別積分可能性"></span>（項別積分可能性）<span
+class="math inline">$f_n\l(x\r)$</span>を<span
+class="math inline">[<em>a</em>,<em>b</em>]</span>上の連続関数の列で<span
+class="math inline">$f\l(x\r)$</span>に一様収束するものとする。<span
+class="math inline"><em>a</em> ≤ <em>c</em> ≤ <em>x</em> ≤ <em>b</em></span>なる<span
+class="math inline">∀<em>c</em>, <em>x</em></span>に対し<span
+class="math inline">$F_n\l(x\r) =\int_{c}^{x} f_n\l(t\r) \, dt$</span>も
+<span class="math inline">$F\l(x\r) =\int_{c}^{x} f\l(t\r) \,
+dt$</span>に一様収束する。</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math display">$$\begin{aligned}
+\l|F_n\l(x\r) -F\l(x\r) \r|
+&amp;=\, \l|\int_{c}^{x} f_n\l(t\r) \, dt -\int_{c}^{x} f\l(t\r) \, d t
+\r| \\
+&amp;\leq\,
+  \int_{c}^{x} \l|f_n\l(t\r) -f\l(t\r) \r| \, d t
+\leq \int_{c}^{x} \sup_{c\leq t \leq x}\l|f_n\l(t\r) -f\l(t\r) \r|\, d t
+\end{aligned}$$</span> より <span class="math display">$$\begin{aligned}
+0 \leq \sup_{a\leq x\leq b}\l|F_n\l(x\r) -F\l(x\r) \r| \leq
+\sup_{a\leq x\leq b}\l(x-c\r) \sup_{c\leq t\leq x}\l|f_n\l(t\r)
+-f\l(t\r) \r|
+\end{aligned}$$</span> 一様収束性より <span
+class="math display">$$\begin{aligned}
+  \lim_{n \to \infty} \sup_{c\leq t\leq x}\l|f_n\l(t\r) -f\l(t\r) \r| =0
+\end{aligned}$$</span> であるからはさみうちの原理より <span
+class="math display">$$\begin{aligned}
+\lim_{n \to \infty} \sup_{a\leq x\leq b}\l|F_n\l(x\r) -F\l(x\r) \r| =0
+\end{aligned}$$</span> すなわちa <span
+class="math display">$$\int_{c}^{x} \lim_{n \to \infty}f_n\l(t\r) \, d t
+=\lim_{n \to \infty}  \int_{c}^{x} f_n\l(t\r) \, d t$$</span>
+であるから一様収束するときは項別積分可能であることが示された。 ◻</p>
+</div>
+<h4 id="整級数の一様収束性の例">整級数の一様収束性の例</h4>
+<p>たとえば<span class="math inline">$f_n\l(x\r) =\dis \sum_{i=0}^{n}
+(-x)^i$</span>，<span class="math inline">$f\l(x\r)
+=\drac{1}{1+x}$</span>とする。<span
+class="math inline">0 &lt; <em>t</em> &lt; 1</span>とすると <span
+class="math inline"> − <em>t</em> &lt; <em>x</em> &lt; <em>t</em></span>において
+<span class="math display">$$\begin{aligned}
+\l|f_n\l(x\r) -f\l(x\r) \r| =\l|\drac{1-\l(-x\r)^n }{1-\l(-x\r)
+}-\drac{1}{1+x} \r| =\drac{\l|x\r|
+^n}{1+x}&lt;\drac{t^n}{1-t}\end{aligned}$$</span> である。よって <span
+class="math display">$$\begin{aligned}
+0\leq \sup_{-t&lt;x&lt;t}\l|f_n\l(x\r) -f\l(x\r)
+\r|&lt;\drac{t^n}{1-t}\end{aligned}$$</span> であり最右辺は<span
+class="math inline"><em>n</em> → ∞</span>で<span
+class="math inline">0</span>に収束するのではさみうちの原理より <span
+class="math display">$$\begin{aligned}
+\lim_{n \to \infty}\sup_{-t&lt;x&lt;t}\l|f_n\l(x\r) -f\l(x\r) \r|=0
+\end{aligned}$$</span> したがって<span
+class="math inline"> − <em>t</em> &lt; <em>x</em> &lt; <em>t</em></span>において<span
+class="math inline">$f_n\l(x\r)$</span>は<span
+class="math inline">$f\l(x\r)$</span>に一様収束する。<span
+class="math inline">$\l[0,x\r]$</span>において項別積分すると <span
+class="math display">$$\begin{aligned}
+\lim_{n \to \infty} \int_{0}^{x} \sum_{i=0}^{n} \l(-s\r) ^i \, d s=
+\int_{0}^{x} \drac{1}{1+s}\, ds \end{aligned}$$</span> <span
+class="math inline"><em>t</em></span>は自由に動かせることに注意して<span
+class="math inline"> − 1 &lt; <em>x</em> &lt; 1</span>において <span
+class="math display">$$\begin{aligned}
+\log \l(1+x\r) =\sum_{i=0}^{\infty} \l(-1\r)
+^i\drac{x^{i+1}}{i+1}=x-\drac{1}{2}x^2+\drac{1}{3}x^3-\dots\end{aligned}$$</span>
+である。</p>
+<div class="theorem">
+<p><span id="項別微分可能性"
+label="項別微分可能性"></span>（項別微分可能性） <span
+class="math inline">$F_n\l(x\r)$</span>を<span
+class="math inline">$\l[a,b\r]$</span>上の連続関数の列で<span
+class="math inline">$F\l(x\r)$</span>に収束するものとする。<span
+class="math inline">$F_{n}'\l(x\r)$</span>が<span
+class="math inline">$f\l(x\r)$</span>に一様収束するならば<span
+class="math inline">$F'\l(x\r)=f\l(x\r)$</span>である。</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math display">$$\begin{aligned}
+F\l(x\r) -F\l(c\r)
+&amp;=\, \lim_{n \to \infty} \left\{ F_n\l(x\r) -F_n\l(c\r) \right\}
+=\lim_{n \to \infty} \int_{c}^{x} F_n'\l(t\r) \, d t=\int_{c}^{x}
+\lim_{n \to \infty} F_n'\l(t\r) \, d t \\
+&amp;=\, \int_{c}^{x} f\l(t\r) \, d t
+\end{aligned}$$</span> の両辺を微分するだけ。 ◻</p>
+</div>
+<div class="theorem">
+<p><span id="絶対収束する級数の収束性"
+label="絶対収束する級数の収束性"></span>（絶対収束する級数の収束性）
+<span class="math inline">$\dis \sum_{n=0}^{\infty}
+\l|a_n\r|$</span>が収束するならば<span class="math inline">$\dis
+\sum_{n=0}^{\infty} a_n$</span>も収束する。</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math inline">$a_{n}^{+}=
+\begin{dcases}
+a_n &amp;\l(a_n\geq 0\r)
+\\ 0&amp;\l(a_n&lt;0\r)
+\end{dcases}$</span> ， <span class="math inline">$a_{n}^{-}=
+\begin{dcases}
+0 &amp;\l(a_n\geq 0\r)
+\\ -a_n&amp;\l(a_n&lt;0\r)
+\end{dcases}$</span> とする。<br />
+<span
+class="math inline"><em>a</em><sub><em>n</em></sub><sup>+</sup>，<em>a</em><sub><em>n</em></sub><sup>−</sup> ≥ 0</span>であり<span
+class="math inline"><em>a</em><sub><em>n</em></sub> = <em>a</em><sub><em>n</em></sub><sup>+</sup> − <em>a</em><sub><em>n</em></sub><sup>−</sup>, |<em>a</em><sub><em>n</em></sub>| = <em>a</em><sub><em>n</em></sub><sup>+</sup> + <em>a</em><sub><em>n</em></sub><sup>−</sup></span>である。<span
+class="math inline">$\dis \sum_{n=0}^{\infty} \l|a_n\r|
+=S$</span>とする。 <span class="math display">$$S=\sum_{n=0}^{\infty}
+\l|a_n\r| =\sum_{n=0}^{\infty} a_n^+
++\sum_{n=0}^{\infty} a_n^-\geq \sum_{n=0}^{\infty} a_n^+$$</span>
+より<span class="math inline">$\sum_{}^{}
+a_n^+$</span>は有界な正項級数であるから収束する。同様に<span
+class="math inline">$\sum_{}^{}
+a_n^-$</span>も収束する。収束値をそれぞれ<span
+class="math inline"><em>S</em><sup>+</sup>, <em>S</em><sup>−</sup></span>とおくと
+<span class="math display">$$\sum_{n=0}^{\infty} a_n=\sum_{n=0}^{\infty}
+\l(a_n^+-a_n^-\r) =S^+-S^-$$</span>
+であるから収束する。よって示された。 ◻</p>
+</div>
+<h3 id="収束判定法">収束判定法</h3>
+<div class="theorem">
+<p><span id="コーシーの収束判定法" label="コーシーの収束判定法"></span>
+（コーシーの収束判定法） <span class="math display">$$\lim_{n \to
+\infty}\sup_{m&gt;n}\sqrt[m]{\l|a_m\r| } =l\text{が存在するとき}
+\sum_{n=0}^{\infty} a_n\text{は}
+\begin{dcases}
+\text{収束する}&amp;\l(0&lt;l&lt;1\text{のとき}\r) \\
+\text{発散する}&amp;\l(l&gt;1\text{のとき}\r)
+\end{dcases}$$</span></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> 　</p>
+<ol type="i">
+<li><p><span
+class="math inline">0 &lt; <em>l</em> &lt; 1</span>のとき<br />
+極限の定義より<span
+class="math inline"><em>l</em> &lt; <em>t</em> &lt; 1</span>となる<span
+class="math inline"><em>t</em></span>を考えると<span
+class="math inline"><em>n</em> ≥ <em>N</em><sub>0</sub></span>ならば<span
+class="math inline">$\sqrt[n]{\l|a_n\r| }&lt;t$</span>すなわち<span
+class="math inline">$\l|a_n\r| &lt;t^n$</span>となる<span
+class="math inline"><em>N</em><sub>0</sub> ∈ ℤ<sub> ≥ 0</sub></span>が存在する。<span
+class="math inline"><em>N</em> &gt; <em>N</em><sub>0</sub></span>として
+<span class="math display">$$\begin{aligned}
+\sum_{n=0}^{N} \l|a_n\r| =
+\sum_{n=0}^{N_0-1} \l|a_n\r|
++\sum_{n=N_0}^{N} \l|a_n\r| &lt;
+\sum_{n=0}^{N_0-1} \l|a_n\r|
++\sum_{n=N_0}^{N}t^n&lt;\sum_{n=0}^{N_0-1} \l|a_n\r|
++t^{N_0}\drac{1}{1-t}
+\end{aligned}$$</span> より<span class="math inline">$\sum_{}^{}
+|a_n|$</span>は有界な正項級数なので収束する。よって<span
+class="math inline">$\sum_{}^{}
+a_n$</span>は絶対収束するので収束する。</p></li>
+<li><p><span class="math inline"><em>l</em> &gt; 1</span>のとき<br />
+<span
+class="math inline">1 &lt; <em>t</em> &lt; <em>l</em></span>なる<span
+class="math inline"><em>t</em></span>を考えると<span
+class="math inline"><em>n</em> ≥ <em>N</em><sub>0</sub></span>ならば<span
+class="math inline">$\sqrt[n]{\l|a_n\r| }&gt;t$</span>すなわち<span
+class="math inline">$\l|a_n\r| &gt;t^n$</span>となる<span
+class="math inline"><em>N</em><sub>0</sub> ∈ ℤ<sub> ≥ 0</sub></span>が存在する。<span
+class="math inline"><em>n</em> → ∞</span>で<span
+class="math inline"><em>t</em><sup><em>n</em></sup></span>は発散するので追い出しの原理より<span
+class="math inline">$\l|a_n\r|$</span>も発散。よって<span
+class="math inline"><em>a</em><sub><em>n</em></sub></span>も発散するので<span
+class="math inline">$\sum_{}^{} a_n$</span>は発散する。</p></li>
+</ol>
+<p> ◻</p>
+</div>
+<div class="theorem">
+<p><span id="ダランベールの収束判定法"
+label="ダランベールの収束判定法"></span>（ダランベールの収束判定法）
+<span class="math display">$$\lim_{n \to
+\infty}\l|\drac{a_{n+1}}{a_n}\r| =l\text{が存在するならば}
+\sum_{n=0}^{\infty} a_n\text{は}
+\begin{dcases}
+\text{収束する}&amp;\l(0&lt;l&lt;1\text{のとき}\r) \\
+\text{発散する}&amp;\l(l&gt;1\text{のとき}\r)
+\end{dcases}$$</span></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> 　</p>
+<ol type="i">
+<li><p><span
+class="math inline">0 &lt; <em>l</em> &lt; 1</span>のとき<br />
+極限の定義より<span
+class="math inline"><em>l</em> &lt; <em>t</em> &lt; 1</span>となる<span
+class="math inline"><em>t</em></span>を考えると<span
+class="math inline"><em>n</em> ≥ <em>N</em><sub>0</sub></span>ならば<span
+class="math inline">$\l|\drac{a_{n+1}}{a_n}\r|
+&lt;t$</span>すなわち<span class="math inline">$\l|a_{n+1}\r|
+&lt;t\l|a_{n}\r|$</span>となる<span
+class="math inline"><em>N</em><sub>0</sub> ∈ ℤ<sub> ≥ 0</sub></span>が存在する。<span
+class="math inline">$\l|a_n\r|&lt;t\l|a_{n-1}\r|
+&lt;\dots&lt;\l|a_{N_0}\r| t^{n-N_0}$</span> である。 <span
+class="math inline"><em>N</em> &gt; <em>N</em><sub>0</sub></span>として
+<span class="math display">$$\begin{aligned}
+\sum_{n=0}^{N} \l|a_n\r| =
+\sum_{n=0}^{N_0-1} \l|a_n\r|
++\sum_{n=N_0}^{N} \l|a_n\r|
+&lt;\sum_{n=0}^{N_0-1} \l|a_n\r|
++\l|a_{N_0}\r| \sum_{n=N_0}^{N}t^{n-N_0}
+&lt;\sum_{n=0}^{N_0-1} \l|a_n\r| +\drac{|a_{N_0}|}{1-t}
+\end{aligned}$$</span> より<span class="math inline">$\sum_{}^{}
+|a_n|$</span>は有界な正項級数なので収束する。よって<span
+class="math inline">$\sum_{}^{}
+a_n$</span>は絶対収束するので収束する。</p></li>
+<li><p><span class="math inline"><em>l</em> &gt; 1</span>のとき<br />
+<span
+class="math inline">1 &lt; <em>t</em> &lt; <em>l</em></span>なる<span
+class="math inline"><em>t</em></span>を考えると<span
+class="math inline"><em>n</em> ≥ <em>N</em><sub>0</sub></span>ならば<span
+class="math inline">$\l|\drac{a_{n+1}}{a_n}\r| &gt;t$</span>となる<span
+class="math inline"><em>N</em><sub>0</sub> ∈ ℤ<sub> ≥ 0</sub></span>が存在する。
+<span class="math inline">$\l|a_n\r|&gt;t\l|a_{n-1}\r|
+&gt;\dots&gt;\l|a_{N_0}\r| t^{n-N_0}$</span>である <span
+class="math inline"><em>n</em> → ∞</span>で<span
+class="math inline"><em>t</em><sup><em>n</em></sup></span>は発散するので追い出しの原理より<span
+class="math inline">$\l|a_n\r|$</span>も発散。よって<span
+class="math inline"><em>a</em><sub><em>n</em></sub></span>も発散するので<span
+class="math inline">$\sum_{}^{} a_n$</span>は発散する。</p></li>
+</ol>
+<p> ◻</p>
+</div>
+<div class="theorem">
+<p><span id="コーシーの収束半径"
+label="コーシーの収束半径"></span>（コーシーの収束半径） <span
+class="math inline">$\sum_{}^{} a_nx^n$</span>の収束半径<span
+class="math inline"><em>r</em></span>は <span class="math inline">$\dis
+\lim_{n \to \infty}\dis \sup_{m&gt;n}\sqrt[m]{\l|a_m\r| }
+=l$</span>として<span
+class="math inline">$r=\drac{1}{l}$</span>である。</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> 　</p>
+<ol type="i">
+<li><p><span class="math inline">$\l|x\r| &lt;r$</span>のとき<br />
+<span class="math inline"><em>x</em> = 0</span>では自明に収束。<span
+class="math inline">$0&lt;\l|x\r|&lt;r$</span>とする。<span
+class="math inline">$0&lt;l&lt;\drac{1}{\l|x\r| }$</span>である。<span
+class="math inline"><em>n</em> ≥ <em>N</em><sub>0</sub></span>ならば<span
+class="math inline">$\sqrt[n]{\l|a_n\r|
+}&lt;\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$</span>となる<span
+class="math inline"><em>N</em><sub>0</sub> ∈ ℤ<sub> ≥ 0</sub></span>が存在する。このもとで
+<span class="math display">$$\begin{aligned}
+\sum_{n=0}^{N} \l|a_nx^n\r|
+&amp;=\, \sum_{n=0}^{N_0-1} \l|a_nx^n\r|
++\sum_{n=N_0}^{N} (\sqrt[n]{\l|a_n\r|  }\l| x\r|)^n
+\\
+&amp;\leq\, \sum_{n=0}^{N_0-1} \l|a_nx^n\r| +\sum_{n=N_0}^{N}
+\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)
+^n
+\end{aligned}$$</span> であり<span
+class="math inline">$\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)
+\bigg/\drac{1}{\l|x\r| }\r)&lt;1$</span>より<span
+class="math inline">$\sum_{}^{}a_nx^n$</span>は絶対収束するので収束する。</p></li>
+<li><p><span class="math inline">$\l|x\r| &gt;r$</span>のとき<br />
+<span class="math inline">$0&lt;\drac{1}{\l|x\r|
+}&lt;l$</span>である。任意の<span
+class="math inline"><em>N</em><sub>0</sub> ∈ ℤ<sub> ≥ 0</sub></span>に対して<span
+class="math inline"><em>n</em> &gt; <em>N</em><sub>0</sub></span>かつ<span
+class="math inline">$\sqrt[n]{\l|a_n\r|
+}&gt;\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$</span>となる<span
+class="math inline"><em>n</em></span>が存在する。すなわち<span
+class="math inline">$\l|a_nx^n\r| =(\sqrt[n]{\l|a_n\r|  }\l|
+x\r|)^n=\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r|
+}\r)
+^n&gt;1$</span>になるような<span
+class="math inline"><em>n</em> &gt; <em>N</em><sub>0</sub></span>が任意の<span
+class="math inline"><em>N</em><sub>0</sub> ∈ ℤ<sub> ≥ 0</sub></span>に対して存在するので数列<span
+class="math inline">{<em>a</em><sub><em>n</em></sub><em>x</em><sup><em>n</em></sup>}</span>は<span
+class="math inline">0</span>に収束しない。したがって級数も発散する。</p></li>
+</ol>
+<p> ◻</p>
+</div>
+<div class="theorem">
+<p><span id="ダランベールの収束半径"
+label="ダランベールの収束半径"></span>（ダランベールの収束半径） <span
+class="math inline">∑<em>a</em><sub><em>n</em></sub><em>x</em><sup><em>n</em></sup></span>の収束半径<span
+class="math inline"><em>r</em></span>は存在するならば<span
+class="math inline">$r=\dis \lim_{n \to
+\infty}\l|\drac{a_n}{a_{n+1}}\r|$</span>である。</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> 　</p>
+<ol type="i">
+<li><p><span
+class="math inline">0 ≤ <em>x</em> &lt; <em>r</em></span>のとき<br />
+<span class="math inline">$n\geq \exists N_0 \Rightarrow
+\l|\drac{a_n}{a_{n+1}}\r| &gt;\drac{\l|x\r| +r}{2} \Leftrightarrow
+\l|a_{n+1}\r| &lt;\left( 1\bigg/\drac{\l|x\r| +r}{2}
+\right)\l|a_n\r|$</span>よりこれを繰り返し用いて<span
+class="math inline">$\l|a_n\r| &lt;\left( 1\bigg/\drac{\l|x\r| +r}{2}
+\right)^{n-N_0}\l|a_{N_0}\r|$</span>が得られる。 <span
+class="math display">$$\begin{aligned}
+\sum_{n=0}^{N} \l|a_nx^n\r| &lt;\sum_{n=0}^{N_0-1}
+\l|a_nx^n\r|+\sum_{n=N_0}^{N} \left( |x|\bigg/\drac{\l|x\r| +r}{2}
+\right)^{n-N_0}\l|a_{N_0}\r|
+\end{aligned}$$</span> であり<span class="math inline">$\left(
+|x|\bigg/\drac{\l|x\r| +r}{2} \right)&lt;1$</span>より<span
+class="math inline">$\sum_{}^{}a_nx^n$</span>は絶対収束するので収束する。</p></li>
+<li><p><span
+class="math inline">|<em>x</em>| &gt; <em>r</em></span>のとき<br />
+<span class="math inline">$n\geq \exists N_0 \Rightarrow
+\l|\drac{a_n}{a_{n+1}}\r| &lt;\drac{\l|x\r| +r}{2} \Leftrightarrow
+\l|a_{n+1}\r| &gt;\left( 1\bigg/\drac{\l|x\r| +r}{2}
+\right)\l|a_n\r|$</span>よりこれを繰り返し用いて<span
+class="math inline">$\l|a_n\r| &gt;\left( 1\bigg/\drac{\l|x\r| +r}{2}
+\right)^{n-N_0}\l|a_{N_0}\r|$</span>が得られる。よって <span
+class="math display">$$\begin{aligned}
+\l|a_nx^n\r| &gt;\left( |x|\bigg/\drac{\l|x\r| +r}{2}
+\right)^{n-N_0}\l|a_{N_0}\r|
+\end{aligned}$$</span> であり<span
+class="math inline">$|x|\bigg/\drac{\l|x\r|
++r}{2}&gt;1$</span>より左辺は発散する。追い出しの原理より<span
+class="math inline"><em>a</em><sub><em>n</em></sub><em>x</em><sup><em>n</em></sup></span>が<span
+class="math inline">0</span>に収束することはないので発散する。</p></li>
+</ol>
+<p> ◻</p>
+</div>
+<h3 id="eの導入"><span class="math inline"><em>e</em></span>の導入</h3>
+<div class="theorem">
+<p><span id="eの存在" label="eの存在"></span>（<span
+class="math inline"><em>e</em></span>の存在） <span
+class="math inline">$e:=\dis \lim_{n \to \infty}\l(1+\drac{1}{n}\r)
+^n$</span>が存在することを示す。</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math inline">$a_n=\l(1+\drac{1}{n}\r)
+^n$</span>とする。<br />
+単調増加性<br />
+二項定理より <span class="math display">$$\begin{aligned}
+a_n
+&amp;=\, \sum_{k=0}^{n} \binom{n}{k}\drac{1}{n^k}
+=\sum_{k=0}^{n} \drac{n\l(n-1\r)\l(n-2\r) \dots\l(n-k+1\r) }{k!n^k} \\
+&amp;=\, \sum_{k=0}^{n} \drac{1}{k!}\l(1-\drac{1}{n}\r)
+\l(1-\drac{2}{n}\r) \dots\l(1-\drac{k-1}{n}\r) \\
+&amp;=\, 2+\drac{1}{2!}\l(1-\drac{1}{n}\r)
++\drac{1}{3!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r)
++\dots+\drac{1}{n!}\l(1-\drac{1}{n}\r) \dots\l(1-\drac{n-1}{n}\r)
+\\
+a_{n+1}
+&amp;=\, \sum_{k=0}^{n+1} \drac{1}{k!}\l(1-\drac{1}{n+1}\r)
+\l(1-\drac{2}{n+1}\r) \dots\l(1-\drac{k-1}{n+1}\r) \\
+&amp;&gt;\, \sum_{k=0}^{n}\drac{1}{k!} \l(1-\drac{1}{n+1}\r)
+\l(1-\drac{2}{n+1}\r) \dots\l(1-\drac{k-1}{n+1}\r)
+\\
+&amp;&gt;\,\sum_{k=0}^{n} \drac{1}{k!}\l(1-\drac{1}{n}\r)
+\l(1-\drac{2}{n}\r) \dots\l(1-\drac{k-1}{n}\r)=a_n
+\end{aligned}$$</span> であるから<span
+class="math inline">{<em>a</em><sub><em>n</em></sub>}</span>は単調増加。<br />
+有界性<br />
+<span class="math display">$$\begin{aligned}
+\forall n\ a_n
+&amp;=\,
+\sum_{k=0}^{n} \drac{1}{k!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r)
+\dots\l(1-\drac{k-1}{n}\r)
+&lt;\sum_{k=0}^{n} \drac{1}{k!}\\
+&amp;=\,
+1+\drac{1}{1}+\drac{1}{2}+\drac{1}{2\cdot 3}+\drac{1}{2\cdot 3\cdot
+4}+\dots \\
+&amp;&lt;\, 1+\drac{1}{1}+\drac{1}{2}+\drac{1}{2\cdot 2}+\drac{1}{2\cdot
+2\cdot 2}+\dots=3
+\end{aligned}$$</span> 以上より<span
+class="math inline">{<em>a</em><sub><em>n</em></sub>}</span>は有界な単調増加数列であるから収束する。 ◻</p>
+</div>
+<h3 id="マクローリン展開">マクローリン展開</h3>
+<p><span class="math inline"><em>k</em> ≥ 1</span>のとき <span
+class="math display">$$\begin{aligned}
+\drac{d}{dt}\left\{ \drac{\l(x-t\r) ^k}{k!}f^{\l(k\r) }\l(t\r) \right\}=
+-\drac{\l(x-t\r) ^{k-1}}{\l(k-1\r) !}f^{\l(k\r) }\l(t\r)
++\drac{\l(x-t\r) ^{k}}{k !}f^{\l(k+1\r)}\l(t\r) \end{aligned}$$</span>
+に注意すると <span class="math display">$$\begin{aligned}
+\drac{d}{dt}\left[ f\l(t\r) +\sum_{k=1}^{n-1} \left\{ \drac{\l(x-t\r)
+^k}{k!}f^{\l(k\r) }\l(t\r) \right\} \right]
+=\drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r)
+!}f^{\l(n\r)}\l(t\r)\end{aligned}$$</span> 両辺<span
+class="math inline">$\l[a,x\r]$</span>において積分すると <span
+class="math display">$$\begin{aligned}
+f\l(x\r) -f\l(a\r) -
+\sum_{k=1}^{n-1} \left\{ \drac{\l(x-a\r) ^k}{k!}f^{\l(k\r) }\l(a\r)
+\right\}
+=\int_{a}^{x} \drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r) !}f^{\l(n\r)}\l(t\r)\,
+dt \end{aligned}$$</span> よって <span
+class="math display">$$\begin{aligned}
+f\l(x\r) =\sum_{k=0}^{n-1} \left\{ \drac{\l(x-a\r) ^k}{k!}f^{\l(k\r)
+}\l(a\r) \right\} +R_n\l(x\r) \end{aligned}$$</span> と書ける。</p>
+<h4 class="unnumbered" id="剰余項の計算">剰余項の計算</h4>
+<p>積分の平均値の定理より<span
+class="math inline"><em>c</em> ∈ [<em>a</em>,<em>x</em>]</span>として
+<span class="math display">$$\begin{aligned}
+R_n\l(x\r) =\int_{a}^{x} \drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r)
+!}f^{\l(n\r)}\l(t\r)\, dt =\int_{a}^{x} \drac{\l(x-t\r) ^{n-1
+}}{\l(n-1\r) !}f^{\l(n\r)}\l(c\r)\, dt
+=\drac{\l(x-a\r) ^n}{n!}f^{\l(n\r) }\l(c\r)  \end{aligned}$$</span>
+となる<span
+class="math inline"><em>c</em></span>が存在する。最右辺はラグランジュの剰余項である。より一般に<span
+class="math inline">$\l(x-t\r) ^{n-p}f^{\l(n\r)
+}\l(t\r)$</span>に平均値の定理を使うと <span
+class="math display">$$\begin{aligned}
+R_n\l(x\r) =\int_{a}^{x} \drac{\l(x-c\r) ^{n-p }\l(x-t\r)
+^{p-1}}{\l(n-1\r) !}f^{\l(n\r)}\l(c\r)\, dt
+=\drac{\l(x-a\r) ^p}{p\l(n-1\r) !}\l(x-c\r) ^{n-p}f^{\l(n\r)
+}\l(c\r)\end{aligned}$$</span> <span class="math inline">$c=a+\theta
+\l(x-a\r)$</span>とおくと<span
+class="math inline">0 ≤ <em>θ</em> ≤ 1</span>であって <span
+class="math display">$$\begin{aligned}
+R_n\l(x\r) =\drac{\l(x-a\r) ^n}{p\l(n-1\r) !}\l(1-\theta \r)
+^{n-p}f^{\l(n\r) }\l(c\r)\end{aligned}$$</span>
+である。コーシーの剰余項である。</p>
+<h3 id="陰関数定理">陰関数定理</h3>
+<div class="theorem">
+<p><span id="中間値の定理" label="中間値の定理"></span>（中間値の定理）
+<span class="math inline"><em>f</em> : ℝ → ℝ</span>として<span
+class="math inline"><em>f</em></span>は閉区間<span
+class="math inline">[<em>a</em>,<em>b</em>]</span>上連続とする。<span
+class="math inline">$f\l(a\r)$</span>と<span
+class="math inline">$f\l(b\r)$</span>の間にある任意の<span
+class="math inline"><em>k</em></span>に対し<span
+class="math inline"><em>a</em> ≤ <em>c</em> ≤ <em>b</em></span>かつ<span
+class="math inline">$f\l(c\r) =k$</span>となる<span
+class="math inline"><em>c</em></span>が存在する。</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math inline">$f\l(a\r) \leq
+f\l(b\r)$</span>としても一般性を失わない。<span
+class="math inline">$c=\dis \sup_{a\leq x\leq b}\l\{ x \:\middle|\:
+f\l(x\r) \leq k \r\}$</span>とする。<span class="math inline">$f\l(c\r)
+\neq k$</span>になると仮定して矛盾を示す。 <span
+class="math inline">$f\l(c\r) &gt;k$</span>としても<span
+class="math inline">$f\l(c\r) &lt;k$</span>としても(<span
+class="math inline">$f\l(c\r) &gt;k$</span>のときは<span
+class="math inline">sup<sub></sub></span>の性質より)<span
+class="math inline">$\dis \lim_{n \to \infty}x_n=c$</span>かつ<span
+class="math inline">$f\l(x_n\r) \leq k$</span>となる数列<span
+class="math inline">{<em>x</em><sub><em>n</em></sub>}</span>が存在する。連続性より<span
+class="math inline">$f\l(x_n\r) \to f\l(c\r) \leq
+k$</span>となる。一方<span
+class="math inline"><em>b</em></span>から<span
+class="math inline"><em>c</em></span>に近づく数列<span
+class="math inline">{<em>y</em><sub><em>n</em></sub>}</span>を考えると<span
+class="math inline">$f\l(y_n\r) &gt;k$</span>であり連続性より<span
+class="math inline">$f\l(y_n\r) \to f\l(c\r) \geq k$</span>となる。
+以上より<span class="math inline">$f\l(c\r)
+=k$</span>となるがこれは仮定に矛盾する。背理法より示された。 ◻</p>
+</div>
+<p>以降，<span
+class="math inline"><em>X</em></span>をベクトルとしてベクトル値関数<span
+class="math inline"><em>f</em>(<em>X</em>)</span>のヤコビアンを<span
+class="math inline">$\delu{f}{x}$</span>のように表すことにする。</p>
+<div class="theorem">
+<p><span id="陰関数定理" label="陰関数定理"></span>（陰関数定理） <span
+class="math inline"><em>X</em> = (<em>x</em><sub>1</sub>,…<em>x</em><sub><em>k</em></sub>)</span>，<span
+class="math inline"><em>Y</em> = (<em>y</em><sub>1</sub>,…<em>y</em><sub><em>m</em></sub>)</span>とする<span
+class="math inline">$\l(k,m\in \mathbb{Z}_{\geq 1}\r)$</span>。<span
+class="math inline">$\l(A,B\r) \in \l(X,
+Y\r)$</span>において<span
+class="math inline"><em>m</em></span>個の関数<span
+class="math inline">$f_{1}\l(X,Y\r),\dots ,f_{m}\l(X,Y\r)$</span>が</p>
+<ol type="i">
+<li><p><span
+class="math inline"><em>f</em><sub>1</sub> = … = <em>f</em><sub><em>m</em></sub> = 0</span></p></li>
+<li><p><span class="math inline">$\l|\drac{\del f}{\del y}\r|=\vmat{
+\delu{f_1}{y_1}&amp; \dots &amp; \delu{f_1}{y_m}\\
+\vdots&amp; \ddots &amp; \vdots\\
+\delu{f_m}{y_1}&amp; \dots&amp; \delu{f_m}{y_m}
+}\neq 0$</span></p></li>
+</ol>
+<p>を満たすならばある<span
+class="math inline"><em>ε</em> &gt; 0</span>が存在して<span
+class="math inline">$\l|X-A\r| &lt;\varepsilon$</span>上で<span
+class="math inline">$\varphi _1\l(X\r) ,\dots ,\varphi
+_m\l(X\r)$</span>が存在して以下を満たす。</p>
+<ol type="1">
+<li><p><span class="math inline">$B=\l(\varphi _1\l(A\r) ,\dots ,
+\varphi _m\l(A\r) \r)$</span></p></li>
+<li><p><span class="math inline">$f_j\l(X,\varphi _1\l(X\r) ,\dots
+,\varphi _m\l(X\r) \r) =0　\l(j=1,\dots, m\r)$</span></p></li>
+</ol>
+<p>上記の命題を<span class="math inline">$P\l(k,m\r)$</span>とおく。</p>
+</div>
+<h4 class="unnumbered" id="証明">証明</h4>
+<h5 class="unnumbered" id="plk1rについて"><span
+class="math inline">$P\l(k,1\r)$</span>について</h5>
+<p>仮定は<span
+class="math inline"><em>X</em> = (<em>x</em><sub>1</sub>,…,<em>x</em><sub><em>k</em></sub>)，<em>Y</em> = <em>y</em><sub>1</sub> = <em>y</em>, <em>A</em> = (<em>a</em><sub>1</sub>,…,<em>a</em><sub><em>k</em></sub>)</span>，<span
+class="math inline"><em>B</em> = <em>b</em><sub>1</sub> = <em>b</em></span>として<span
+class="math inline">$\l(X,Y\r) =\l(A,b\r)$</span>において</p>
+<ol type="i">
+<li><p><span class="math inline">$f\l(A,b\r) =0$</span></p></li>
+<li><p><span class="math inline">$\delu{f}{y}\neq 0$</span></p></li>
+</ol>
+<p>であることである。(ii)よりある<span
+class="math inline"><em>δ</em> ≠ 0</span>であって<span
+class="math inline">$f\l(A,b_1-\delta\r)&lt;0&lt;
+f\l(A,b_1+\delta\r)$</span>となるものが存在する。<span
+class="math inline"><em>δ</em></span>に対応する<span
+class="math inline"><em>ε</em> &gt; 0</span>をうまくとれば<span
+class="math inline">$\l|X-A\r| &lt;\varepsilon$</span>ならば <span
+class="math display">$$f\l(X,b-\delta \r) &lt;0&lt;f\l(X,b+\delta
+\r)$$</span> とすることができる。中間値の定理（）と<span
+class="math inline">$\delu{f}{y}$</span>の符号が一定であることにより<span
+class="math inline">$\l|X-A\r| &lt;\varepsilon$</span>のもとで</p>
+<ol type="1">
+<li><p><span class="math inline">$b=\varphi \l(X\r)$</span></p></li>
+<li><p><span class="math inline">$f\l(X,\varphi \l(X\r) \r)
+=0$</span></p></li>
+</ol>
+<p>を満たす<span class="math inline">$\varphi\l(X\r)$</span> が<span
+class="math inline"><em>b</em> − <em>δ</em></span>と<span
+class="math inline"><em>b</em> − <em>δ</em></span>
+の間にただ一つ存在する。よって<span
+class="math inline"><em>P</em>(<em>k</em>,1)</span>が示された。（証明終）</p>
+<h5 class="unnumbered" id="varphiの連続性"><span
+class="math inline"><em>φ</em></span>の連続性</h5>
+<p><span
+class="math inline">[<em>b</em>−<em>δ</em>,<em>b</em>+<em>δ</em>] = <em>I</em></span>とする。<span
+class="math inline">$\varphi \l(X_0+H\r)$</span>が<span
+class="math inline"><em>H</em> → <em>O</em></span>で<span
+class="math inline">$\varphi \l(X_0\r)$</span>に収束しないと仮定すると
+任意の<span class="math inline"><em>n</em></span>に対して<span
+class="math inline">$\l|X_0+H_n-A\r| &lt;\varepsilon$</span>かつ <span
+class="math display">$$\l|\varphi \l(X_0+H_n\r) -\varphi \l(X_0\r) \r|
+\geq \varepsilon '$$</span> を満たす，<span
+class="math inline"><em>O</em></span>に収束するベクトル列<span
+class="math inline"><em>H</em><sub><em>n</em></sub> ∈ ℝ<sup><em>k</em></sup></span>と<span
+class="math inline"><em>ε</em>′ &gt; 0</span>が存在する。 任意の<span
+class="math inline"><em>n</em></span>に対し<span
+class="math inline">$\varphi \l(X_0+H_n\r) \in
+I$</span>が成り立つので<span class="math inline">$\left\{ \varphi
+\l(X_0+H_n\r) \right\}$</span>の部分列<span class="math inline">$\left\{
+\varphi \l(X_0+H_{n_l}\r) \right\}$</span>で<span
+class="math inline"><em>I</em></span>内のある値<span
+class="math inline"><em>α</em></span>に収束するものが存在する。
+任意の<span class="math inline"><em>l</em></span>に対し<span
+class="math inline">$\l|\varphi \l(X_0+H_{n_l}\r) -\varphi \l(X_0\r) \r|
+\geq \varepsilon '$</span>であることより<span
+class="math inline">$\alpha \neq \varphi \l(X_0\r)$</span>であるが <span
+class="math inline"><em>f</em></span>の連続性から <span
+class="math display">$$f\l(X_0,\alpha \r) =\lim_{l \to \infty}
+f\l(X_0+H_{n_l},\varphi \left( X_0+H_{n_l} \right)\r)=0$$</span>
+より<span class="math inline">$f\l(X_0,y_0\r) =0$</span>なる<span
+class="math inline"><em>y</em><sub>0</sub> ∈ <em>I</em></span>が<span
+class="math inline">$y_0=\varphi \l(X_0\r)$</span>しかないことから<span
+class="math inline">$\alpha =\varphi
+\l(X_0\r)$</span>ということになってしまい矛盾。</p>
+<h5 class="unnumbered" id="varphiが微分可能であること"><span
+class="math inline"><em>φ</em></span>が微分可能であること</h5>
+<p><span
+class="math inline"><em>x</em><sub>1</sub></span>で偏微分可能なことを示す。<span
+class="math inline">$\l(x_2,\dots,x_k \r) =X'$</span>とおく。<br />
+テイラーの定理より<span class="math inline">$k_1=\varphi
+\l(x_1+h_1,X'\r) -\varphi \l(x_1,X' \r)$</span>として <span
+class="math display">$$\begin{aligned}
+&amp;f\l(x_1+h_1,X',\varphi \l(x_1+h_1,X'\r) \r) \\
+&amp;=\, f\l(x_1,X',\varphi (x_1,X')\r)
++f_{x_1}\l(x_1+\theta h_1,X',\varphi(x_1,X')+\theta k_1\r)h_1 \\
+&amp;\qq
++f_{y }\l(x_1+\theta h_1,X',\varphi(x_1,X')+\theta k_1\r)k_1
+\end{aligned}$$</span> である。 <span
+class="math inline">$f\l(x_1+h_1,X',\varphi \l(x_1+h_1,X'\r) \r) =
+f\l(x_1,X',\varphi (x_1,X')\r) =0$</span>より <span
+class="math display">$$\begin{aligned}
+\drac{\varphi \l(x_1+h_1,X'\r) -\varphi \l(x_1,X'\r)
+}{h_1}=\drac{k_1}{h_1}=-\drac{f_{x_1}\l(x_1+\theta
+h_1,X',\varphi(x_1,X')+\theta k_1\r)}{f_{y }\l(x_1+\theta
+h_1,X',\varphi(x_1,X')+\theta k_1\r)}\end{aligned}$$</span> <span
+class="math inline"><em>φ</em></span>の連続性より<span
+class="math inline"><em>h</em><sub>1</sub> → 0</span>で<span
+class="math inline"><em>k</em><sub>1</sub> → 0</span>。よって<span
+class="math inline"><em>f</em><sub><em>x</em><sub>1</sub></sub>, <em>f</em><sub><em>y</em></sub></span>の連続性より
+<span class="math display">$$\begin{aligned}
+\lim_{h_1 \to 0}\drac{\varphi \l(x_1+h_1,X'\r) -\varphi \l(x_1,X'\r)
+}{h_1}
+=-\drac{f_{x_1}\l(x_1,X',\varphi(x_1,X')\r)}{f_{y
+}\l(x_1,X',\varphi(x_1,X')\r)}\end{aligned}$$</span> <span
+class="math inline"><em>x</em><sub>2</sub>, …, <em>x</em><sub><em>k</em></sub></span>も同様に考えて<span
+class="math inline"><em>i</em> = 1, 2, …, <em>k</em></span>において
+<span class="math display">$$\begin{aligned}
+\delu{\varphi }{x_i}=-\drac{f_{x_i}\l(X,\varphi(X)\r)}{f_{y
+}\l(X,\varphi(X)\r)}\end{aligned}$$</span> となるので<span
+class="math inline"><em>φ</em></span>は微分可能であることが示された。</p>
+<h5 class="unnumbered" id="plkmrについて"><span
+class="math inline">$P\l(k,m\r)$</span>について</h5>
+<p><span class="math inline">$\forall k\
+P\l(k,1\r)$</span>が真であることをもとにして<span
+class="math inline">$P\l(k+1,m\r)$</span>から<span
+class="math inline">$P\l(k,m+1\r)$</span>を示すことで帰納法を完成させる。
+<span
+class="math inline">$P\l(k+1,m\r)$</span>が真であると仮定する。<span
+class="math inline">$P\l(k,m+1\r)$</span>の仮定は</p>
+<ol type="i">
+<li><p><span
+class="math inline"><em>f</em><sub><em>j</em></sub>(<em>A</em>,<em>b</em><sub>1</sub>,…,<em>b</em><sub><em>m</em></sub>,<em>b</em><sub><em>m</em> + 1</sub>) = 0  (<em>j</em>=1,…,<em>m</em>,<em>m</em>+1)</span></p></li>
+<li><p><span
+class="math inline">(<em>A</em>,<em>b</em><sub>1</sub>,…,<em>b</em><sub><em>m</em></sub>,<em>b</em><sub><em>m</em> + 1</sub>)</span>において
+<span class="math display">$$\begin{aligned}
+\left|\drac{\partial f}{\partial y}\right|=\begin{vmatrix}
+\drac{\partial f_{1} }{\partial y_{1}} &amp; \dots &amp;\drac{\partial
+f_{1} }{\partial y_{m}}
+&amp;\drac{\partial f_{1} }{\partial y_{m+1}}\\
+\vdots &amp;\ddots &amp;\vdots &amp;\vdots\\
+\drac{\partial f_{m} }{\partial y_{1}}&amp;\dots &amp; \drac{\partial
+f_{m} }{\partial y_{m}}&amp;\vdots \\
+\drac{\partial f_{m+1} }{\partial y_{1}}&amp;\dots
+&amp;\dots&amp;\drac{\partial f_{m+1} }{\partial y_{m+1}}
+\end{vmatrix}
+\neq 0
+\end{aligned}$$</span></p></li>
+</ol>
+<p>である。このとき(2)の余因子展開から，うまく<span
+class="math inline"><em>y</em><sub>1</sub>, …, <em>y</em><sub><em>m</em> + 1</sub></span>を選べば
+<span class="math display">$$\drac{\partial f_{m+1} }{\partial y_{m+1}}
+\begin{vmatrix}
+\delu{f_1}{y_1}&amp; \dots &amp; \delu{f_1}{y_m}\\
+\vdots  &amp; \ddots &amp;  \vdots \\  
+\delu{f_m}{y_1}&amp; \dots &amp; \delu{f_m}{y_m}
+\end{vmatrix}
+\neq 0
+\text{　　特に　　}
+\begin{vmatrix}
+\drac{\partial f_{1} }{\partial y_{1}} &amp; \dots &amp; \drac{\partial
+f_{1}}{\partial y_{m}} \\
+\vdots  &amp; \ddots &amp;\vdots \\
+\drac{\partial f_{m} }{\partial y_{1}} &amp; \dots &amp; \drac{\partial
+f_{m}}{\partial y_{m}}
+\end{vmatrix}
+\neq 0$$</span> よって<span
+class="math inline"><em>f</em><sub><em>j</em></sub>(<em>X</em>,<em>y</em><sub>1</sub>,…,<em>y</em><sub><em>m</em></sub>,<em>y</em><sub><em>m</em> + 1</sub>) (<em>j</em>=1,…,<em>m</em>)</span>は<span
+class="math inline"><em>P</em>(<em>k</em>+1,<em>m</em>)</span>の仮定を満たすから，ある<span
+class="math inline"><em>ε</em><sub>1</sub> &gt; 0</span>に対し <span
+class="math inline">|(<em>X</em>,<em>y</em><sub><em>m</em> + 1</sub>)−(<em>A</em>,<em>b</em><sub><em>m</em> + 1</sub>)| &lt; <em>ε</em><sub>1</sub></span>ならば</p>
+<ol type="1">
+<li><p><span
+class="math inline">(<em>b</em><sub>1</sub>,…,<em>b</em><sub><em>m</em></sub>) = (<em>φ</em>′<sub>1</sub>(<em>A</em>,<em>b</em><sub><em>m</em> + 1</sub>),…,<em>φ</em>′<sub><em>m</em></sub>(<em>A</em>,<em>b</em><sub><em>m</em> + 1</sub>))</span></p></li>
+<li><p><span
+class="math inline">$f_{j}(X,\varphi'_{1}(X,y_{m+1}),\dots,\varphi'_{m}(X,y_{m+1}),y_{m+1})=0
+\q(j=1,\dots,m)$</span></p></li>
+</ol>
+<p>を満たす<span
+class="math inline"><em>m</em></span>個の微分可能な関数<span
+class="math inline"><em>φ</em>′<sub>1</sub>(<em>X</em>), …, <em>φ</em>′<sub><em>m</em></sub>(<em>X</em>)</span>が一意に存在する。<br />
+<span
+class="math inline"><em>f</em><sub><em>j</em></sub>(<em>X</em>,<em>φ</em>′<sub>1</sub>(<em>X</em>),…,<em>φ</em>′<sub><em>m</em></sub>(<em>X</em>))</span>を<span
+class="math inline"><em>F</em><sub><em>j</em></sub>(<em>X</em>,<em>y</em><sub><em>m</em> + 1</sub>)</span>とおく。</p>
+<div class="lemma">
+<p><span id="f/yneq0" label="f/yneq0"></span> <span
+class="math inline">(<em>A</em>,<em>b</em><sub><em>m</em> + 1</sub>)</span>
+において <span class="math inline">$\drac{\partial F_{m+1} }{\partial
+y_{m+1}}\neq 0$</span> が成り立つ。</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span
+class="math inline">|(<em>X</em>,<em>y</em><sub><em>m</em> + 1</sub>)−(<em>A</em>,<em>b</em><sub><em>m</em> + 1</sub>)| &lt; <em>ε</em><sub>1</sub></span>において<span
+class="math inline"><em>F</em><sub><em>j</em></sub> = 0</span> (<span
+class="math inline">0</span>の定数関数)<br />
+ゆえに<span
+class="math inline">(<em>A</em>,<em>b</em><sub><em>m</em> + 1</sub>)</span>において<br />
+<span class="math display">$$\begin{split}
+&amp;\drac{\partial F_{1} }{\partial y_{m+1}}=
+\drac{\partial f_{1} }{\partial y_{1}}\drac{\partial \varphi'_{1}
+}{\partial y_{m+1}}
++\dots
++\drac{\partial f_{1} }{\partial y_{m}}\drac{\partial \varphi'_{m}
+}{\partial y_{m+1}}
++\drac{\partial f_{1} }{\partial y_{m+1}}=0\\
+&amp;\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\vdots\\
+&amp;\drac{\partial F_{m} }{\partial y_{m+1}}=
+  \drac{\partial f_{m} }{\partial y_{1}}\drac{\partial \varphi'_{1}
+}{\partial y_{m+1}}
++\dots
++\drac{\partial f_{m} }{\partial y_{m}}\drac{\partial \varphi'_{m}
+}{\partial y_{m+1}}
++\drac{\partial f_{m} }{\partial y_{m+1}}=0
+\end{split}$$</span> このもとで <span
+class="math display">$$\drac{\partial F_{m+1} }{\partial y_{m+1}}=
+  \drac{\partial f_{m+1} }{\partial y_{1}}\drac{\partial \varphi'_{1}
+}{\partial y_{m+1}}
++\dots
++\drac{\partial f_{m+1} }{\partial y_{m}}\drac{\partial \varphi'_{m}
+}{\partial y_{m+1}}
++\drac{\partial f_{m+1} }{\partial y_{m+1}}=0$$</span> を仮定すると
+<span class="math display">$$\begin{pmatrix}
+  \drac{\partial f_{1} }{\partial y_{1}} &amp; \dots &amp;\drac{\partial
+f_{1} }{\partial y_{m}}&amp;\drac{\partial f_{1} }{\partial y_{m+1}}\\
+\vdots &amp;\ddots &amp;\vdots  &amp;\vdots \\
+\drac{\partial f_{m} }{\partial y_{1}} &amp;\dots &amp;\drac{\partial
+f_{m} }{\partial y_{m}}&amp;\vdots \\
+\drac{\partial f_{m+1} }{\partial y_{1}}&amp;\dots
+&amp;\dots  &amp;\drac{\partial f_{m+1} }{\partial y_{m+1}}
+\end{pmatrix}
+\begin{pmatrix}
+\drac{\partial \varphi'_{1} }{\partial y_{m+1}}\\
+\vdots\\
+\drac{\partial \varphi'_{m} }{\partial y_{m+1}}\\
+\displaystyle{1}
+\end{pmatrix}=\bm{0}$$</span> であるが，これは<span
+class="math inline">$\left|\delu{f}{y}\right|\neq
+0$</span>に反し矛盾する。 ◻</p>
+</div>
+<p>以上より</p>
+<ol type="i">
+<li><p><span class="math inline">$F_{m+1}\l(A,b_{m+1}\r)
+=0$</span></p></li>
+<li><p><span class="math inline">$\l(A,b_{m+1}\r)$</span> において<span
+class="math inline">$\delu{F_{m+1}}{y_{m+1}}\neq 0$</span></p></li>
+</ol>
+<p>から<span
+class="math inline"><em>P</em>(<em>k</em>,1)</span>によってある<span
+class="math inline"><em>ε</em><sub>2</sub> &gt; 0</span>に対し<span
+class="math inline">|<em>X</em>−<em>A</em>| &lt; <em>ε</em><sub>2</sub></span>上で</p>
+<ol type="1">
+<li><p><span
+class="math inline">$b_{m+1}=\varphi_{m+1}\l(A\r)$</span></p></li>
+<li><p><span
+class="math inline"><em>f</em><sub><em>m</em> + 1</sub>(<em>X</em>,<em>φ</em><sub><em>m</em> + 1</sub>(<em>X</em>)) = 0</span></p></li>
+</ol>
+<p>を満たす関数<span
+class="math inline"><em>φ</em><sub><em>m</em> + 1</sub></span>が一意に存在する。<br />
+したがって<span
+class="math inline"><em>φ</em>′<sub><em>j</em></sub>(<em>X</em>,<em>φ</em><sub><em>m</em> + 1</sub>(<em>X</em>)) = <em>φ</em><sub><em>j</em></sub>(<em>X</em>)</span>
+<span
+class="math inline">(<em>j</em>=1,…,<em>m</em>)</span>とおくと<span
+class="math inline"><em>φ</em><sub><em>j</em></sub></span>は一意であり
+<span
+class="math display">|(<em>X</em>,<em>φ</em><sub><em>m</em> + 1</sub>(<em>X</em>))−(<em>A</em>,<em>b</em><sub><em>m</em> + 1</sub>)| &lt; <em>ε</em><sub>1</sub>　かつ　|<em>X</em>−<em>A</em>| &lt; <em>ε</em><sub>2</sub></span></p>
+<p>になるように<span
+class="math inline">|<em>X</em>−<em>A</em>| &lt; <em>ε</em></span>なる<span
+class="math inline"><em>ε</em></span>を定めれば</p>
+<ol type="1">
+<li><p><span
+class="math inline"><em>B</em> = (<em>φ</em><sub>1</sub>(<em>A</em>),…,<em>φ</em><sub><em>m</em></sub>(<em>A</em>),<em>φ</em><sub><em>m</em> + 1</sub>(<em>A</em>))</span></p></li>
+<li><p><span
+class="math inline"><em>f</em><sub><em>j</em></sub>(<em>X</em>,<em>φ</em><sub>1</sub>(<em>X</em>),…,<em>φ</em><sub><em>m</em></sub>(<em>X</em>),<em>φ</em><sub><em>m</em> + 1</sub>(<em>X</em>)) = 0 (<em>j</em>=1,…,<em>m</em>+1)</span></p></li>
+</ol>
+<p>となる。以上より<span
+class="math inline"><em>P</em>(<em>k</em>,<em>m</em>+1)</span>が示された。（証明終）</p>
+<h5 class="unnumbered" id="補足">補足</h5>
+<p><span class="math inline"><em>j</em> = 1, …, <em>m</em></span>に対し
+<span class="math display">$$\begin{aligned}
+f_j\l(X,\varphi _1\l(X\r) ,\dots,\varphi _m\l(X\r) \r) :=G_j\l(X\r)
+\end{aligned}$$</span> とおくと<span
+class="math inline"><em>G</em><sub><em>j</em></sub></span>はすべて<span
+class="math inline">0</span>の定数関数なので <span
+class="math display">$$\begin{aligned}
+\delu{G_1}{x_1}=\delu{f_1}{x_1}+\delu{f_1}{y_1}\delu{\varphi
+_1}{x_1}+\dots+\delu{f_1}{y_m}\delu{\varphi _m}{x_1}=0\\
+\vdots　　　　　　　　　　　　　\\
+\delu{G_m}{x_1}=\delu{f_m}{x_1}+\delu{f_m}{y_1}\delu{\varphi
+_1}{x_1}+\dots+\delu{f_m}{y_m}\delu{\varphi
+_m}{x_1}=0\end{aligned}$$</span> であるから <span
+class="math display">$$\begin{aligned}
+\begin{pmatrix}
+{\delu{f_1}{y_1}}&amp; {\dots}&amp; {\delu{f_1}{y_m}}\\
+\vdots&amp; \ddots&amp; \vdots\\
+\delu{f_m}{y_1}&amp; \dots&amp; \delu{f_m}{y_m}
+\end{pmatrix}
+\begin{pmatrix}
+\delu{\varphi _1}{x_1}\\ \vdots \\\delu{\varphi _m}{x_1}
+\end{pmatrix}
+=
+- \begin{pmatrix}
+\delu{f_1}{x_1}\\ \vdots\\ \delu{f_m}{x_1}
+\end{pmatrix}\end{aligned}$$</span> <span
+class="math inline"><em>i</em> = 2, …, <em>k</em></span>で同じことを行うと
+<span class="math display">$$\begin{aligned}
+\begin{pmatrix}
+\delu{f_1}{y_1}&amp; \dots&amp; \delu{f_1}{y_m}\\
+\vdots&amp; \ddots&amp; \vdots\\
+\delu{f_m}{y_1}&amp; \dots&amp; \delu{f_m}{y_m}
+\end{pmatrix}
+\begin{pmatrix}
+\delu{\varphi _1}{x_1}&amp; \dots&amp; \delu{\varphi _1}{x_k}\\
+\vdots&amp; \ddots&amp; \vdots\\
+\delu{\varphi _m}{x_1}&amp; \dots&amp; \delu{\varphi _m}{x_k}
+\end{pmatrix}
+=
+-
+\begin{pmatrix}
+\delu{f_1}{x_1}&amp; \dots&amp; \delu{f_1}{x_k}\\
+\vdots&amp; \ddots &amp; \vdots\\
+\delu{f_m}{x_1}&amp; \dots&amp; \delu{f_m}{x_k}
+\end{pmatrix}\end{aligned}$$</span> より <span
+class="math display">$$\begin{aligned}
+\delu{f}{y}\delu{\varphi }{x}=-\delu{f}{x}\end{aligned}$$</span>
+すなわち <span class="math display">$$\begin{aligned}
+\delu{\varphi }{x}=-\l(\delu{f}{y}\l(X,\varphi \l(X\r) \r) \r)
+^{-1}\delu{f}{x}\l(X,\varphi \l(X\r) \r) \end{aligned}$$</span> <span
+class="math display">$$\begin{aligned}
+\begin{pmatrix}
+\delu{\varphi _1}{x_1}&amp; \dots&amp; \delu{\varphi _1}{x_k}\\
+\vdots&amp; \ddots&amp; \vdots\\
+\delu{\varphi _m}{x_1}&amp; \dots&amp; \delu{\varphi _m}{x_k}
+\end{pmatrix}
+=
+-\begin{pmatrix}
+\delu{f_1}{y_1}&amp; \dots&amp; \delu{f_1}{y_m}\\
+\vdots&amp; \ddots&amp; \vdots\\
+\delu{f_m}{y_1}&amp; \dots&amp; \delu{f_m}{y_m}
+\end{pmatrix}^{\raisebox{3zw}[1zw][0zw]{\(-1\)}}
+\begin{pmatrix}
+\delu{f_1}{x_1}&amp; \dots&amp; \delu{f_1}{x_k}\\
+\vdots&amp; \ddots&amp; \vdots\\
+\delu{f_m}{x_1}&amp; \dots&amp; \delu{f_m}{x_k}
+\end{pmatrix}
+\end{aligned}$$</span> 帰納法の概略は下図のようである。<br />
+</p>
+<h4 id="陰関数定理の別証">陰関数定理の別証</h4>
+<p>写像<span
+class="math inline"><em>T</em> : ℝ<sup><em>k</em> + <em>m</em></sup> → ℝ<sup><em>m</em></sup></span>を以下のように定める。
+<span class="math display">$$\begin{aligned}
+T\l(X,Y\r) =Y-\l(\delu{f}{y}\l(A,B\r) \r) ^{-1}\bm{f}\l(X,Y\r)
+\end{aligned}$$</span> このとき<span class="math inline">$T\l(A,B\r)
+=\delu{T}{y}\l(A,B\r) =\bm{0}$</span>である。<span
+class="math inline">$T,\delu{T}{y}$</span>の連続性から<span
+class="math inline"><em>ρ</em>, <em>δ</em><sub><em>ρ</em></sub></span>をあらためて小さく取ると<span
+class="math inline">$\l|X-A\r| &lt;\delta _\rho$</span>かつ<span
+class="math inline">$\l|Y-B\r| &lt;\rho$</span>ならば <span
+class="math display">$$\begin{aligned}
+\l|\l|\delu{T}{y}\l(X,Y\r) \r| \r| &lt;\drac{1}{2},\l|T\l(X,Y\r)
+-T\l(X,Y'\r) \r| &lt;\drac{1}{2}\rho\text{　　かつ　　}\l|T\l(X,B\r)
+-B\r| &lt;\drac{\rho}{3}\end{aligned}$$</span> とできる。ただし，<span
+class="math inline">$\l|\l|\cdot \r|
+\r|$</span>を行列のノルム，すなわち行列の成分の絶対値の最大値とした。</p>
+<div class="lemma">
+<p><span id="リプシッツ連続" label="リプシッツ連続"></span>
+上の範囲で<span
+class="math inline"><em>X</em>, <em>Y</em></span>を取ると<span
+class="math inline">$\l|T\l(X,Y\r) -B\r| &lt;\rho$</span></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> <span class="math display">$$\begin{aligned}
+\l|T\l(X,Y\r) -B\r|&amp; \leq \l|T\l(X,Y\r) -T\l(X,B\r) \r|
++\l|T\l(X,B\r) -B\r| \\
+&amp; \leq \drac{1}{2}\l|Y-B\r| +\drac{\rho}{3}\\
+&amp;\leq \drac{1}{2}\rho+\drac{\rho}{3}&lt;\rho
+\end{aligned}$$</span> ◻</p>
+</div>
+<div class="theorem">
+<p><span id="（バナッハの不動点定理）"
+label="（バナッハの不動点定理）"></span> （バナッハの不動点定理）<span
+class="math inline"><em>Ω</em> ∈ ℝ<sup><em>m</em></sup></span>とし，写像<span
+class="math inline"><em>T</em> : <em>Ω</em> → <em>Ω</em></span>は任意の<span
+class="math inline"><em>X</em>, <em>Y</em> ∈ <em>Ω</em></span>において<span
+class="math inline">$k\in \l(0,1\r)$</span>として <span
+class="math display">$$\begin{aligned}
+T\l(X\r) -T\l(Y\r) \leq k\l|X-Y\r|
+\end{aligned}$$</span> を満たすとする。このとき写像<span
+class="math inline"><em>T</em></span>は不動点をただ一つもつ。</p>
+</div>
+<p><span class="math inline">$X\in R\l(A,\delta
+_\rho\r)$</span>を固定して写像<span
+class="math inline"><em>S</em></span>を <span
+class="math display">$$\begin{aligned}
+S\colon R\l(B,\rho\r)\to R\l(B,\rho\r),Y\mapsto T\l(X,Y\r)
+\end{aligned}$$</span> によって定める（により<span
+class="math inline"><em>T</em></span>も<span
+class="math inline">$R\l(B,\rho\r)$</span>に属する）と，定理<a
+href="#（バナッハの不動点定理）" data-reference-type="ref"
+data-reference="（バナッハの不動点定理）">[（バナッハの不動点定理）]</a>より
+<span class="math display">$$\begin{aligned}
+S\l(Y\r) =Y　すなわち　\bm{f}\l(X,Y\r) =0 \end{aligned}$$</span>
+となる<span class="math inline"><em>Y</em></span>が<span
+class="math inline"><em>X</em></span>に対してただ一つ存在することが示された。</p>
+<h3 id="ラグランジュの未定乗数法">ラグランジュの未定乗数法</h3>
+<div class="theorem">
+<p><span id="ラグランジュの未定乗数法"
+label="ラグランジュの未定乗数法"></span>（ラグランジュの未定乗数法）
+<span
+class="math inline"><em>X</em> = (<em>x</em><sub>1</sub>,…,<em>x</em><sub><em>k</em></sub>), <em>Y</em> = (<em>y</em><sub>1</sub>,…,<em>y</em><sub><em>m</em></sub>)</span>とする。
+<span
+class="math inline"><em>g</em><sub><em>j</em></sub>(<em>X</em>,<em>Y</em>) = 0 (<em>j</em>=1,…,<em>m</em>)</span>のもとで，<span
+class="math inline"><em>f</em>(<em>X</em>,<em>Y</em>)</span>は<span
+class="math inline">(<em>X</em>,<em>Y</em>) = (<em>A</em>,<em>B</em>)</span>において極値を取るものとする。<span
+class="math inline">(<em>A</em>,<em>B</em>)</span>において <span
+class="math display">$$\left|\drac{\partial g}{\partial y}\right|=
+\vmat{
+\drac{\partial g_1}{\partial y_1}&amp; \dots &amp; \drac{\partial
+g_1}{\partial y_m}\\
+\vdots &amp; \ddots &amp; \vdots \\
+\drac{\partial g_m}{\partial y_1}&amp; \dots &amp; \drac{\partial
+g_m}{\partial y_m}
+} \neq 0$$</span> であれば<span
+class="math inline">$\bm{g}(X,Y)=(g_1(X,Y),\dots,g_m(X,Y)),\\\bm{\la}=(\la_1,\dots,\la_m)^
+\mathrm{T}$</span>,<span
+class="math inline">$\bm{F}(X,Y,\bm{\la})=f(X,Y)-\bm{g}(X,Y)\bm{\la}$</span>として<span
+class="math inline">(<em>A</em>,<em>B</em>)</span>において <span
+class="math display">$$\begin{aligned}
+\nabla \bm{F}=\bm{0}
+\end{aligned}$$</span> すなわち <span
+class="math display">$$\begin{aligned}
+\begin{pmatrix}
+\drac{\partial f}{\partial x_1}&amp; \drac{\partial g_1}{\partial
+x_1}&amp; \dots &amp; \drac{\partial g_m}{\partial x_1}\\
+\vdots  &amp; \vdots  &amp; \ddots&amp; \vdots  \\
+\drac{\partial f}{\partial x_k}&amp; \drac{\partial g_1}{\partial
+x_k}&amp; \dots &amp; \drac{\partial g_m}{\partial x_k}\\
+\drac{\partial f}{\partial y_1}&amp; \drac{\partial g_1}{\partial
+y_1}&amp; \dots &amp; \drac{\partial g_m}{\partial y_1}\\
+\vdots  &amp; \vdots  &amp; \ddots&amp; \vdots  \\
+\drac{\partial f}{\partial y_m}&amp; \drac{\partial g_1}{\partial
+y_m}&amp; \dots&amp; \drac{\partial g_m}{\partial y_m}
+\end{pmatrix}
+\begin{pmatrix}
+1 \\ -\la_1 \\ \vdots \\ -\la_m
+\end{pmatrix}=\bm{0}
+\text{かつ$\bm{g}=\bm{0}$}
+\end{aligned}$$</span> を満たす<span
+class="math inline">$\bm{\la}=(\la_1,\dots,\la_m)^\mathrm{T}$</span>が存在する。</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> よりある<span
+class="math inline"><em>ε</em> &gt; 0</span>に対して<span
+class="math inline">|<em>X</em>−<em>A</em>| &lt; <em>ε</em></span>
+のもとで</p>
+<ol type="1">
+<li><p><span
+class="math inline"><em>B</em> = (<em>φ</em><sub>1</sub>(<em>A</em>),…,<em>φ</em><sub><em>m</em></sub>(<em>A</em>))</span></p></li>
+<li><p><span
+class="math inline">$g_j(X,\varphi_1(X),\dots,\varphi_m(X))=0
+\q(j=1,\dots,m)$</span></p></li>
+</ol>
+<p>なる<span class="math inline"><em>m</em></span>個の関数<span
+class="math inline"><em>φ</em><sub>1</sub>(<em>X</em>), …, <em>φ</em><sub><em>m</em></sub>(<em>X</em>)</span>が存在する。<br />
+<span
+class="math inline"><em>f</em>, <em>g</em><sub><em>j</em></sub>(<em>X</em>,<em>φ</em><sub>1</sub>(<em>X</em>),…,<em>φ</em><sub><em>m</em></sub>(<em>X</em>)) = <em>F</em>, <em>G</em><sub><em>j</em></sub>(<em>X</em>)</span>とおく。各<span
+class="math inline"><em>i</em></span>について考える。極値を取るので<span
+class="math inline"><em>X</em> = <em>A</em></span>において <span
+class="math display">$$\begin{aligned}
+\drac{\partial F}{\partial x_i}=\drac{\partial f}{\partial
+x_i}+\drac{\partial f}{\partial y_1}
+\drac{\partial \varphi_1}{\partial x_i} +\dots+\drac{\partial
+f}{\partial y_m}
+\drac{\partial \varphi_m}{\partial x_i}=0
+\end{aligned}$$</span> 常に<span class="math inline">0</span>なので
+<span class="math display">$$\begin{aligned}
+\drac{\partial G_j}{\partial x_i}=\drac{\partial g_j}{\partial
+x_i}+\drac{\partial g_j}{\partial y_1}
+\drac{\partial \varphi_1}{\partial x_i} +\dots+\drac{\partial
+g_j}{\partial y_m}
+\drac{\partial \varphi_m}{\partial x_i}=0\q(j=1,\dots,m)
+\end{aligned}$$</span> したがって<span
+class="math inline"><em>X</em> = <em>A</em></span>において <span
+class="math display">$$\begin{aligned}
+\begin{pmatrix}
+\drac{\partial f}{\partial x_i} &amp; \drac{\partial f}{\partial y_1}
+&amp; \dots &amp; \drac{\partial f}{\partial y_m}\\
+\drac{\partial g_1}{\partial x_i} &amp; \drac{\partial g_1}{\partial
+y_1} &amp; \dots &amp; \drac{\partial g_1}{\partial y_m}\\
+\vdots&amp; \vdots&amp; \ddots&amp; \vdots\\
+\drac{\partial g_m}{\partial x_i} &amp; \drac{\partial g_m}{\partial
+y_1} &amp; \dots &amp; \drac{\partial g_m}{\partial y_m}\\
+\end{pmatrix}
+\begin{pmatrix}
+1 \\ \drac{\partial \varphi_1}{\partial x_i}\\ \vdots\\ \drac{\partial
+\varphi_m}{\partial x_i}
+\end{pmatrix}=\bm{0}\q(\text{左の行列$A_i$とおく})
+\end{aligned}$$</span></p>
+<p>より連立方程式<span
+class="math inline"><em>A</em><sub><em>i</em></sub><strong>x</strong> = 0</span>は<span
+class="math inline">0</span>でない解を持つので<span
+class="math inline">$\rank(A_i)&lt;m+1$</span>。よって<span
+class="math inline">$\rank(A_i^ \mathrm{T})&lt;m+1$</span>より <span
+class="math display">$$\begin{aligned}
+\begin{pmatrix}
+\drac{\partial f}{\partial x_i} &amp; \drac{\partial g_1}{\partial x_i}
+&amp; \dots &amp; \drac{\partial g_m}{\partial x_i}\\
+\drac{\partial f}{\partial y_1} &amp; \drac{\partial g_1}{\partial y_1}
+&amp; \dots &amp; \drac{\partial g_m}{\partial y_1}\\
+\vdots&amp; \vdots&amp; \ddots&amp; \vdots\\
+\drac{\partial f}{\partial y_m} &amp; \drac{\partial g_1}{\partial y_m}
+&amp; \dots &amp; \drac{\partial g_m}{\partial y_m}\\
+\end{pmatrix}
+\begin{pmatrix}
+\la'_f(i)\\ \la'_1(i)\\ \vdots\\ \la'_m(i)
+\end{pmatrix}=\bm{0}
+\end{aligned}$$</span> となる<span
+class="math inline">$(\la'_f(i),\la'_1(i),\dots,\la'_m(i))^ \mathrm{T}
+\neq \bm{0}$</span>が存在する。 <span class="math inline">$\la'_f(i)\neq
+0$</span>を示す。<span class="math inline">$\la'_f(i)= 0$</span>とすると
+<span class="math display">$$\begin{aligned}
+\begin{pmatrix}
+\drac{\partial g_1}{\partial y_1} &amp; \dots &amp; \drac{\partial
+g_m}{\partial y_1}\\
+\vdots&amp; \ddots&amp; \vdots\\
+  \drac{\partial g_1}{\partial y_m} &amp; \dots &amp; \drac{\partial
+g_m}{\partial y_m}\\
+\end{pmatrix}
+\begin{pmatrix}
+  \la'_1(i)\\ \vdots\\ \la'_m(i)
+\end{pmatrix}=\bm{0}\q\text{すなわち}\q\drac{\partial f}{\partial
+y}\bm{\la'}=\bm{0}
+\end{aligned}$$</span> であって<span class="math inline">$\bm{\la'}\neq
+\bm{0}$</span>なるものが存在するがこれは <span
+class="math inline">$\left|\drac{\partial f}{\partial y}\right|\neq
+0$</span>に矛盾。 したがって<span class="math inline">$\la'_f(i) \neq
+0$</span>。 <span
+class="math inline">$-\drac{\la'_j(i)}{\la'_f(i)}=\la_j(i)$</span>とすると，<span
+class="math inline"><em>i</em> = 1, …, <em>k</em></span>に対し <span
+class="math display">$$\begin{aligned}
+A_i^ \mathrm{T}
+\begin{pmatrix}
+1 \\ -\la_1(i)\\ \vdots\\ -\la_m(i)
+\end{pmatrix}
+=A_i^ \mathrm{T}
+\begin{pmatrix}
+1 \\
+-\bm{\la(i)}\end{pmatrix}=\bm{0}
+\end{aligned}$$</span> となる。 <span
+class="math inline">$\bm{\la(i)}$</span>は<span
+class="math inline"><em>i</em></span>によらず， <span
+class="math display">$$\begin{aligned}
+\begin{pmatrix}
+\drac{\partial g_1}{\partial y_1} &amp;&amp; \dots &amp;&amp;
+\drac{\partial g_m}{\partial y_1}\\
+\vdots&amp;&amp; \ddots&amp;&amp; \vdots\\
+  \drac{\partial g_1}{\partial y_m} &amp;&amp; \dots &amp;&amp;
+\drac{\partial g_m}{\partial y_m}\\
+\end{pmatrix}
+\begin{pmatrix}
+t_1\\ \vdots\\t_m
+\end{pmatrix}=
+\begin{pmatrix}
+\drac{\partial f}{\partial y_1}\\ \vdots\\ \drac{\partial f}{\partial
+y_m}
+\end{pmatrix}
+\end{aligned}$$</span> の解であるが，<span
+class="math inline">$\left|\drac{\partial g}{\partial y}\right|\neq
+0$</span>よりそれは一つに限られる。 よって<span
+class="math inline">$\bm{\la(i)}$</span>は<span
+class="math inline"><em>i</em></span>によらない。それを<span
+class="math inline">$\bm{\la(i)}=\bm{\la}=
+(
+\la_1, \dots, \la_m
+)^\mathrm{T}$</span>とする。 すると<span
+class="math inline">$\bm{\la(i)}=\bm{\la}$</span>は<span
+class="math inline">$\bm{F}(X,Y,\bm{\la})=f(X,Y)-\bm{g}(X,Y)\bm{\la}$</span>として
+<span class="math display">$$\begin{aligned}
+\nabla \bm{F}=\bm{0}
+\end{aligned}$$</span> すなわち <span
+class="math display">$$\begin{aligned}
+\begin{pmatrix}
+\drac{\partial f}{\partial x_1}&amp; \drac{\partial g_1}{\partial
+x_1}&amp; \dots&amp; \drac{\partial g_m}{\partial x_1}\\
+\vdots  &amp; \vdots  &amp; \ddots&amp; \vdots\\
+\drac{\partial f}{\partial x_k}&amp; \drac{\partial g_1}{\partial
+x_k}&amp; \dots&amp; \drac{\partial g_m}{\partial x_k}\\
+\drac{\partial f}{\partial y_1}&amp; \drac{\partial g_1}{\partial
+y_1}&amp; \dots&amp; \drac{\partial g_m}{\partial y_1}\\
+\vdots  &amp; \vdots  &amp; \ddots&amp; \vdots\\
+\drac{\partial f}{\partial y_m}&amp; \drac{\partial g_1}{\partial
+y_m}&amp; \dots&amp; \drac{\partial g_m}{\partial y_m}\\
+\end{pmatrix}
+\begin{pmatrix}
+1 \\ -\la_1 \\ \vdots \\ -\la_m
+\end{pmatrix}=\bm{0}\q
+\text{かつ}\q
+\bm{g}=
+(g_1,\dots,g_m)=
+\bm{0}
+\end{aligned}$$</span> を満たす。 ◻</p>
+</div>
+<p>なお， <span class="math display">$$\begin{aligned}
+\bm{\la}=
+\begin{pmatrix}
+\la_1\\\vdots\\\la_m
+\end{pmatrix}
+=
+\begin{pmatrix}
+\delu{g_1}{y_1}&amp;\dots&amp;\delu{g_1}{y_m}\\
+\vdots&amp;\ddots&amp;\vdots\\
+\delu{g_m}{y_1}&amp;\dots&amp;\delu{g_m}{y_m}
+\end{pmatrix}\l(A,B\r)
+^{\raisebox{3zw}[1zw][0zw]{\(-1\)}}
+\begin{pmatrix}
+\delu{f}{y_1}\\\vdots\\\delu{f}{y_m}
+\end{pmatrix} \l(A,B\r)\end{aligned}$$</span>
+である。未定乗数法自体が極値を与える<span
+class="math inline">$\l(A,B\r)$</span>を求めるために用いられるものなので<span
+class="math inline">$\bm{\la}$</span>は<span
+class="math inline">$\l(X,Y\r)$</span>の式として与えられることがほとんどである。</p>
+<h3 id="フーリエ級数展開">フーリエ級数展開</h3>
+<h3 id="楕円積分論">楕円積分論</h3>
+<p><span class="math inline">$K\l(k\r) =\dis \int_{0}^{\drac{\pi }{2}}
+\drac{1}{\sqrt{1-k^2 \sin ^2 \theta }}\, d\theta ，E\l(k\r) =\dis
+\int_{0}^{\drac{\pi }{2}}
+{\sqrt{1-k^2 \sin ^2 \theta }}\,
+d\theta$</span>とおく。ルジャンドルの公式を示したい。</p>
+<h4 class="unnumbered"
+id="算術幾何平均に収束すること">算術幾何平均に収束すること</h4>
+<p><span class="math inline">$\dis \int_{0}^{\drac{\pi }{2}}
+\drac{1}{\sqrt{a^2 \cos ^\theta +b^2 \sin ^2 \theta }}\, d\theta
+=M\l(a,b\r) =\lim_{n \to \infty}a_n=\lim_{n \to
+\infty}b_n$</span>であることを示す。 ただし<span
+class="math inline">$a_{n+1}=\drac{1}{2}\l(a_n+b_n\r)，
+b_{n+1}=\sqrt{a_nb_n}$</span>かつ<span
+class="math inline"><em>a</em><sub>0</sub> = <em>a</em>, <em>b</em><sub>0</sub> = <em>b</em></span>
+とした。</p>
+<h4 class="unnumbered" id="証明-1">証明</h4>
+<h3
+id="リーマン積分の導入から円の面積を考える">リーマン積分の導入から円の面積を考える</h3>
+<p>行列式の定義，線形代数論，ベクトル解析，微分方程式，フーリエ変換，複素解析，複素関数への拡張，三角関数の部分分数展開，ジョルダン標準形
+<span
+class="math inline"><em>n</em> ≥ 3 ⇔ ¬∃<em>x</em>, <em>y</em>, <em>z</em> <em>s</em>.<em>t</em>. <em>x</em><sup><em>n</em></sup> + <em>y</em><sup><em>n</em></sup> = <em>z</em><sup><em>n</em></sup></span></p>
+
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+		integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+	<script>anchors.add();</script>
+	</body>
+	
+	</html>
