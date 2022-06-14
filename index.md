@@ -34,8 +34,6 @@ $$
 
 
 
-
-
 # 微分積分学
 
 ### 一様収束
@@ -51,44 +49,44 @@ $F\l(x\r) =\int_{c}^{x} f\l(t\r) \, dt$に一様収束する。
 
 $$
 \begin{aligned}
-  \l|F_n\l(x\r) -F\l(x\r) \r| 
-  &=\,  \l|\int_{c}^{x} f_n\l(t\r) \, dt -\int_{c}^{x} f\l(t\r) \, d t  \r| \\
-  &\leq\, 
-   \int_{c}^{x} \l|f_n\l(t\r) -f\l(t\r) \r| \, d t 
-  \leq \int_{c}^{x} \sup_{c\leq t \leq x}\l|f_n\l(t\r) -f\l(t\r) \r|\, d t 
-  \end{aligned}
+ \l|F_n\l(x\r) -F\l(x\r) \r| 
+ &=\, \l|\int_{c}^{x} f_n\l(t\r) \, dt -\int_{c}^{x} f\l(t\r) \, d t \r| \\
+ &\leq\, 
+  \int_{c}^{x} \l|f_n\l(t\r) -f\l(t\r) \r| \, d t 
+ \leq \int_{c}^{x} \sup_{c\leq t \leq x}\l|f_n\l(t\r) -f\l(t\r) \r|\, d t 
+ \end{aligned}
 $$
 
-  より
-  
+ より
+ 
 $$
-  \begin{aligned}
-  0 \leq \sup_{a\leq x\leq b}\l|F_n\l(x\r) -F\l(x\r) \r| \leq 
-  \sup_{a\leq x\leq b}\l(x-c\r) \sup_{c\leq t\leq x}\l|f_n\l(t\r) -f\l(t\r) \r| 
-  \end{aligned}
-$$
-
-  一様収束性より
-  
-$$
-  \begin{aligned}
-   \lim_{n \to \infty}  \sup_{c\leq t\leq x}\l|f_n\l(t\r) -f\l(t\r) \r| =0
-  \end{aligned}
+ \begin{aligned}
+ 0 \leq \sup_{a\leq x\leq b}\l|F_n\l(x\r) -F\l(x\r) \r| \leq 
+ \sup_{a\leq x\leq b}\l(x-c\r) \sup_{c\leq t\leq x}\l|f_n\l(t\r) -f\l(t\r) \r| 
+ \end{aligned}
 $$
 
-  であるからはさみうちの原理より
-  
+ 一様収束性より
+ 
 $$
-  \begin{aligned}
-  \lim_{n \to \infty} \sup_{a\leq x\leq b}\l|F_n\l(x\r) -F\l(x\r) \r| =0
-  \end{aligned}
+ \begin{aligned}
+  \lim_{n \to \infty} \sup_{c\leq t\leq x}\l|f_n\l(t\r) -f\l(t\r) \r| =0
+ \end{aligned}
 $$
 
-  すなわちa
+ であるからはさみうちの原理より
+ 
+$$
+ \begin{aligned}
+ \lim_{n \to \infty} \sup_{a\leq x\leq b}\l|F_n\l(x\r) -F\l(x\r) \r| =0
+ \end{aligned}
+$$
+
+ すなわちa
 
 $$
 \int_{c}^{x} \lim_{n \to \infty}f_n\l(t\r) \, d t
-  =\lim_{n \to \infty}   \int_{c}^{x} f_n\l(t\r) \, d t
+ =\lim_{n \to \infty}  \int_{c}^{x} f_n\l(t\r) \, d t
 $$
 
 であるから一様収束するときは項別積分可能であることが示された。 ◻
@@ -145,13 +143,13 @@ $F_n\l(x\r)$を$\l[a,b\r]$上の連続関数の列で$F\l(x\r)$に収束する�
 
 $$
 \begin{aligned}
-  F\l(x\r) -F\l(c\r) 
-  &=\, \lim_{n \to \infty} \left\{  F_n\l(x\r) -F_n\l(c\r) \right\} =\lim_{n \to \infty} \int_{c}^{x} F_n'\l(t\r) \, d t=\int_{c}^{x} \lim_{n \to \infty} F_n'\l(t\r) \, d t \\
-  &=\, \int_{c}^{x} f\l(t\r) \, d t 
-  \end{aligned}
+ F\l(x\r) -F\l(c\r) 
+ &=\, \lim_{n \to \infty} \left\{ F_n\l(x\r) -F_n\l(c\r) \right\} =\lim_{n \to \infty} \int_{c}^{x} F_n'\l(t\r) \, d t=\int_{c}^{x} \lim_{n \to \infty} F_n'\l(t\r) \, d t \\
+ &=\, \int_{c}^{x} f\l(t\r) \, d t 
+ \end{aligned}
 $$
 
-  の両辺を微分するだけ。 ◻
+ の両辺を微分するだけ。 ◻
 :::
 
 ::: theorem
@@ -162,19 +160,19 @@ $\dis \sum_{n=0}^{\infty} \l|a_n\r|$が収束するならば$\dis \sum_{n=0}^{\i
 
 ::: proof
 *Proof.* $a_{n}^{+}=
-  \begin{dcases}
-  a_n &\l(a_n\geq 0\r) 
-  \\ 0&\l(a_n<0\r) 
-  \end{dcases}$ ， $a_{n}^{-}=
-  \begin{dcases}
-  0 &\l(a_n\geq 0\r) 
-  \\ -a_n&\l(a_n<0\r) 
-  \end{dcases}$ とする。\
+ \begin{dcases}
+ a_n &\l(a_n\geq 0\r) 
+ \\ 0&\l(a_n<0\r) 
+ \end{dcases}$ ， $a_{n}^{-}=
+ \begin{dcases}
+ 0 &\l(a_n\geq 0\r) 
+ \\ -a_n&\l(a_n<0\r) 
+ \end{dcases}$ とする。\
 $a_{n}^{+}，a_{n}^{-}\geq 0$であり$a_n=a_n^+-a_n^-,|a_n|=a_n^++a_n^-$である。$\dis \sum_{n=0}^{\infty} \l|a_n\r| =S$とする。
 
 $$
 S=\sum_{n=0}^{\infty} \l|a_n\r| =\sum_{n=0}^{\infty} a_n^+
-  +\sum_{n=0}^{\infty} a_n^-\geq \sum_{n=0}^{\infty} a_n^+
+ +\sum_{n=0}^{\infty} a_n^-\geq \sum_{n=0}^{\infty} a_n^+
 $$
 
 より$\sum_{}^{} a_n^+$は有界な正項級数であるから収束する。同様に$\sum_{}^{} a_n^-$も収束する。収束値をそれぞれ$S^+,S^-$とおくと
@@ -194,10 +192,10 @@ $$
 
 $$
 \lim_{n \to \infty}\sup_{m>n}\sqrt[m]{\l|a_m\r| } =l\text{が存在するとき} \sum_{n=0}^{\infty} a_n\text{は}
-    \begin{dcases}
-    \text{収束する}&\l(0<l<1\text{のとき}\r) \\ 
-    \text{発散する}&\l(l>1\text{のとき}\r) 
-    \end{dcases}
+ \begin{dcases}
+ \text{収束する}&\l(0<l<1\text{のとき}\r) \\ 
+ \text{発散する}&\l(l>1\text{のとき}\r) 
+ \end{dcases}
 $$
 
 :::
@@ -206,23 +204,23 @@ $$
 *Proof.* 　
 
 (i) $0<l<1$のとき\
-    極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }<t$すなわち$\l|a_n\r| <t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$N>N_0$として
-  
-  
+ 極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }<t$すなわち$\l|a_n\r| <t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$N>N_0$として
+ 
+ 
 $$
-  \begin{aligned}
-        \sum_{n=0}^{N} \l|a_n\r| =
-        \sum_{n=0}^{N_0-1} \l|a_n\r| 
-        +\sum_{n=N_0}^{N} \l|a_n\r| <
-        \sum_{n=0}^{N_0-1} \l|a_n\r| 
-        +\sum_{n=N_0}^{N}t^n<\sum_{n=0}^{N_0-1} \l|a_n\r| +t^{N_0}\drac{1}{1-t}
-        \end{aligned}
+ \begin{aligned}
+ \sum_{n=0}^{N} \l|a_n\r| =
+ \sum_{n=0}^{N_0-1} \l|a_n\r| 
+ +\sum_{n=N_0}^{N} \l|a_n\r| <
+ \sum_{n=0}^{N_0-1} \l|a_n\r| 
+ +\sum_{n=N_0}^{N}t^n<\sum_{n=0}^{N_0-1} \l|a_n\r| +t^{N_0}\drac{1}{1-t}
+ \end{aligned}
 $$
 
-    より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
+ より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
 
 (ii) $l>1$のとき\
-     $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }>t$すなわち$\l|a_n\r| >t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$n \to \infty$で$t^n$は発散するので追い出しの原理より$\l|a_n\r|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
+  $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }>t$すなわち$\l|a_n\r| >t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$n \to \infty$で$t^n$は発散するので追い出しの原理より$\l|a_n\r|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
 
  ◻
 :::
@@ -233,10 +231,10 @@ label="ダランベールの収束判定法"}（ダランベールの収束判�
 
 $$
 \lim_{n \to \infty}\l|\drac{a_{n+1}}{a_n}\r| =l\text{が存在するならば} \sum_{n=0}^{\infty} a_n\text{は}
-  \begin{dcases}
-  \text{収束する}&\l(0<l<1\text{のとき}\r) \\ 
-  \text{発散する}&\l(l>1\text{のとき}\r) 
-  \end{dcases}
+ \begin{dcases}
+ \text{収束する}&\l(0<l<1\text{のとき}\r) \\ 
+ \text{発散する}&\l(l>1\text{のとき}\r) 
+ \end{dcases}
 $$
 
 :::
@@ -245,26 +243,26 @@ $$
 *Proof.* 　
 
 (i) $0<l<1$のとき\
-    極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\l|\drac{a_{n+1}}{a_n}\r| <t$すなわち$\l|a_{n+1}\r| <t\l|a_{n}\r|$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$\l|a_n\r|<t\l|a_{n-1}\r| <\dots<\l|a_{N_0}\r| t^{n-N_0}$
-    である。 $N>N_0$として
-    
+ 極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\l|\drac{a_{n+1}}{a_n}\r| <t$すなわち$\l|a_{n+1}\r| <t\l|a_{n}\r|$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$\l|a_n\r|<t\l|a_{n-1}\r| <\dots<\l|a_{N_0}\r| t^{n-N_0}$
+ である。 $N>N_0$として
+ 
 $$
-    \begin{aligned}
-          \sum_{n=0}^{N} \l|a_n\r| =
-          \sum_{n=0}^{N_0-1} \l|a_n\r| 
-          +\sum_{n=N_0}^{N} \l|a_n\r| 
-          <\sum_{n=0}^{N_0-1} \l|a_n\r| 
-          +\l|a_{N_0}\r| \sum_{n=N_0}^{N}t^{n-N_0}
-          <\sum_{n=0}^{N_0-1} \l|a_n\r| +\drac{|a_{N_0}|}{1-t}
-          \end{aligned}
+ \begin{aligned}
+ \sum_{n=0}^{N} \l|a_n\r| =
+ \sum_{n=0}^{N_0-1} \l|a_n\r| 
+ +\sum_{n=N_0}^{N} \l|a_n\r| 
+ <\sum_{n=0}^{N_0-1} \l|a_n\r| 
+ +\l|a_{N_0}\r| \sum_{n=N_0}^{N}t^{n-N_0}
+ <\sum_{n=0}^{N_0-1} \l|a_n\r| +\drac{|a_{N_0}|}{1-t}
+ \end{aligned}
 $$
 
-    より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
+ より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
 
 (ii) $l>1$のとき\
-     $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\l|\drac{a_{n+1}}{a_n}\r| >t$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。
-     $\l|a_n\r|>t\l|a_{n-1}\r| >\dots>\l|a_{N_0}\r| t^{n-N_0}$である
-     $n \to \infty$で$t^n$は発散するので追い出しの原理より$\l|a_n\r|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
+  $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\l|\drac{a_{n+1}}{a_n}\r| >t$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。
+  $\l|a_n\r|>t\l|a_{n-1}\r| >\dots>\l|a_{N_0}\r| t^{n-N_0}$である
+  $n \to \infty$で$t^n$は発散するので追い出しの原理より$\l|a_n\r|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
 
  ◻
 :::
@@ -279,26 +277,26 @@ $\dis \lim_{n \to \infty}\dis \sup_{m>n}\sqrt[m]{\l|a_m\r| } =l$として$r=\dra
 *Proof.* 　
 
 (i) $\l|x\r| <r$のとき\
-    $x=0$では自明に収束。$0<\l|x\r|<r$とする。$0<l<\drac{1}{\l|x\r| }$である。$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }<\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。このもとで
-  
-  
+ $x=0$では自明に収束。$0<\l|x\r|<r$とする。$0<l<\drac{1}{\l|x\r| }$である。$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }<\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。このもとで
+ 
+ 
 $$
-  \begin{aligned}
-        \sum_{n=0}^{N} \l|a_nx^n\r| 
-        &=\, \sum_{n=0}^{N_0-1} \l|a_nx^n\r| 
-        +\sum_{n=N_0}^{N} (\sqrt[n]{\l|a_n\r|   }\l| x\r|)^n
-        \\
-        &\leq\,  \sum_{n=0}^{N_0-1} \l|a_nx^n\r| +\sum_{n=N_0}^{N} 
-        \l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)
-        ^n
-        \end{aligned}
+ \begin{aligned}
+ \sum_{n=0}^{N} \l|a_nx^n\r| 
+ &=\, \sum_{n=0}^{N_0-1} \l|a_nx^n\r| 
+ +\sum_{n=N_0}^{N} (\sqrt[n]{\l|a_n\r|  }\l| x\r|)^n
+ \\
+ &\leq\, \sum_{n=0}^{N_0-1} \l|a_nx^n\r| +\sum_{n=N_0}^{N} 
+ \l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)
+ ^n
+ \end{aligned}
 $$
 
-    であり$\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
+ であり$\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
 
 (ii) $\l|x\r| >r$のとき\
-     $0<\drac{1}{\l|x\r| }<l$である。任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して$n>N_0$かつ$\sqrt[n]{\l|a_n\r| }>\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$となる$n$が存在する。すなわち$\l|a_nx^n\r| =(\sqrt[n]{\l|a_n\r|   }\l| x\r|)^n=\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)
-         ^n>1$になるような$n>N_0$が任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して存在するので数列$\left\{ a_nx^n \right\}$は$0$に収束しない。したがって級数も発散する。
+  $0<\drac{1}{\l|x\r| }<l$である。任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して$n>N_0$かつ$\sqrt[n]{\l|a_n\r| }>\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$となる$n$が存在する。すなわち$\l|a_nx^n\r| =(\sqrt[n]{\l|a_n\r|  }\l| x\r|)^n=\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)
+  ^n>1$になるような$n>N_0$が任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して存在するので数列$\left\{ a_nx^n \right\}$は$0$に収束しない。したがって級数も発散する。
 
  ◻
 :::
@@ -313,28 +311,28 @@ $\sum a_nx^n$の収束半径$r$は存在するならば$r=\dis \lim_{n \to \inft
 *Proof.* 　
 
 (i) $0 \leq x< r$のとき\
-    $n\geq \exists N_0 \Rightarrow \l|\drac{a_n}{a_{n+1}}\r| >\drac{\l|x\r| +r}{2} \Leftrightarrow \l|a_{n+1}\r| <\left( 1\bigg/\drac{\l|x\r| +r}{2}  \right)\l|a_n\r|$よりこれを繰り返し用いて$\l|a_n\r| <\left( 1\bigg/\drac{\l|x\r| +r}{2}  \right)^{n-N_0}\l|a_{N_0}\r|$が得られる。
-  
-  
+ $n\geq \exists N_0 \Rightarrow \l|\drac{a_n}{a_{n+1}}\r| >\drac{\l|x\r| +r}{2} \Leftrightarrow \l|a_{n+1}\r| <\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)\l|a_n\r|$よりこれを繰り返し用いて$\l|a_n\r| <\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r|$が得られる。
+ 
+ 
 $$
-  \begin{aligned}
-        \sum_{n=0}^{N} \l|a_nx^n\r| <\sum_{n=0}^{N_0-1} \l|a_nx^n\r|+\sum_{n=N_0}^{N} \left( |x|\bigg/\drac{\l|x\r| +r}{2}  \right)^{n-N_0}\l|a_{N_0}\r|
-        \end{aligned}
+ \begin{aligned}
+ \sum_{n=0}^{N} \l|a_nx^n\r| <\sum_{n=0}^{N_0-1} \l|a_nx^n\r|+\sum_{n=N_0}^{N} \left( |x|\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r|
+ \end{aligned}
 $$
 
-    であり$\left( |x|\bigg/\drac{\l|x\r| +r}{2}  \right)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
+ であり$\left( |x|\bigg/\drac{\l|x\r| +r}{2} \right)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
 
 (ii) $|x|>r$のとき\
-     $n\geq \exists N_0 \Rightarrow \l|\drac{a_n}{a_{n+1}}\r| <\drac{\l|x\r| +r}{2} \Leftrightarrow \l|a_{n+1}\r| >\left( 1\bigg/\drac{\l|x\r| +r}{2}  \right)\l|a_n\r|$よりこれを繰り返し用いて$\l|a_n\r| >\left( 1\bigg/\drac{\l|x\r| +r}{2}  \right)^{n-N_0}\l|a_{N_0}\r|$が得られる。よって
-    
-    
+  $n\geq \exists N_0 \Rightarrow \l|\drac{a_n}{a_{n+1}}\r| <\drac{\l|x\r| +r}{2} \Leftrightarrow \l|a_{n+1}\r| >\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)\l|a_n\r|$よりこれを繰り返し用いて$\l|a_n\r| >\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r|$が得られる。よって
+ 
+ 
 $$
-    \begin{aligned}
-         \l|a_nx^n\r| >\left( |x|\bigg/\drac{\l|x\r| +r}{2}  \right)^{n-N_0}\l|a_{N_0}\r| 
-         \end{aligned}
+ \begin{aligned}
+  \l|a_nx^n\r| >\left( |x|\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r| 
+  \end{aligned}
 $$
 
-     であり$|x|\bigg/\drac{\l|x\r| +r}{2}>1$より左辺は発散する。追い出しの原理より$a_nx^n$が$0$に収束することはないので発散する。
+  であり$|x|\bigg/\drac{\l|x\r| +r}{2}>1$より左辺は発散する。追い出しの原理より$a_nx^n$が$0$に収束することはないので発散する。
 
  ◻
 :::
@@ -353,33 +351,33 @@ $e:=\dis \lim_{n \to \infty}\l(1+\drac{1}{n}\r) ^n$が存在することを示�
 
 $$
 \begin{aligned}
-  a_n 
-  &=\, \sum_{k=0}^{n} \binom{n}{k}\drac{1}{n^k}
-  =\sum_{k=0}^{n} \drac{n\l(n-1\r)\l(n-2\r)  \dots\l(n-k+1\r) }{k!n^k} \\
-  &=\, \sum_{k=0}^{n} \drac{1}{k!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r) \dots\l(1-\drac{k-1}{n}\r) \\
-  &=\, 2+\drac{1}{2!}\l(1-\drac{1}{n}\r) +\drac{1}{3!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r) +\dots+\drac{1}{n!}\l(1-\drac{1}{n}\r) \dots\l(1-\drac{n-1}{n}\r) 
-  \\
-  a_{n+1}
-  &=\, \sum_{k=0}^{n+1} \drac{1}{k!}\l(1-\drac{1}{n+1}\r) \l(1-\drac{2}{n+1}\r) \dots\l(1-\drac{k-1}{n+1}\r) \\
-  &>\,  \sum_{k=0}^{n}\drac{1}{k!} \l(1-\drac{1}{n+1}\r) \l(1-\drac{2}{n+1}\r) \dots\l(1-\drac{k-1}{n+1}\r) 
-  \\
-  &>\,\sum_{k=0}^{n} \drac{1}{k!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r) \dots\l(1-\drac{k-1}{n}\r)=a_n
-  \end{aligned}
+ a_n 
+ &=\, \sum_{k=0}^{n} \binom{n}{k}\drac{1}{n^k}
+ =\sum_{k=0}^{n} \drac{n\l(n-1\r)\l(n-2\r) \dots\l(n-k+1\r) }{k!n^k} \\
+ &=\, \sum_{k=0}^{n} \drac{1}{k!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r) \dots\l(1-\drac{k-1}{n}\r) \\
+ &=\, 2+\drac{1}{2!}\l(1-\drac{1}{n}\r) +\drac{1}{3!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r) +\dots+\drac{1}{n!}\l(1-\drac{1}{n}\r) \dots\l(1-\drac{n-1}{n}\r) 
+ \\
+ a_{n+1}
+ &=\, \sum_{k=0}^{n+1} \drac{1}{k!}\l(1-\drac{1}{n+1}\r) \l(1-\drac{2}{n+1}\r) \dots\l(1-\drac{k-1}{n+1}\r) \\
+ &>\, \sum_{k=0}^{n}\drac{1}{k!} \l(1-\drac{1}{n+1}\r) \l(1-\drac{2}{n+1}\r) \dots\l(1-\drac{k-1}{n+1}\r) 
+ \\
+ &>\,\sum_{k=0}^{n} \drac{1}{k!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r) \dots\l(1-\drac{k-1}{n}\r)=a_n
+ \end{aligned}
 $$
 
-  であるから$\left\{ a_n \right\}$は単調増加。\
+ であるから$\left\{ a_n \right\}$は単調増加。\
 有界性\
 
 $$
 \begin{aligned}
-  \forall n\  a_n 
-  &=\, 
-  \sum_{k=0}^{n} \drac{1}{k!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r) \dots\l(1-\drac{k-1}{n}\r) 
-  <\sum_{k=0}^{n} \drac{1}{k!}\\
-  &=\, 
-  1+\drac{1}{1}+\drac{1}{2}+\drac{1}{2\cdot 3}+\drac{1}{2\cdot 3\cdot 4}+\dots \\
-  &<\, 1+\drac{1}{1}+\drac{1}{2}+\drac{1}{2\cdot 2}+\drac{1}{2\cdot 2\cdot 2}+\dots=3
-  \end{aligned}
+ \forall n\ a_n 
+ &=\, 
+ \sum_{k=0}^{n} \drac{1}{k!}\l(1-\drac{1}{n}\r) \l(1-\drac{2}{n}\r) \dots\l(1-\drac{k-1}{n}\r) 
+ <\sum_{k=0}^{n} \drac{1}{k!}\\
+ &=\, 
+ 1+\drac{1}{1}+\drac{1}{2}+\drac{1}{2\cdot 3}+\drac{1}{2\cdot 3\cdot 4}+\dots \\
+ &<\, 1+\drac{1}{1}+\drac{1}{2}+\drac{1}{2\cdot 2}+\drac{1}{2\cdot 2\cdot 2}+\dots=3
+ \end{aligned}
 $$
 
 以上より$\left\{ a_n \right\}$は有界な単調増加数列であるから収束する。 ◻
@@ -391,7 +389,7 @@ $k\geq 1$のとき
 
 $$
 \begin{aligned}
-\drac{d}{dt}\left\{ \drac{\l(x-t\r) ^k}{k!}f^{\l(k\r) }\l(t\r)  \right\}=
+\drac{d}{dt}\left\{ \drac{\l(x-t\r) ^k}{k!}f^{\l(k\r) }\l(t\r) \right\}=
 -\drac{\l(x-t\r) ^{k-1}}{\l(k-1\r) !}f^{\l(k\r) }\l(t\r) 
 +\drac{\l(x-t\r) ^{k}}{k !}f^{\l(k+1\r)}\l(t\r) \end{aligned}
 $$
@@ -400,8 +398,8 @@ $$
 
 $$
 \begin{aligned}
-\drac{d}{dt}\left[ f\l(t\r) +\sum_{k=1}^{n-1} \left\{ \drac{\l(x-t\r) ^k}{k!}f^{\l(k\r) }\l(t\r)  \right\} \right]
-=\drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r)  !}f^{\l(n\r)}\l(t\r)\end{aligned}
+\drac{d}{dt}\left[ f\l(t\r) +\sum_{k=1}^{n-1} \left\{ \drac{\l(x-t\r) ^k}{k!}f^{\l(k\r) }\l(t\r) \right\} \right]
+=\drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r) !}f^{\l(n\r)}\l(t\r)\end{aligned}
 $$
 
 両辺$\l[a,x\r]$において積分すると
@@ -409,15 +407,15 @@ $$
 $$
 \begin{aligned}
 f\l(x\r) -f\l(a\r) -
-\sum_{k=1}^{n-1} \left\{ \drac{\l(x-a\r) ^k}{k!}f^{\l(k\r) }\l(a\r)  \right\} 
-=\int_{a}^{x} \drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r)  !}f^{\l(n\r)}\l(t\r)\, dt \end{aligned}
+\sum_{k=1}^{n-1} \left\{ \drac{\l(x-a\r) ^k}{k!}f^{\l(k\r) }\l(a\r) \right\} 
+=\int_{a}^{x} \drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r) !}f^{\l(n\r)}\l(t\r)\, dt \end{aligned}
 $$
 
 よって
 
 $$
 \begin{aligned}
-f\l(x\r) =\sum_{k=0}^{n-1} \left\{ \drac{\l(x-a\r) ^k}{k!}f^{\l(k\r) }\l(a\r)  \right\} +R_n\l(x\r) \end{aligned}
+f\l(x\r) =\sum_{k=0}^{n-1} \left\{ \drac{\l(x-a\r) ^k}{k!}f^{\l(k\r) }\l(a\r) \right\} +R_n\l(x\r) \end{aligned}
 $$
 
 と書ける。
@@ -428,23 +426,23 @@ $$
 
 $$
 \begin{aligned}
-R_n\l(x\r) =\int_{a}^{x} \drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r)  !}f^{\l(n\r)}\l(t\r)\, dt =\int_{a}^{x} \drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r)  !}f^{\l(n\r)}\l(c\r)\, dt 
-=\drac{\l(x-a\r) ^n}{n!}f^{\l(n\r) }\l(c\r)   \end{aligned}
+R_n\l(x\r) =\int_{a}^{x} \drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r) !}f^{\l(n\r)}\l(t\r)\, dt =\int_{a}^{x} \drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r) !}f^{\l(n\r)}\l(c\r)\, dt 
+=\drac{\l(x-a\r) ^n}{n!}f^{\l(n\r) }\l(c\r)  \end{aligned}
 $$
 
 となる$c$が存在する。最右辺はラグランジュの剰余項である。より一般に$\l(x-t\r) ^{n-p}f^{\l(n\r) }\l(t\r)$に平均値の定理を使うと
 
 $$
 \begin{aligned}
-R_n\l(x\r) =\int_{a}^{x} \drac{\l(x-c\r) ^{n-p }\l(x-t\r) ^{p-1}}{\l(n-1\r)  !}f^{\l(n\r)}\l(c\r)\, dt 
-=\drac{\l(x-a\r) ^p}{p\l(n-1\r) !}\l(x-c\r) ^{n-p}f^{\l(n\r)  }\l(c\r)\end{aligned}
+R_n\l(x\r) =\int_{a}^{x} \drac{\l(x-c\r) ^{n-p }\l(x-t\r) ^{p-1}}{\l(n-1\r) !}f^{\l(n\r)}\l(c\r)\, dt 
+=\drac{\l(x-a\r) ^p}{p\l(n-1\r) !}\l(x-c\r) ^{n-p}f^{\l(n\r) }\l(c\r)\end{aligned}
 $$
 
 $c=a+\theta \l(x-a\r)$とおくと$0\leq \theta \leq 1$であって
 
 $$
 \begin{aligned}
-R_n\l(x\r) =\drac{\l(x-a\r) ^n}{p\l(n-1\r) !}\l(1-\theta \r) ^{n-p}f^{\l(n\r)  }\l(c\r)\end{aligned}
+R_n\l(x\r) =\drac{\l(x-a\r) ^n}{p\l(n-1\r) !}\l(1-\theta \r) ^{n-p}f^{\l(n\r) }\l(c\r)\end{aligned}
 $$
 
 である。コーシーの剰余項である。
@@ -458,7 +456,7 @@ $f:\mathbb{R}\to \mathbb{R}$として$f$は閉区間$[a,b]$上連続とする。
 
 ::: proof
 *Proof.*
-$f\l(a\r) \leq f\l(b\r)$としても一般性を失わない。$c=\dis \sup_{a\leq x\leq b}\l\{ x \:\middle|\: f\l(x\r) \leq k  \r\}$とする。$f\l(c\r) \neq  k$になると仮定して矛盾を示す。
+$f\l(a\r) \leq f\l(b\r)$としても一般性を失わない。$c=\dis \sup_{a\leq x\leq b}\l\{ x \:\middle|\: f\l(x\r) \leq k \r\}$とする。$f\l(c\r) \neq k$になると仮定して矛盾を示す。
 $f\l(c\r) >k$としても$f\l(c\r) <k$としても($f\l(c\r) >k$のときは$\sup_{}$の性質より)$\dis \lim_{n \to \infty}x_n=c$かつ$f\l(x_n\r) \leq k$となる数列$\left\{ x_n \right\}$が存在する。連続性より$f\l(x_n\r) \to f\l(c\r) \leq k$となる。一方$b$から$c$に近づく数列$\left\{ y_n \right\}$を考えると$f\l(y_n\r) >k$であり連続性より$f\l(y_n\r) \to f\l(c\r) \geq k$となる。
 以上より$f\l(c\r) =k$となるがこれは仮定に矛盾する。背理法より示された。 ◻
 :::
@@ -468,15 +466,15 @@ $f\l(c\r) >k$としても$f\l(c\r) <k$としても($f\l(c\r) >k$のときは$\su
 ::: theorem
 []{#陰関数定理 label="陰関数定理"}（陰関数定理）
 $X=\left(x_1,\dots x_k\right)$，$Y=\left(y_1,\dots y_m\right)$とする$\l(k,m\in \mathbb{Z}_{\geq 1}\r)$。$\l(A,B\r) \in \l(X,
-  Y\r)$において$m$個の関数$f_{1}\l(X,Y\r),\dots ,f_{m}\l(X,Y\r)$が
+ Y\r)$において$m$個の関数$f_{1}\l(X,Y\r),\dots ,f_{m}\l(X,Y\r)$が
 
 (i) $f_1=\dots=f_{m}=0$
 
 (ii) $\l|\drac{\del f}{\del y}\r|=\vmat{
-           \delu{f_1}{y_1}& \dots &  \delu{f_1}{y_m}\\
-           \vdots&  \ddots & \vdots\\
-           \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m} 
-         }\neq 0$
+  \delu{f_1}{y_1}& \dots & \delu{f_1}{y_m}\\
+  \vdots& \ddots & \vdots\\
+  \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m} 
+  }\neq 0$
 
 を満たすならばある$\varepsilon >0$が存在して$\l|X-A\r| <\varepsilon$上で$\varphi _1\l(X\r) ,\dots ,\varphi _m\l(X\r)$が存在して以下を満たす。
 
@@ -514,7 +512,7 @@ $$
 
 ##### $\varphi$の連続性 {#varphiの連続性 .unnumbered}
 
-$\left[b-\delta  ,b+\delta \right]=I$とする。$\varphi \l(X_0+H\r)$が$H\to O$で$\varphi \l(X_0\r)$に収束しないと仮定すると
+$\left[b-\delta ,b+\delta \right]=I$とする。$\varphi \l(X_0+H\r)$が$H\to O$で$\varphi \l(X_0\r)$に収束しないと仮定すると
 任意の$n$に対して$\l|X_0+H_n-A\r| <\varepsilon$かつ
 
 $$
@@ -522,7 +520,7 @@ $$
 $$
 
 を満たす，$O$に収束するベクトル列$H_n\in \mathbb{R}^k$と$\varepsilon '>0$が存在する。
-任意の$n$に対し$\varphi \l(X_0+H_n\r) \in I$が成り立つので$\left\{ \varphi \l(X_0+H_n\r)  \right\}$の部分列$\left\{ \varphi \l(X_0+H_{n_l}\r)  \right\}$で$I$内のある値$\alpha$に収束するものが存在する。
+任意の$n$に対し$\varphi \l(X_0+H_n\r) \in I$が成り立つので$\left\{ \varphi \l(X_0+H_n\r) \right\}$の部分列$\left\{ \varphi \l(X_0+H_{n_l}\r) \right\}$で$I$内のある値$\alpha$に収束するものが存在する。
 任意の$l$に対し$\l|\varphi \l(X_0+H_{n_l}\r) -\varphi \l(X_0\r) \r| \geq \varepsilon '$であることより$\alpha \neq \varphi \l(X_0\r)$であるが
 $f$の連続性から
 
@@ -540,10 +538,10 @@ $x_1$で偏微分可能なことを示す。$\l(x_2,\dots,x_k \r) =X'$とおく�
 $$
 \begin{aligned}
 &f\l(x_1+h_1,X',\varphi \l(x_1+h_1,X'\r) \r) \\ 
-&=\,  f\l(x_1,X',\varphi (x_1,X')\r) 
+&=\, f\l(x_1,X',\varphi (x_1,X')\r) 
 +f_{x_1}\l(x_1+\theta h_1,X',\varphi(x_1,X')+\theta k_1\r)h_1 \\
 &\qq 
-+f_{y  }\l(x_1+\theta h_1,X',\varphi(x_1,X')+\theta k_1\r)k_1 \end{aligned}
++f_{y }\l(x_1+\theta h_1,X',\varphi(x_1,X')+\theta k_1\r)k_1 \end{aligned}
 $$
 
 である。
@@ -551,7 +549,7 @@ $f\l(x_1+h_1,X',\varphi \l(x_1+h_1,X'\r) \r) = f\l(x_1,X',\varphi (x_1,X')\r) =0
 
 $$
 \begin{aligned}
-\drac{\varphi \l(x_1+h_1,X'\r) -\varphi \l(x_1,X'\r) }{h_1}=\drac{k_1}{h_1}=-\drac{f_{x_1}\l(x_1+\theta h_1,X',\varphi(x_1,X')+\theta k_1\r)}{f_{y  }\l(x_1+\theta h_1,X',\varphi(x_1,X')+\theta k_1\r)}\end{aligned}
+\drac{\varphi \l(x_1+h_1,X'\r) -\varphi \l(x_1,X'\r) }{h_1}=\drac{k_1}{h_1}=-\drac{f_{x_1}\l(x_1+\theta h_1,X',\varphi(x_1,X')+\theta k_1\r)}{f_{y }\l(x_1+\theta h_1,X',\varphi(x_1,X')+\theta k_1\r)}\end{aligned}
 $$
 
 $\varphi$の連続性より$h_1\to 0$で$k_1\to 0$。よって$f_{x_1},f_{y}$の連続性より
@@ -559,14 +557,14 @@ $\varphi$の連続性より$h_1\to 0$で$k_1\to 0$。よって$f_{x_1},f_{y}$の
 $$
 \begin{aligned}
 \lim_{h_1 \to 0}\drac{\varphi \l(x_1+h_1,X'\r) -\varphi \l(x_1,X'\r) }{h_1}
-=-\drac{f_{x_1}\l(x_1,X',\varphi(x_1,X')\r)}{f_{y  }\l(x_1,X',\varphi(x_1,X')\r)}\end{aligned}
+=-\drac{f_{x_1}\l(x_1,X',\varphi(x_1,X')\r)}{f_{y }\l(x_1,X',\varphi(x_1,X')\r)}\end{aligned}
 $$
 
 $x_2,\dots,x_k$も同様に考えて$i=1,2,\dots,k$において
 
 $$
 \begin{aligned}
-\delu{\varphi }{x_i}=-\drac{f_{x_i}\l(X,\varphi(X)\r)}{f_{y  }\l(X,\varphi(X)\r)}\end{aligned}
+\delu{\varphi }{x_i}=-\drac{f_{x_i}\l(X,\varphi(X)\r)}{f_{y }\l(X,\varphi(X)\r)}\end{aligned}
 $$
 
 となるので$\varphi$は微分可能であることが示された。
@@ -576,21 +574,21 @@ $$
 $\forall k\ P\l(k,1\r)$が真であることをもとにして$P\l(k+1,m\r)$から$P\l(k,m+1\r)$を示すことで帰納法を完成させる。
 $P\l(k+1,m\r)$が真であると仮定する。$P\l(k,m+1\r)$の仮定は
 
-(i) $f_{j}(A,b_{1},\dots,b_{m},b_{m+1})=0  \quad(j=1,\dots,m,m+1)$
+(i) $f_{j}(A,b_{1},\dots,b_{m},b_{m+1})=0 \quad(j=1,\dots,m,m+1)$
 
 (ii) $(A,b_{1},\dots,b_{m},b_{m+1})$において
 
 $$
 \begin{aligned}
-         \left|\drac{\partial f}{\partial y}\right|=\begin{vmatrix}
-           \drac{\partial f_{1} }{\partial y_{1}} & \dots &\drac{\partial f_{1} }{\partial y_{m}}
-           &\drac{\partial f_{1} }{\partial y_{m+1}}\\
-           \vdots &\ddots &\vdots &\vdots\\
-           \drac{\partial f_{m} }{\partial y_{1}}&\dots & \drac{\partial f_{m} }{\partial y_{m}}&\vdots \\
-           \drac{\partial f_{m+1} }{\partial y_{1}}&\dots &\dots&\drac{\partial f_{m+1} }{\partial y_{m+1}} 
-           \end{vmatrix}
-           \neq 0
-       \end{aligned}
+  \left|\drac{\partial f}{\partial y}\right|=\begin{vmatrix}
+  \drac{\partial f_{1} }{\partial y_{1}} & \dots &\drac{\partial f_{1} }{\partial y_{m}}
+  &\drac{\partial f_{1} }{\partial y_{m+1}}\\
+  \vdots &\ddots &\vdots &\vdots\\
+  \drac{\partial f_{m} }{\partial y_{1}}&\dots & \drac{\partial f_{m} }{\partial y_{m}}&\vdots \\
+  \drac{\partial f_{m+1} }{\partial y_{1}}&\dots &\dots&\drac{\partial f_{m+1} }{\partial y_{m+1}} 
+  \end{vmatrix}
+  \neq 0
+  \end{aligned}
 $$
 
 
@@ -598,19 +596,19 @@ $$
 
 $$
 \drac{\partial f_{m+1} }{\partial y_{m+1}} 
-  \begin{vmatrix}
-  \delu{f_1}{y_1}& \dots  &  \delu{f_1}{y_m}\\ 
-  \vdots         & \ddots &     \vdots      \\       
-  \delu{f_m}{y_1}& \dots  &  \delu{f_m}{y_m}
-    \end{vmatrix}
-    \neq 0
-  \text{　　特に　　}
-    \begin{vmatrix}
-    \drac{\partial f_{1} }{\partial y_{1}} &  \dots  & \drac{\partial f_{1}}{\partial y_{m}}  \\
-    \vdots                                 &  \ddots &\vdots                                  \\
-    \drac{\partial f_{m} }{\partial y_{1}} &  \dots  & \drac{\partial f_{m}}{\partial y_{m}}
-    \end{vmatrix}
-    \neq 0
+ \begin{vmatrix}
+ \delu{f_1}{y_1}& \dots & \delu{f_1}{y_m}\\ 
+ \vdots  & \ddots &  \vdots \\  
+ \delu{f_m}{y_1}& \dots & \delu{f_m}{y_m}
+ \end{vmatrix}
+ \neq 0
+ \text{　　特に　　}
+ \begin{vmatrix}
+ \drac{\partial f_{1} }{\partial y_{1}} & \dots & \drac{\partial f_{1}}{\partial y_{m}} \\
+ \vdots  & \ddots &\vdots \\
+ \drac{\partial f_{m} }{\partial y_{1}} & \dots & \drac{\partial f_{m}}{\partial y_{m}}
+ \end{vmatrix}
+ \neq 0
 $$
 
 よって$f_{j}(X,y_{1},\dots,y_{m},y_{m+1}) \,(j=1,\dots,m)$は$P(k+1,m)$の仮定を満たすから，ある$\varepsilon_{1}>0$に対し
@@ -635,45 +633,45 @@ $\drac{\partial F_{m+1} }{\partial y_{m+1}}\neq 0$ が成り立つ。
 
 $$
 \begin{split}
-    &\drac{\partial F_{1} }{\partial y_{m+1}}=
-    \drac{\partial f_{1} }{\partial y_{1}}\drac{\partial \varphi'_{1} }{\partial y_{m+1}}
-    +\dots
-    +\drac{\partial f_{1} }{\partial y_{m}}\drac{\partial \varphi'_{m} }{\partial y_{m+1}}
-    +\drac{\partial f_{1} }{\partial y_{m+1}}=0\\
-    &\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\vdots\\
-    &\drac{\partial F_{m} }{\partial y_{m+1}}=
-    \drac{\partial f_{m} }{\partial y_{1}}\drac{\partial \varphi'_{1} }{\partial y_{m+1}}
-    +\dots
-    +\drac{\partial f_{m} }{\partial y_{m}}\drac    {\partial \varphi'_{m} }{\partial y_{m+1}}
-    +\drac{\partial f_{m} }{\partial y_{m+1}}=0
-    \end{split}
+ &\drac{\partial F_{1} }{\partial y_{m+1}}=
+ \drac{\partial f_{1} }{\partial y_{1}}\drac{\partial \varphi'_{1} }{\partial y_{m+1}}
+ +\dots
+ +\drac{\partial f_{1} }{\partial y_{m}}\drac{\partial \varphi'_{m} }{\partial y_{m+1}}
+ +\drac{\partial f_{1} }{\partial y_{m+1}}=0\\
+ &\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\vdots\\
+ &\drac{\partial F_{m} }{\partial y_{m+1}}=
+ \drac{\partial f_{m} }{\partial y_{1}}\drac{\partial \varphi'_{1} }{\partial y_{m+1}}
+ +\dots
+ +\drac{\partial f_{m} }{\partial y_{m}}\drac {\partial \varphi'_{m} }{\partial y_{m+1}}
+ +\drac{\partial f_{m} }{\partial y_{m+1}}=0
+ \end{split}
 $$
 
-    このもとで
+ このもとで
 
 $$
 \drac{\partial F_{m+1} }{\partial y_{m+1}}=
-     \drac{\partial f_{m+1} }{\partial y_{1}}\drac{\partial \varphi'_{1} }{\partial y_{m+1}}
-    +\dots
-    +\drac{\partial f_{m+1} }{\partial y_{m}}\drac{\partial \varphi'_{m} }{\partial y_{m+1}}
-    +\drac{\partial f_{m+1} }{\partial y_{m+1}}=0
+  \drac{\partial f_{m+1} }{\partial y_{1}}\drac{\partial \varphi'_{1} }{\partial y_{m+1}}
+ +\dots
+ +\drac{\partial f_{m+1} }{\partial y_{m}}\drac{\partial \varphi'_{m} }{\partial y_{m+1}}
+ +\drac{\partial f_{m+1} }{\partial y_{m+1}}=0
 $$
 
-    を仮定すると
+ を仮定すると
 
 $$
 \begin{pmatrix}
-         \drac{\partial f_{1} }{\partial y_{1}} & \dots &\drac{\partial f_{1} }{\partial y_{m}}&\drac{\partial f_{1} }{\partial y_{m+1}}\\
-        \vdots                                  &\ddots &\vdots                                 &\vdots                                  \\
-        \drac{\partial f_{m} }{\partial y_{1}}  &\dots  &\drac{\partial f_{m} }{\partial y_{m}}&\vdots                                  \\
-        \drac{\partial f_{m+1} }{\partial y_{1}}&\dots  &\dots                                 &\drac{\partial f_{m+1} }{\partial y_{m+1}} 
-        \end{pmatrix}
-        \begin{pmatrix}
-        \drac{\partial \varphi'_{1} }{\partial y_{m+1}}\\
-        \vdots\\
-        \drac{\partial \varphi'_{m} }{\partial y_{m+1}}\\
-        \displaystyle{1}
-        \end{pmatrix}=\bm{0}
+  \drac{\partial f_{1} }{\partial y_{1}} & \dots &\drac{\partial f_{1} }{\partial y_{m}}&\drac{\partial f_{1} }{\partial y_{m+1}}\\
+ \vdots &\ddots &\vdots  &\vdots \\
+ \drac{\partial f_{m} }{\partial y_{1}} &\dots &\drac{\partial f_{m} }{\partial y_{m}}&\vdots \\
+ \drac{\partial f_{m+1} }{\partial y_{1}}&\dots &\dots  &\drac{\partial f_{m+1} }{\partial y_{m+1}} 
+ \end{pmatrix}
+ \begin{pmatrix}
+ \drac{\partial \varphi'_{1} }{\partial y_{m+1}}\\
+ \vdots\\
+ \drac{\partial \varphi'_{m} }{\partial y_{m+1}}\\
+ \displaystyle{1}
+ \end{pmatrix}=\bm{0}
 $$
 
 であるが，これは$\left|\delu{f}{y}\right|\neq 0$に反し矛盾する。 ◻
@@ -737,7 +735,7 @@ $$
 \pmat{ \delu{\varphi _1}{x_1}\\ \vdots \\\delu{\varphi _m}{x_1}}
 =
 - \pmat{
-  \delu{f_1}{x_1}\\ \vdots\\ \delu{f_m}{x_1}
+ \delu{f_1}{x_1}\\ \vdots\\ \delu{f_m}{x_1}
 } \end{aligned}
 $$
 
@@ -746,9 +744,9 @@ $i=2,\dots,k$で同じことを行うと
 $$
 \begin{aligned}
 \pmat{
-  \delu{f_1}{y_1}& \dots& \delu{f_1}{y_m}\\
-  \vdots& \ddots& \vdots\\
-  \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m}
+ \delu{f_1}{y_1}& \dots& \delu{f_1}{y_m}\\
+ \vdots& \ddots& \vdots\\
+ \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m}
 }
 \pmat{
 \delu{\varphi _1}{x_1}& \dots& \delu{\varphi _1}{x_k}\\
@@ -758,9 +756,9 @@ $$
 =
 -
 \pmat{
-  \delu{f_1}{x_1}& \dots& \delu{f_1}{x_k}\\
-  \vdots& \ddots & \vdots\\
-  \delu{f_m}{x_1}& \dots& \delu{f_m}{x_k}
+ \delu{f_1}{x_1}& \dots& \delu{f_1}{x_k}\\
+ \vdots& \ddots & \vdots\\
+ \delu{f_m}{x_1}& \dots& \delu{f_m}{x_k}
 }\end{aligned}
 $$
 
@@ -781,26 +779,26 @@ $$
 
 $$
 \begin{aligned}
-  \pmat{
-  \delu{\varphi _1}{x_1}& \dots& \delu{\varphi _1}{x_k}\\
-  \vdots& \ddots& \vdots\\
-  \delu{\varphi _m}{x_1}& \dots& \delu{\varphi _m}{x_k} 
-  }
-  =
-  -\pmat{
-    \delu{f_1}{y_1}& \dots& \delu{f_1}{y_m}\\
-    \vdots& \ddots& \vdots\\
-    \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m}
-  }^{\raisebox{3zw}[1zw][0zw]{\(-1\)}}
-  \pmat{
-    \delu{f_1}{x_1}& \dots& \delu{f_1}{x_k}\\
-    \vdots& \ddots& \vdots\\
-    \delu{f_m}{x_1}& \dots& \delu{f_m}{x_k}
-  }
-  \end{aligned}
+ \pmat{
+ \delu{\varphi _1}{x_1}& \dots& \delu{\varphi _1}{x_k}\\
+ \vdots& \ddots& \vdots\\
+ \delu{\varphi _m}{x_1}& \dots& \delu{\varphi _m}{x_k} 
+ }
+ =
+ -\pmat{
+ \delu{f_1}{y_1}& \dots& \delu{f_1}{y_m}\\
+ \vdots& \ddots& \vdots\\
+ \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m}
+ }^{\raisebox{3zw}[1zw][0zw]{\(-1\)}}
+ \pmat{
+ \delu{f_1}{x_1}& \dots& \delu{f_1}{x_k}\\
+ \vdots& \ddots& \vdots\\
+ \delu{f_m}{x_1}& \dots& \delu{f_m}{x_k}
+ }
+ \end{aligned}
 $$
 
-  帰納法の概略は下図のようである。\
+ 帰納法の概略は下図のようである。\
 
 #### 陰関数定理の別証
 
@@ -830,12 +828,12 @@ $$
 
 $$
 \begin{aligned}
-    \l|T\l(X,Y\r) -B\r|& \leq \l|T\l(X,Y\r) -T\l(X,B\r) \r| +\l|T\l(X,B\r) -B\r| \\ 
-    & \leq \drac{1}{2}\l|Y-B\r| +\drac{\rho}{3}\\ 
-    &\leq \drac{1}{2}\rho+\drac{\rho}{3}<\rho
-  \end{aligned}
+ \l|T\l(X,Y\r) -B\r|& \leq \l|T\l(X,Y\r) -T\l(X,B\r) \r| +\l|T\l(X,B\r) -B\r| \\ 
+ & \leq \drac{1}{2}\l|Y-B\r| +\drac{\rho}{3}\\ 
+ &\leq \drac{1}{2}\rho+\drac{\rho}{3}<\rho
+ \end{aligned}
 $$
-   ◻
+  ◻
 :::
 
 ::: theorem
@@ -844,8 +842,8 @@ $$
 
 $$
 \begin{aligned}
-  T\l(X\r) -T\l(Y\r) \leq k\l|X-Y\r| 
-  \end{aligned}
+ T\l(X\r) -T\l(Y\r) \leq k\l|X-Y\r| 
+ \end{aligned}
 $$
 
 を満たすとする。このとき写像$T$は不動点をただ一つもつ。
@@ -855,7 +853,7 @@ $X\in R\l(A,\delta _\rho\r)$を固定して写像$S$を
 
 $$
 \begin{aligned}
-S\colon R\l(B,\rho\r)\to R\l(B,\rho\r),Y\mapsto T\l(X,Y\r)  \end{aligned}
+S\colon R\l(B,\rho\r)\to R\l(B,\rho\r),Y\mapsto T\l(X,Y\r) \end{aligned}
 $$
 
 によって定める（により$T$も$R\l(B,\rho\r)$に属する）と，定理[\[（バナッハの不動点定理）\]](#（バナッハの不動点定理）){reference-type="ref"
@@ -878,38 +876,38 @@ $g_j(X,Y)=0 \,(j=1,\dots,m)$のもとで，$f(X,Y)$は$(X,Y)=(A,B)$において�
 
 $$
 \left|\drac{\partial g}{\partial y}\right|=
-        \vmat{
-        \drac{\partial g_1}{\partial y_1}& \dots&  \drac{\partial g_1}{\partial y_m}\\
-        \vdots& \ddots& \vdots \\
-        \drac{\partial g_m}{\partial y_1}& \dots&  \drac{\partial g_m}{\partial y_m}
-        } \neq 0
+ \vmat{
+ \drac{\partial g_1}{\partial y_1}& \dots& \drac{\partial g_1}{\partial y_m}\\
+ \vdots& \ddots& \vdots \\
+ \drac{\partial g_m}{\partial y_1}& \dots& \drac{\partial g_m}{\partial y_m}
+ } \neq 0
 $$
 
 であれば$\bm{g}(X,Y)=(g_1(X,Y),\dots,g_m(X,Y)),\\\bm{\la}=(\la_1,\dots,\la_m)^ \mathrm{T}$,$\bm{F}(X,Y,\bm{\la})=f(X,Y)-\bm{g}(X,Y)\bm{\la}$として$(A,B)$において
 
 $$
 \begin{aligned}
-        \nabla \bm{F}=\bm{0}
-      \end{aligned}
+ \nabla \bm{F}=\bm{0}
+ \end{aligned}
 $$
 
-      すなわち
-      
+ すなわち
+ 
 $$
-      \begin{aligned}
-      \pmat{
-      \drac{\partial f}{\partial x_1}& \drac{\partial g_1}{\partial x_1}& \dots & \drac{\partial g_m}{\partial x_1}\\
-      \vdots                         & \vdots                           & \ddots& \vdots                           \\
-      \drac{\partial f}{\partial x_k}& \drac{\partial g_1}{\partial x_k}& \dots & \drac{\partial g_m}{\partial x_k}\\
-      \drac{\partial f}{\partial y_1}& \drac{\partial g_1}{\partial y_1}& \dots & \drac{\partial g_m}{\partial y_1}\\
-      \vdots                         & \vdots                           & \ddots& \vdots                           \\
-      \drac{\partial f}{\partial y_m}& \drac{\partial g_1}{\partial y_m}& \dots& \drac{\partial g_m}{\partial y_m}
-      }
-      \pmat{
-      1 \\ -\la_1 \\ \vdots \\ -\la_m
-      }=\bm{0}
-      \text{かつ$\bm{g}=\bm{0}$}
-    \end{aligned}
+ \begin{aligned}
+ \pmat{
+ \drac{\partial f}{\partial x_1}& \drac{\partial g_1}{\partial x_1}& \dots & \drac{\partial g_m}{\partial x_1}\\
+ \vdots  & \vdots  & \ddots& \vdots  \\
+ \drac{\partial f}{\partial x_k}& \drac{\partial g_1}{\partial x_k}& \dots & \drac{\partial g_m}{\partial x_k}\\
+ \drac{\partial f}{\partial y_1}& \drac{\partial g_1}{\partial y_1}& \dots & \drac{\partial g_m}{\partial y_1}\\
+ \vdots  & \vdots  & \ddots& \vdots  \\
+ \drac{\partial f}{\partial y_m}& \drac{\partial g_1}{\partial y_m}& \dots& \drac{\partial g_m}{\partial y_m}
+ }
+ \pmat{
+ 1 \\ -\la_1 \\ \vdots \\ -\la_m
+ }=\bm{0}
+ \text{かつ$\bm{g}=\bm{0}$}
+ \end{aligned}
 $$
 
 を満たす$\bm{\la}=(\la_1,\dots,\la_m)^\mathrm{T}$が存在する。
@@ -927,36 +925,36 @@ $f,g_j(X,\varphi_1(X),\dots,\varphi_m(X))=F,G_j(X)$とおく。各$i$につい�
 
 $$
 \begin{aligned}
-      \drac{\partial F}{\partial x_i}=\drac{\partial f}{\partial x_i}+\drac{\partial f}{\partial y_1}
-      \drac{\partial \varphi_1}{\partial x_i} +\dots+\drac{\partial f}{\partial y_m}
-      \drac{\partial \varphi_m}{\partial x_i}=0 
-    \end{aligned}
+ \drac{\partial F}{\partial x_i}=\drac{\partial f}{\partial x_i}+\drac{\partial f}{\partial y_1}
+ \drac{\partial \varphi_1}{\partial x_i} +\dots+\drac{\partial f}{\partial y_m}
+ \drac{\partial \varphi_m}{\partial x_i}=0 
+ \end{aligned}
 $$
 
-    常に$0$なので
-    
+ 常に$0$なので
+ 
 $$
-    \begin{aligned}
-      \drac{\partial G_j}{\partial x_i}=\drac{\partial g_j}{\partial x_i}+\drac{\partial g_j}{\partial y_1}
-      \drac{\partial \varphi_1}{\partial x_i} +\dots+\drac{\partial g_j}{\partial y_m}
-      \drac{\partial \varphi_m}{\partial x_i}=0\q(j=1,\dots,m)
-    \end{aligned}
+ \begin{aligned}
+ \drac{\partial G_j}{\partial x_i}=\drac{\partial g_j}{\partial x_i}+\drac{\partial g_j}{\partial y_1}
+ \drac{\partial \varphi_1}{\partial x_i} +\dots+\drac{\partial g_j}{\partial y_m}
+ \drac{\partial \varphi_m}{\partial x_i}=0\q(j=1,\dots,m)
+ \end{aligned}
 $$
 
-    したがって$X=A$において
-    
+ したがって$X=A$において
+ 
 $$
-    \begin{aligned}
-      \pmat{
-      \drac{\partial f}{\partial x_i} &  \drac{\partial f}{\partial y_1} &  \dots &  \drac{\partial f}{\partial y_m}\\
-      \drac{\partial g_1}{\partial x_i} &  \drac{\partial g_1}{\partial y_1} &  \dots &  \drac{\partial g_1}{\partial y_m}\\
-      \vdots& \vdots& \ddots& \vdots\\
-      \drac{\partial g_m}{\partial x_i} &  \drac{\partial g_m}{\partial y_1} &  \dots &  \drac{\partial g_m}{\partial y_m}\\
-      }
-      \pmat{
-      1 \\ \drac{\partial \varphi_1}{\partial x_i}\\ \vdots\\ \drac{\partial \varphi_m}{\partial x_i}
-      }=\bm{0}\q(\text{左の行列$A_i$とおく})
-    \end{aligned}
+ \begin{aligned}
+ \pmat{
+ \drac{\partial f}{\partial x_i} & \drac{\partial f}{\partial y_1} & \dots & \drac{\partial f}{\partial y_m}\\
+ \drac{\partial g_1}{\partial x_i} & \drac{\partial g_1}{\partial y_1} & \dots & \drac{\partial g_1}{\partial y_m}\\
+ \vdots& \vdots& \ddots& \vdots\\
+ \drac{\partial g_m}{\partial x_i} & \drac{\partial g_m}{\partial y_1} & \dots & \drac{\partial g_m}{\partial y_m}\\
+ }
+ \pmat{
+ 1 \\ \drac{\partial \varphi_1}{\partial x_i}\\ \vdots\\ \drac{\partial \varphi_m}{\partial x_i}
+ }=\bm{0}\q(\text{左の行列$A_i$とおく})
+ \end{aligned}
 $$
 
 
@@ -964,33 +962,33 @@ $$
 
 $$
 \begin{aligned}
-    \pmat{
-    \drac{\partial f}{\partial x_i} &  \drac{\partial g_1}{\partial x_i} &  \dots &  \drac{\partial g_m}{\partial x_i}\\
-    \drac{\partial f}{\partial y_1} &  \drac{\partial g_1}{\partial y_1} &  \dots &  \drac{\partial g_m}{\partial y_1}\\
-    \vdots& \vdots& \ddots& \vdots\\
-    \drac{\partial f}{\partial y_m} &  \drac{\partial g_1}{\partial y_m} &  \dots &  \drac{\partial g_m}{\partial y_m}\\
-    }
-    \pmat{
-    \la'_f(i)\\ \la'_1(i)\\ \vdots\\ \la'_m(i) 
-    }=\bm{0}
-    \end{aligned}
+ \pmat{
+ \drac{\partial f}{\partial x_i} & \drac{\partial g_1}{\partial x_i} & \dots & \drac{\partial g_m}{\partial x_i}\\
+ \drac{\partial f}{\partial y_1} & \drac{\partial g_1}{\partial y_1} & \dots & \drac{\partial g_m}{\partial y_1}\\
+ \vdots& \vdots& \ddots& \vdots\\
+ \drac{\partial f}{\partial y_m} & \drac{\partial g_1}{\partial y_m} & \dots & \drac{\partial g_m}{\partial y_m}\\
+ }
+ \pmat{
+ \la'_f(i)\\ \la'_1(i)\\ \vdots\\ \la'_m(i) 
+ }=\bm{0}
+ \end{aligned}
 $$
 
 となる$(\la'_f(i),\la'_1(i),\dots,\la'_m(i))^ \mathrm{T}
-    \neq \bm{0}$が存在する。
+ \neq \bm{0}$が存在する。
 $\la'_f(i)\neq 0$を示す。$\la'_f(i)= 0$とすると
 
 $$
 \begin{aligned}
-    \pmat{
-    \drac{\partial g_1}{\partial y_1} &  \dots &  \drac{\partial g_m}{\partial y_1}\\
-    \vdots& \ddots& \vdots\\
-     \drac{\partial g_1}{\partial y_m} &  \dots &  \drac{\partial g_m}{\partial y_m}\\
-    }
-    \pmat{
-     \la'_1(i)\\ \vdots\\ \la'_m(i) 
-    }=\bm{0}\q\text{すなわち}\q\drac{\partial f}{\partial y}\bm{\la'}=\bm{0}
-    \end{aligned}
+ \pmat{
+ \drac{\partial g_1}{\partial y_1} & \dots & \drac{\partial g_m}{\partial y_1}\\
+ \vdots& \ddots& \vdots\\
+  \drac{\partial g_1}{\partial y_m} & \dots & \drac{\partial g_m}{\partial y_m}\\
+ }
+ \pmat{
+  \la'_1(i)\\ \vdots\\ \la'_m(i) 
+ }=\bm{0}\q\text{すなわち}\q\drac{\partial f}{\partial y}\bm{\la'}=\bm{0}
+ \end{aligned}
 $$
 
 であって$\bm{\la'}\neq \bm{0}$なるものが存在するがこれは
@@ -1000,72 +998,72 @@ $-\drac{\la'_j(i)}{\la'_f(i)}=\la_j(i)$とすると，$i=1,\dots,k$に対し
 
 $$
 \begin{aligned}
-    A_i^ \mathrm{T}
-    \pmat{
-    1 \\ -\la_1(i)\\ \vdots\\ -\la_m(i)
-    }
-    =A_i^ \mathrm{T}
-    \pmat{
-    1 \\
-    -\bm{\la(i)}}=\bm{0}
-    \end{aligned}
+ A_i^ \mathrm{T}
+ \pmat{
+ 1 \\ -\la_1(i)\\ \vdots\\ -\la_m(i)
+ }
+ =A_i^ \mathrm{T}
+ \pmat{
+ 1 \\
+ -\bm{\la(i)}}=\bm{0}
+ \end{aligned}
 $$
 
-    となる。 $\bm{\la(i)}$は$i$によらず，
+ となる。 $\bm{\la(i)}$は$i$によらず，
 
 $$
 \begin{aligned}
-    \pmat{
-    \drac{\partial g_1}{\partial y_1} &&  \dots &&  \drac{\partial g_m}{\partial y_1}\\
-    \vdots&& \ddots&& \vdots\\
-     \drac{\partial g_1}{\partial y_m} &&  \dots &&  \drac{\partial g_m}{\partial y_m}\\
-    }
-    \pmat{
-    t_1\\ \vdots\\t_m
-    }=
-    \pmat{
-    \drac{\partial f}{\partial y_1}\\ \vdots\\ \drac{\partial f}{\partial y_m}
-    }
-    \end{aligned}
+ \pmat{
+ \drac{\partial g_1}{\partial y_1} && \dots && \drac{\partial g_m}{\partial y_1}\\
+ \vdots&& \ddots&& \vdots\\
+  \drac{\partial g_1}{\partial y_m} && \dots && \drac{\partial g_m}{\partial y_m}\\
+ }
+ \pmat{
+ t_1\\ \vdots\\t_m
+ }=
+ \pmat{
+ \drac{\partial f}{\partial y_1}\\ \vdots\\ \drac{\partial f}{\partial y_m}
+ }
+ \end{aligned}
 $$
 
 の解であるが，$\left|\drac{\partial g}{\partial y}\right|\neq 0$よりそれは一つに限られる。
 よって$\bm{\la(i)}$は$i$によらない。それを$\bm{\la(i)}=\bm{\la}=
-    (
-    \la_1, \dots, \la_m
-    )^\mathrm{T}$とする。
+ (
+ \la_1, \dots, \la_m
+ )^\mathrm{T}$とする。
 すると$\bm{\la(i)}=\bm{\la}$は$\bm{F}(X,Y,\bm{\la})=f(X,Y)-\bm{g}(X,Y)\bm{\la}$として
 
 $$
 \begin{aligned}
-      \nabla \bm{F}=\bm{0}
-    \end{aligned}
+ \nabla \bm{F}=\bm{0}
+ \end{aligned}
 $$
 
-    すなわち 
+ すなわち 
 
 
 $$
 \begin{aligned}
-      \pmat{
-      \drac{\partial f}{\partial x_1}& \drac{\partial g_1}{\partial x_1}& \dots& \drac{\partial g_m}{\partial x_1}\\
-      \vdots               & \vdots                 & \ddots& \vdots\\
-      \drac{\partial f}{\partial x_k}& \drac{\partial g_1}{\partial x_k}& \dots& \drac{\partial g_m}{\partial x_k}\\
-      \drac{\partial f}{\partial y_1}& \drac{\partial g_1}{\partial y_1}& \dots& \drac{\partial g_m}{\partial y_1}\\
-      \vdots               & \vdots                 & \ddots& \vdots\\
-      \drac{\partial f}{\partial y_m}& \drac{\partial g_1}{\partial y_m}& \dots& \drac{\partial g_m}{\partial y_m}\\
-      }
-      \pmat{
-      1 \\ -\la_1 \\ \vdots \\ -\la_m
-      }=\bm{0}\q
-      \text{かつ}\q 
-      \bm{g}=
-      (g_1,\dots,g_m)=
-      \bm{0}
-    \end{aligned}
+ \pmat{
+ \drac{\partial f}{\partial x_1}& \drac{\partial g_1}{\partial x_1}& \dots& \drac{\partial g_m}{\partial x_1}\\
+ \vdots  & \vdots  & \ddots& \vdots\\
+ \drac{\partial f}{\partial x_k}& \drac{\partial g_1}{\partial x_k}& \dots& \drac{\partial g_m}{\partial x_k}\\
+ \drac{\partial f}{\partial y_1}& \drac{\partial g_1}{\partial y_1}& \dots& \drac{\partial g_m}{\partial y_1}\\
+ \vdots  & \vdots  & \ddots& \vdots\\
+ \drac{\partial f}{\partial y_m}& \drac{\partial g_1}{\partial y_m}& \dots& \drac{\partial g_m}{\partial y_m}\\
+ }
+ \pmat{
+ 1 \\ -\la_1 \\ \vdots \\ -\la_m
+ }=\bm{0}\q
+ \text{かつ}\q 
+ \bm{g}=
+ (g_1,\dots,g_m)=
+ \bm{0}
+ \end{aligned}
 $$
 
-    を満たす。 ◻
+ を満たす。 ◻
 :::
 
 なお，
@@ -1074,17 +1072,17 @@ $$
 \begin{aligned}
 \bm{\la}=
 \pmat{
-  \la_1\\\vdots\\\la_m
+ \la_1\\\vdots\\\la_m
 }
 =
 \pmat{
-  \delu{g_1}{y_1}&\dots&\delu{g_1}{y_m}\\
-  \vdots&\ddots&\vdots\\
-  \delu{g_m}{y_1}&\dots&\delu{g_m}{y_m}
+ \delu{g_1}{y_1}&\dots&\delu{g_1}{y_m}\\
+ \vdots&\ddots&\vdots\\
+ \delu{g_m}{y_1}&\dots&\delu{g_m}{y_m}
 }\l(A,B\r) 
 ^{\raisebox{3zw}[1zw][0zw]{\(-1\)}}
 \pmat{
-  \delu{f}{y_1}\\\vdots\\\delu{f}{y_m}
+ \delu{f}{y_1}\\\vdots\\\delu{f}{y_m}
 } \l(A,B\r)\end{aligned}
 $$
 
@@ -1108,4 +1106,5 @@ $\dis \int_{0}^{\drac{\pi }{2}} \drac{1}{\sqrt{a^2 \cos ^\theta +b^2 \sin ^2 \th
 ### リーマン積分の導入から円の面積を考える
 
 行列式の定義，線形代数論，ベクトル解析，微分方程式，フーリエ変換，複素解析，複素関数への拡張，三角関数の部分分数展開，ジョルダン標準形
-$n\geq 3 \Leftrightarrow \lnot \exists x,y,z \ s.t.\  x^n+y^n=z^n$
+$n\geq 3 \Leftrightarrow \lnot \exists x,y,z \ s.t.\ x^n+y^n=z^n$
+
