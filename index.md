@@ -30,6 +30,7 @@ $$
 \newcommand{\m}{\item}
 \newcommand{\drac}[2]{\dfrac{#1}{#2}}
 \newcommand{\delu}[3][]{\drac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}
+\newcommand{\bm}[1]{\boldsymbol{#1}}
 $$
 
 
