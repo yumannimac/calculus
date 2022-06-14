@@ -77,8 +77,9 @@
 		\newcommand{\bm}[1]{\boldsymbol{#1}}
 		\newcommand{\pmat}[1]{\begin{pmatrix}#1\end{pmatrix}}
 		\newcommand{\vmat}[1]{\begin{vmatrix}#1\end{vmatrix}}\]
-<h1 id="微分積分学">微分積分学</h1>
-<h3 id="一様収束">一様収束</h3>
+
+
+<h1 id="一様収束">一様収束</h1>
 <div class="theorem">
 <p><span id="項別積分可能性"
 label="項別積分可能性"></span>（項別積分可能性）<span
@@ -114,7 +115,7 @@ class="math display">\[\int_{c}^{x} \lim_{n \to \infty}f_n\l(t\r) \, d t
 =\lim_{n \to \infty}  \int_{c}^{x} f_n\l(t\r) \, d t\]</span>
 であるから一様収束するときは項別積分可能であることが示された。 ◻</p>
 </div>
-<h4 id="整級数の一様収束性の例">整級数の一様収束性の例</h4>
+<h2 id="整級数の一様収束性の例">整級数の一様収束性の例</h2>
 <p>たとえば<span class="math inline">\(f_n\l(x\r) =\dis \sum_{i=0}^{n}
 (-x)^i\)</span>，<span class="math inline">\(f\l(x\r)
 =\drac{1}{1+x}\)</span>とする。<span
@@ -197,7 +198,7 @@ class="math display">\[\sum_{n=0}^{\infty} a_n=\sum_{n=0}^{\infty}
 \l(a_n^+-a_n^-\r) =S^+-S^-\]</span>
 であるから収束する。よって示された。 ◻</p>
 </div>
-<h3 id="収束判定法">収束判定法</h3>
+<h1 id="収束判定法">収束判定法</h1>
 <div class="theorem">
 <p><span id="コーシーの収束判定法" label="コーシーの収束判定法"></span>
 （コーシーの収束判定法） <span class="math display">\[\lim_{n \to
@@ -398,7 +399,7 @@ class="math inline">\(0\)</span>に収束することはないので発散する
 </ol>
 <p> ◻</p>
 </div>
-<h3 id="eの導入"><span class="math inline">\(e\)</span>の導入</h3>
+<h1 id="eの導入"><span class="math inline">\(e\)</span>の導入</h1>
 <div class="theorem">
 <p><span id="eの存在" label="eの存在"></span>（<span
 class="math inline">\(e\)</span>の存在） <span
@@ -444,7 +445,7 @@ a_{n+1}
 \end{aligned}\]</span> 以上より<span class="math inline">\(\left\{ a_n
 \right\}\)</span>は有界な単調増加数列であるから収束する。 ◻</p>
 </div>
-<h3 id="マクローリン展開">マクローリン展開</h3>
+<h1 id="マクローリン展開">マクローリン展開</h1>
 <p><span class="math inline">\(k\geq 1\)</span>のとき <span
 class="math display">\[\begin{aligned}
 \drac{d}{dt}\left\{ \drac{\l(x-t\r) ^k}{k!}f^{\l(k\r) }\l(t\r) \right\}=
@@ -465,7 +466,7 @@ dt \end{aligned}\]</span> よって <span
 class="math display">\[\begin{aligned}
 f\l(x\r) =\sum_{k=0}^{n-1} \left\{ \drac{\l(x-a\r) ^k}{k!}f^{\l(k\r)
 }\l(a\r) \right\} +R_n\l(x\r) \end{aligned}\]</span> と書ける。</p>
-<h4 class="unnumbered" id="剰余項の計算">剰余項の計算</h4>
+<h2 class="unnumbered" id="剰余項の計算">剰余項の計算</h2>
 <p>積分の平均値の定理より<span class="math inline">\(c\in
 [a,x]\)</span>として <span class="math display">\[\begin{aligned}
 R_n\l(x\r) =\int_{a}^{x} \drac{\l(x-t\r) ^{n-1 }}{\l(n-1\r)
@@ -486,7 +487,7 @@ R_n\l(x\r) =\int_{a}^{x} \drac{\l(x-c\r) ^{n-p }\l(x-t\r)
 R_n\l(x\r) =\drac{\l(x-a\r) ^n}{p\l(n-1\r) !}\l(1-\theta \r)
 ^{n-p}f^{\l(n\r) }\l(c\r)\end{aligned}\]</span>
 である。コーシーの剰余項である。</p>
-<h3 id="陰関数定理">陰関数定理</h3>
+<h1 id="陰関数定理">陰関数定理</h1>
 <div class="theorem">
 <p><span id="中間値の定理" label="中間値の定理"></span>（中間値の定理）
 <span class="math inline">\(f:\mathbb{R}\to
@@ -557,9 +558,9 @@ _1\l(X\r) ,\dots ,\varphi _m\l(X\r)\)</span>が存在して以下を満たす。
 <p>上記の命題を<span
 class="math inline">\(P\l(k,m\r)\)</span>とおく。</p>
 </div>
-<h4 class="unnumbered" id="証明">証明</h4>
-<h5 class="unnumbered" id="plk1rについて"><span
-class="math inline">\(P\l(k,1\r)\)</span>について</h5>
+<h2 class="unnumbered" id="証明">証明</h2>
+<h3 class="unnumbered" id="plk1rについて"><span
+class="math inline">\(P\l(k,1\r)\)</span>について</h3>
 <p>仮定は<span class="math inline">\(X=\left(x_1,\dots
 ,x_k\right)，Y=y_1=y, A=\left(a_1,\dots , a_k\right)\)</span>，<span
 class="math inline">\(B=b_1=b\)</span>として<span
@@ -589,8 +590,8 @@ class="math inline">\(b-\delta\)</span>と<span
 class="math inline">\(b-\delta\)</span>
 の間にただ一つ存在する。よって<span
 class="math inline">\(P(k,1)\)</span>が示された。（証明終）</p>
-<h5 class="unnumbered" id="varphiの連続性"><span
-class="math inline">\(\varphi\)</span>の連続性</h5>
+<h3 class="unnumbered" id="varphiの連続性"><span
+class="math inline">\(\varphi\)</span>の連続性</h3>
 <p><span class="math inline">\(\left[b-\delta ,b+\delta
 \right]=I\)</span>とする。<span class="math inline">\(\varphi
 \l(X_0+H\r)\)</span>が<span class="math inline">\(H\to O\)</span>で<span
@@ -621,8 +622,8 @@ class="math inline">\(y_0\in I\)</span>が<span
 class="math inline">\(y_0=\varphi
 \l(X_0\r)\)</span>しかないことから<span class="math inline">\(\alpha
 =\varphi \l(X_0\r)\)</span>ということになってしまい矛盾。</p>
-<h5 class="unnumbered" id="varphiが微分可能であること"><span
-class="math inline">\(\varphi\)</span>が微分可能であること</h5>
+<h3 class="unnumbered" id="varphiが微分可能であること"><span
+class="math inline">\(\varphi\)</span>が微分可能であること</h3>
 <p><span
 class="math inline">\(x_1\)</span>で偏微分可能なことを示す。<span
 class="math inline">\(\l(x_2,\dots,x_k \r)
@@ -658,8 +659,8 @@ class="math display">\[\begin{aligned}
 \delu{\varphi }{x_i}=-\drac{f_{x_i}\l(X,\varphi(X)\r)}{f_{y
 }\l(X,\varphi(X)\r)}\end{aligned}\]</span> となるので<span
 class="math inline">\(\varphi\)</span>は微分可能であることが示された。</p>
-<h5 class="unnumbered" id="plkmrについて"><span
-class="math inline">\(P\l(k,m\r)\)</span>について</h5>
+<h3 class="unnumbered" id="plkmrについて"><span
+class="math inline">\(P\l(k,m\r)\)</span>について</h3>
 <p><span class="math inline">\(\forall k\
 P\l(k,1\r)\)</span>が真であることをもとにして<span
 class="math inline">\(P\l(k+1,m\r)\)</span>から<span
@@ -811,7 +812,7 @@ class="math inline">\(f_j(X,\varphi_{1}(X),\dots,\varphi_{m}(X),\varphi_{m+1}(X)
 </ol>
 <p>となる。以上より<span
 class="math inline">\(P(k,m+1)\)</span>が示された。（証明終）</p>
-<h5 class="unnumbered" id="補足">補足</h5>
+<h3 class="unnumbered" id="補足">補足</h3>
 <p><span class="math inline">\(j=1,\dots,m\)</span>に対し <span
 class="math display">\[\begin{aligned}
 f_j\l(X,\varphi _1\l(X\r) ,\dots,\varphi _m\l(X\r) \r) :=G_j\l(X\r)
@@ -881,7 +882,7 @@ class="math display">\[\begin{aligned}
 \end{pmatrix}
 \end{aligned}\]</span> 帰納法の概略は下図のようである。<br />
 </p>
-<h4 id="陰関数定理の別証">陰関数定理の別証</h4>
+<h2 id="陰関数定理の別証">陰関数定理の別証</h2>
 <p>写像<span class="math inline">\(T:\mathbb{R}^{k+m}\to
 \mathbb{R}^m\)</span>を以下のように定める。 <span
 class="math display">\[\begin{aligned}
@@ -937,7 +938,7 @@ data-reference="（バナッハの不動点定理）">[（バナッハの不動�
 S\l(Y\r) =Y　すなわち　\bm{f}\l(X,Y\r) =0 \end{aligned}\]</span>
 となる<span class="math inline">\(Y\)</span>が<span
 class="math inline">\(X\)</span>に対してただ一つ存在することが示された。</p>
-<h3 id="ラグランジュの未定乗数法">ラグランジュの未定乗数法</h3>
+<h1 id="ラグランジュの未定乗数法">ラグランジュの未定乗数法</h1>
 <div class="theorem">
 <p><span id="ラグランジュの未定乗数法"
 label="ラグランジュの未定乗数法"></span>（ラグランジュの未定乗数法）
@@ -1155,15 +1156,15 @@ y_m}&amp; \dots&amp; \drac{\partial g_m}{\partial y_m}\\
 class="math inline">\(\l(A,B\r)\)</span>を求めるために用いられるものなので<span
 class="math inline">\(\bm{\la}\)</span>は<span
 class="math inline">\(\l(X,Y\r)\)</span>の式として与えられることがほとんどである。</p>
-<h3 id="フーリエ級数展開">フーリエ級数展開</h3>
-<h3 id="楕円積分論">楕円積分論</h3>
+<h1 id="フーリエ級数展開">フーリエ級数展開</h1>
+<h1 id="楕円積分論">楕円積分論</h1>
 <p><span class="math inline">\(K\l(k\r) =\dis \int_{0}^{\drac{\pi }{2}}
 \drac{1}{\sqrt{1-k^2 \sin ^2 \theta }}\, d\theta ，E\l(k\r) =\dis
 \int_{0}^{\drac{\pi }{2}}
 {\sqrt{1-k^2 \sin ^2 \theta }}\,
 d\theta\)</span>とおく。ルジャンドルの公式を示したい。</p>
-<h4 class="unnumbered"
-id="算術幾何平均に収束すること">算術幾何平均に収束すること</h4>
+<h2 class="unnumbered"
+id="算術幾何平均に収束すること">算術幾何平均に収束すること</h2>
 <p><span class="math inline">\(\dis \int_{0}^{\drac{\pi }{2}}
 \drac{1}{\sqrt{a^2 \cos ^\theta +b^2 \sin ^2 \theta }}\, d\theta
 =M\l(a,b\r) =\lim_{n \to \infty}a_n=\lim_{n \to
@@ -1171,17 +1172,9 @@ id="算術幾何平均に収束すること">算術幾何平均に収束する�
 class="math inline">\(a_{n+1}=\drac{1}{2}\l(a_n+b_n\r)，
 b_{n+1}=\sqrt{a_nb_n}\)</span>かつ<span
 class="math inline">\(a_0=a,b_0=b\)</span> とした。</p>
-<h4 class="unnumbered" id="証明-1">証明</h4>
-<h3
-id="リーマン積分の導入から円の面積を考える">リーマン積分の導入から円の面積を考える</h3>
+<h2 class="unnumbered" id="証明-1">証明</h2>
+<h1
+id="リーマン積分の導入から円の面積を考える">リーマン積分の導入から円の面積を考える</h1>
 <p>行列式の定義，線形代数論，ベクトル解析，微分方程式，フーリエ変換，複素解析，複素関数への拡張，三角関数の部分分数展開，ジョルダン標準形
 <span class="math inline">\(n\geq 3 \Leftrightarrow \lnot \exists x,y,z
 \ s.t.\ x^n+y^n=z^n\)</span></p>
-
-</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-		integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-	<script>anchors.add();</script>
-	</body>
-	
-	</html>
