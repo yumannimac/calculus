@@ -205,23 +205,23 @@ $$
 *Proof.* 　
 
 (i) $0<l<1$のとき\
-    極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }<t$すなわち$\l|a_n\r| <t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$N>N_0$として
+極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }<t$すなわち$\l|a_n\r| <t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$N>N_0$として
 
 
 $$
 \begin{aligned}
-     \sum_{n=0}^{N} \l|a_n\r| =
-     \sum_{n=0}^{N_0-1} \l|a_n\r| 
-     +\sum_{n=N_0}^{N} \l|a_n\r| <
-     \sum_{n=0}^{N_0-1} \l|a_n\r| 
-     +\sum_{n=N_0}^{N}t^n<\sum_{n=0}^{N_0-1} \l|a_n\r| +t^{N_0}\drac{1}{1-t}
-     \end{aligned}
+ \sum_{n=0}^{N} \l|a_n\r| =
+ \sum_{n=0}^{N_0-1} \l|a_n\r| 
+ +\sum_{n=N_0}^{N} \l|a_n\r| <
+ \sum_{n=0}^{N_0-1} \l|a_n\r| 
+ +\sum_{n=N_0}^{N}t^n<\sum_{n=0}^{N_0-1} \l|a_n\r| +t^{N_0}\drac{1}{1-t}
+ \end{aligned}
 $$
 
-    より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
+より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
 
 (ii) $l>1$のとき\
-     $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }>t$すなわち$\l|a_n\r| >t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$n \to \infty$で$t^n$は発散するので追い出しの原理より$\l|a_n\r|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
+ $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }>t$すなわち$\l|a_n\r| >t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$n \to \infty$で$t^n$は発散するので追い出しの原理より$\l|a_n\r|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
 
  ◻
 :::
@@ -244,26 +244,26 @@ $$
 *Proof.* 　
 
 (i) $0<l<1$のとき\
-    極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\l|\drac{a_{n+1}}{a_n}\r| <t$すなわち$\l|a_{n+1}\r| <t\l|a_{n}\r|$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$\l|a_n\r|<t\l|a_{n-1}\r| <\dots<\l|a_{N_0}\r| t^{n-N_0}$
-    である。 $N>N_0$として
+極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\l|\drac{a_{n+1}}{a_n}\r| <t$すなわち$\l|a_{n+1}\r| <t\l|a_{n}\r|$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$\l|a_n\r|<t\l|a_{n-1}\r| <\dots<\l|a_{N_0}\r| t^{n-N_0}$
+である。 $N>N_0$として
 
 $$
 \begin{aligned}
-     \sum_{n=0}^{N} \l|a_n\r| =
-     \sum_{n=0}^{N_0-1} \l|a_n\r| 
-     +\sum_{n=N_0}^{N} \l|a_n\r| 
-     <\sum_{n=0}^{N_0-1} \l|a_n\r| 
-     +\l|a_{N_0}\r| \sum_{n=N_0}^{N}t^{n-N_0}
-     <\sum_{n=0}^{N_0-1} \l|a_n\r| +\drac{|a_{N_0}|}{1-t}
-     \end{aligned}
+ \sum_{n=0}^{N} \l|a_n\r| =
+ \sum_{n=0}^{N_0-1} \l|a_n\r| 
+ +\sum_{n=N_0}^{N} \l|a_n\r| 
+ <\sum_{n=0}^{N_0-1} \l|a_n\r| 
+ +\l|a_{N_0}\r| \sum_{n=N_0}^{N}t^{n-N_0}
+ <\sum_{n=0}^{N_0-1} \l|a_n\r| +\drac{|a_{N_0}|}{1-t}
+ \end{aligned}
 $$
 
-    より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
+より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
 
 (ii) $l>1$のとき\
-     $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\l|\drac{a_{n+1}}{a_n}\r| >t$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。
-     $\l|a_n\r|>t\l|a_{n-1}\r| >\dots>\l|a_{N_0}\r| t^{n-N_0}$である
-     $n \to \infty$で$t^n$は発散するので追い出しの原理より$\l|a_n\r|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
+ $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\l|\drac{a_{n+1}}{a_n}\r| >t$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。
+ $\l|a_n\r|>t\l|a_{n-1}\r| >\dots>\l|a_{N_0}\r| t^{n-N_0}$である
+ $n \to \infty$で$t^n$は発散するので追い出しの原理より$\l|a_n\r|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
 
  ◻
 :::
@@ -278,26 +278,26 @@ $\dis \lim_{n \to \infty}\dis \sup_{m>n}\sqrt[m]{\l|a_m\r| } =l$として$r=\dra
 *Proof.* 　
 
 (i) $\l|x\r| <r$のとき\
-    $x=0$では自明に収束。$0<\l|x\r|<r$とする。$0<l<\drac{1}{\l|x\r| }$である。$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }<\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。このもとで
+$x=0$では自明に収束。$0<\l|x\r|<r$とする。$0<l<\drac{1}{\l|x\r| }$である。$n\geq N_0$ならば$\sqrt[n]{\l|a_n\r| }<\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。このもとで
 
 
 $$
 \begin{aligned}
-     \sum_{n=0}^{N} \l|a_nx^n\r| 
-     &=\, \sum_{n=0}^{N_0-1} \l|a_nx^n\r| 
-     +\sum_{n=N_0}^{N} (\sqrt[n]{\l|a_n\r|  }\l| x\r|)^n
-     \\
-     &\leq\, \sum_{n=0}^{N_0-1} \l|a_nx^n\r| +\sum_{n=N_0}^{N} 
-     \l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)
-     ^n
-     \end{aligned}
+ \sum_{n=0}^{N} \l|a_nx^n\r| 
+ &=\, \sum_{n=0}^{N_0-1} \l|a_nx^n\r| 
+ +\sum_{n=N_0}^{N} (\sqrt[n]{\l|a_n\r|  }\l| x\r|)^n
+ \\
+ &\leq\, \sum_{n=0}^{N_0-1} \l|a_nx^n\r| +\sum_{n=N_0}^{N} 
+ \l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)
+ ^n
+ \end{aligned}
 $$
 
-    であり$\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
+であり$\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
 
 (ii) $\l|x\r| >r$のとき\
-     $0<\drac{1}{\l|x\r| }<l$である。任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して$n>N_0$かつ$\sqrt[n]{\l|a_n\r| }>\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$となる$n$が存在する。すなわち$\l|a_nx^n\r| =(\sqrt[n]{\l|a_n\r|  }\l| x\r|)^n=\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)
-      ^n>1$になるような$n>N_0$が任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して存在するので数列$\left\{ a_nx^n \right\}$は$0$に収束しない。したがって級数も発散する。
+ $0<\drac{1}{\l|x\r| }<l$である。任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して$n>N_0$かつ$\sqrt[n]{\l|a_n\r| }>\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r)$となる$n$が存在する。すなわち$\l|a_nx^n\r| =(\sqrt[n]{\l|a_n\r|  }\l| x\r|)^n=\l(\drac{1}{2}\l(l+\drac{1}{\l|x\r| }\r) \bigg/\drac{1}{\l|x\r| }\r)
+  ^n>1$になるような$n>N_0$が任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して存在するので数列$\left\{ a_nx^n \right\}$は$0$に収束しない。したがって級数も発散する。
 
  ◻
 :::
@@ -312,28 +312,28 @@ $\sum a_nx^n$の収束半径$r$は存在するならば$r=\dis \lim_{n \to \inft
 *Proof.* 　
 
 (i) $0 \leq x< r$のとき\
-    $n\geq \exists N_0 \Rightarrow \l|\drac{a_n}{a_{n+1}}\r| >\drac{\l|x\r| +r}{2} \Leftrightarrow \l|a_{n+1}\r| <\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)\l|a_n\r|$よりこれを繰り返し用いて$\l|a_n\r| <\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r|$が得られる。
+$n\geq \exists N_0 \Rightarrow \l|\drac{a_n}{a_{n+1}}\r| >\drac{\l|x\r| +r}{2} \Leftrightarrow \l|a_{n+1}\r| <\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)\l|a_n\r|$よりこれを繰り返し用いて$\l|a_n\r| <\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r|$が得られる。
 
 
 $$
 \begin{aligned}
-     \sum_{n=0}^{N} \l|a_nx^n\r| <\sum_{n=0}^{N_0-1} \l|a_nx^n\r|+\sum_{n=N_0}^{N} \left( |x|\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r|
-     \end{aligned}
+ \sum_{n=0}^{N} \l|a_nx^n\r| <\sum_{n=0}^{N_0-1} \l|a_nx^n\r|+\sum_{n=N_0}^{N} \left( |x|\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r|
+ \end{aligned}
 $$
 
-    であり$\left( |x|\bigg/\drac{\l|x\r| +r}{2} \right)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
+であり$\left( |x|\bigg/\drac{\l|x\r| +r}{2} \right)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
 
 (ii) $|x|>r$のとき\
-     $n\geq \exists N_0 \Rightarrow \l|\drac{a_n}{a_{n+1}}\r| <\drac{\l|x\r| +r}{2} \Leftrightarrow \l|a_{n+1}\r| >\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)\l|a_n\r|$よりこれを繰り返し用いて$\l|a_n\r| >\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r|$が得られる。よって
-    
+ $n\geq \exists N_0 \Rightarrow \l|\drac{a_n}{a_{n+1}}\r| <\drac{\l|x\r| +r}{2} \Leftrightarrow \l|a_{n+1}\r| >\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)\l|a_n\r|$よりこれを繰り返し用いて$\l|a_n\r| >\left( 1\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r|$が得られる。よって
+
 
 $$
 \begin{aligned}
-      \l|a_nx^n\r| >\left( |x|\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r| 
-      \end{aligned}
+  \l|a_nx^n\r| >\left( |x|\bigg/\drac{\l|x\r| +r}{2} \right)^{n-N_0}\l|a_{N_0}\r| 
+  \end{aligned}
 $$
 
-     であり$|x|\bigg/\drac{\l|x\r| +r}{2}>1$より左辺は発散する。追い出しの原理より$a_nx^n$が$0$に収束することはないので発散する。
+ であり$|x|\bigg/\drac{\l|x\r| +r}{2}>1$より左辺は発散する。追い出しの原理より$a_nx^n$が$0$に収束することはないので発散する。
 
  ◻
 :::
@@ -472,10 +472,10 @@ $X=\left(x_1,\dots x_k\right)$，$Y=\left(y_1,\dots y_m\right)$とする$\l(k,m\
 (i) $f_1=\dots=f_{m}=0$
 
 (ii) $\l|\drac{\del f}{\del y}\r|=\vmat{
-      \delu{f_1}{y_1}& \dots & \delu{f_1}{y_m}\\
-      \vdots& \ddots & \vdots\\
-      \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m} 
-      }\neq 0$
+  \delu{f_1}{y_1}& \dots & \delu{f_1}{y_m}\\
+  \vdots& \ddots & \vdots\\
+  \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m} 
+  }\neq 0$
 
 を満たすならばある$\varepsilon >0$が存在して$\l|X-A\r| <\varepsilon$上で$\varphi _1\l(X\r) ,\dots ,\varphi _m\l(X\r)$が存在して以下を満たす。
 
@@ -581,15 +581,15 @@ $P\l(k+1,m\r)$が真であると仮定する。$P\l(k,m+1\r)$の仮定は
 
 $$
 \begin{aligned}
-      \left|\drac{\partial f}{\partial y}\right|=\begin{vmatrix}
-      \drac{\partial f_{1} }{\partial y_{1}} & \dots &\drac{\partial f_{1} }{\partial y_{m}}
-      &\drac{\partial f_{1} }{\partial y_{m+1}}\\
-      \vdots &\ddots &\vdots &\vdots\\
-      \drac{\partial f_{m} }{\partial y_{1}}&\dots & \drac{\partial f_{m} }{\partial y_{m}}&\vdots \\
-      \drac{\partial f_{m+1} }{\partial y_{1}}&\dots &\dots&\drac{\partial f_{m+1} }{\partial y_{m+1}} 
-      \end{vmatrix}
-      \neq 0
-      \end{aligned}
+  \left|\drac{\partial f}{\partial y}\right|=\begin{vmatrix}
+  \drac{\partial f_{1} }{\partial y_{1}} & \dots &\drac{\partial f_{1} }{\partial y_{m}}
+  &\drac{\partial f_{1} }{\partial y_{m+1}}\\
+  \vdots &\ddots &\vdots &\vdots\\
+  \drac{\partial f_{m} }{\partial y_{1}}&\dots & \drac{\partial f_{m} }{\partial y_{m}}&\vdots \\
+  \drac{\partial f_{m+1} }{\partial y_{1}}&\dots &\dots&\drac{\partial f_{m+1} }{\partial y_{m+1}} 
+  \end{vmatrix}
+  \neq 0
+  \end{aligned}
 $$
 
 
@@ -1110,3 +1110,4 @@ $\dis \int_{0}^{\drac{\pi }{2}} \drac{1}{\sqrt{a^2 \cos ^\theta +b^2 \sin ^2 \th
 
 行列式の定義，線形代数論，ベクトル解析，微分方程式，フーリエ変換，複素解析，複素関数への拡張，三角関数の部分分数展開，ジョルダン標準形
 $n\geq 3 \Leftrightarrow \lnot \exists x,y,z \ s.t.\ x^n+y^n=z^n$
+
