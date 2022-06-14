@@ -58,32 +58,32 @@ $$
  \end{aligned}
 $$
 
- より
- 
+より
+
 $$
- \begin{aligned}
+\begin{aligned}
  0 \leq \sup_{a\leq x\leq b}\left|F_n\left(x\right) -F\left(x\right) \right| \leq 
  \sup_{a\leq x\leq b}\left(x-c\right) \sup_{c\leq t\leq x}\left|f_n\left(t\right) -f\left(t\right) \right| 
  \end{aligned}
 $$
 
- 一様収束性より
- 
+一様収束性より
+
 $$
- \begin{aligned}
+\begin{aligned}
   \lim_{n \to \infty} \sup_{c\leq t\leq x}\left|f_n\left(t\right) -f\left(t\right) \right| =0
  \end{aligned}
 $$
 
- であるからはさみうちの原理より
- 
+であるからはさみうちの原理より
+
 $$
- \begin{aligned}
+\begin{aligned}
  \lim_{n \to \infty} \sup_{a\leq x\leq b}\left|F_n\left(x\right) -F\left(x\right) \right| =0
  \end{aligned}
 $$
 
- すなわちa
+すなわちa
 
 $$
 \int_{c}^{x} \lim_{n \to \infty}f_n\left(t\right) \, d t
@@ -150,7 +150,7 @@ $$
  \end{aligned}
 $$
 
- の両辺を微分するだけ。 ◻
+の両辺を微分するだけ。 ◻
 :::
 
 ::: theorem
@@ -205,11 +205,11 @@ $$
 *Proof.* 　
 
 (i) $0<l<1$のとき\
- 極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\left|a_n\right| }<t$すなわち$\left|a_n\right| <t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$N>N_0$として
- 
- 
+極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\left|a_n\right| }<t$すなわち$\left|a_n\right| <t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$N>N_0$として
+
+
 $$
- \begin{aligned}
+\begin{aligned}
  \sum_{n=0}^{N} \left|a_n\right| =
  \sum_{n=0}^{N_0-1} \left|a_n\right| 
  +\sum_{n=N_0}^{N} \left|a_n\right| <
@@ -218,10 +218,10 @@ $$
  \end{aligned}
 $$
 
- より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
+より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
 
 (ii) $l>1$のとき\
-  $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\left|a_n\right| }>t$すなわち$\left|a_n\right| >t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$n \to \infty$で$t^n$は発散するので追い出しの原理より$\left|a_n\right|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
+ $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\sqrt[n]{\left|a_n\right| }>t$すなわち$\left|a_n\right| >t^n$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$n \to \infty$で$t^n$は発散するので追い出しの原理より$\left|a_n\right|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
 
  ◻
 :::
@@ -244,11 +244,11 @@ $$
 *Proof.* 　
 
 (i) $0<l<1$のとき\
- 極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\left|\dfrac{a_{n+1}}{a_n}\right| <t$すなわち$\left|a_{n+1}\right| <t\left|a_{n}\right|$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$\left|a_n\right|<t\left|a_{n-1}\right| <\dots<\left|a_{N_0}\right| t^{n-N_0}$
- である。 $N>N_0$として
- 
+極限の定義より$l<t<1$となる$t$を考えると$n\geq N_0$ならば$\left|\dfrac{a_{n+1}}{a_n}\right| <t$すなわち$\left|a_{n+1}\right| <t\left|a_{n}\right|$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。$\left|a_n\right|<t\left|a_{n-1}\right| <\dots<\left|a_{N_0}\right| t^{n-N_0}$
+である。 $N>N_0$として
+
 $$
- \begin{aligned}
+\begin{aligned}
  \sum_{n=0}^{N} \left|a_n\right| =
  \sum_{n=0}^{N_0-1} \left|a_n\right| 
  +\sum_{n=N_0}^{N} \left|a_n\right| 
@@ -258,12 +258,12 @@ $$
  \end{aligned}
 $$
 
- より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
+より$\sum_{}^{} |a_n|$は有界な正項級数なので収束する。よって$\sum_{}^{} a_n$は絶対収束するので収束する。
 
 (ii) $l>1$のとき\
-  $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\left|\dfrac{a_{n+1}}{a_n}\right| >t$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。
-  $\left|a_n\right|>t\left|a_{n-1}\right| >\dots>\left|a_{N_0}\right| t^{n-N_0}$である
-  $n \to \infty$で$t^n$は発散するので追い出しの原理より$\left|a_n\right|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
+ $1<t<l$なる$t$を考えると$n\geq N_0$ならば$\left|\dfrac{a_{n+1}}{a_n}\right| >t$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。
+ $\left|a_n\right|>t\left|a_{n-1}\right| >\dots>\left|a_{N_0}\right| t^{n-N_0}$である
+ $n \to \infty$で$t^n$は発散するので追い出しの原理より$\left|a_n\right|$も発散。よって$a_n$も発散するので$\sum_{}^{} a_n$は発散する。
 
  ◻
 :::
@@ -278,11 +278,11 @@ $\displaystyle \lim_{n \to \infty}\displaystyle \sup_{m>n}\sqrt[m]{\left|a_m\rig
 *Proof.* 　
 
 (i) $\left|x\right| <r$のとき\
- $x=0$では自明に収束。$0<\left|x\right|<r$とする。$0<l<\dfrac{1}{\left|x\right| }$である。$n\geq N_0$ならば$\sqrt[n]{\left|a_n\right| }<\dfrac{1}{2}\left(l+\dfrac{1}{\left|x\right| }\right)$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。このもとで
- 
- 
+$x=0$では自明に収束。$0<\left|x\right|<r$とする。$0<l<\dfrac{1}{\left|x\right| }$である。$n\geq N_0$ならば$\sqrt[n]{\left|a_n\right| }<\dfrac{1}{2}\left(l+\dfrac{1}{\left|x\right| }\right)$となる$N_0\in \mathbb{Z}_{\geq 0}$が存在する。このもとで
+
+
 $$
- \begin{aligned}
+\begin{aligned}
  \sum_{n=0}^{N} \left|a_nx^n\right| 
  &=\, \sum_{n=0}^{N_0-1} \left|a_nx^n\right| 
  +\sum_{n=N_0}^{N} (\sqrt[n]{\left|a_n\right|  }\left| x\right|)^n
@@ -293,10 +293,10 @@ $$
  \end{aligned}
 $$
 
- であり$\left(\dfrac{1}{2}\left(l+\dfrac{1}{\left|x\right| }\right) \bigg/\dfrac{1}{\left|x\right| }\right)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
+であり$\left(\dfrac{1}{2}\left(l+\dfrac{1}{\left|x\right| }\right) \bigg/\dfrac{1}{\left|x\right| }\right)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
 
 (ii) $\left|x\right| >r$のとき\
-  $0<\dfrac{1}{\left|x\right| }<l$である。任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して$n>N_0$かつ$\sqrt[n]{\left|a_n\right| }>\dfrac{1}{2}\left(l+\dfrac{1}{\left|x\right| }\right)$となる$n$が存在する。すなわち$\left|a_nx^n\right| =(\sqrt[n]{\left|a_n\right|  }\left| x\right|)^n=\left(\dfrac{1}{2}\left(l+\dfrac{1}{\left|x\right| }\right) \bigg/\dfrac{1}{\left|x\right| }\right)
+ $0<\dfrac{1}{\left|x\right| }<l$である。任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して$n>N_0$かつ$\sqrt[n]{\left|a_n\right| }>\dfrac{1}{2}\left(l+\dfrac{1}{\left|x\right| }\right)$となる$n$が存在する。すなわち$\left|a_nx^n\right| =(\sqrt[n]{\left|a_n\right|  }\left| x\right|)^n=\left(\dfrac{1}{2}\left(l+\dfrac{1}{\left|x\right| }\right) \bigg/\dfrac{1}{\left|x\right| }\right)
   ^n>1$になるような$n>N_0$が任意の$N_0\in \mathbb{Z}_{\geq 0}$に対して存在するので数列$\left\{ a_nx^n \right\}$は$0$に収束しない。したがって級数も発散する。
 
  ◻
@@ -312,28 +312,28 @@ $\sum a_nx^n$の収束半径$r$は存在するならば$r=\displaystyle \lim_{n 
 *Proof.* 　
 
 (i) $0 \leq x< r$のとき\
- $n\geq \exists N_0 \Rightarrow \left|\dfrac{a_n}{a_{n+1}}\right| >\dfrac{\left|x\right| +r}{2} \Leftrightarrow \left|a_{n+1}\right| <\left( 1\bigg/\dfrac{\left|x\right| +r}{2} \right)\left|a_n\right|$よりこれを繰り返し用いて$\left|a_n\right| <\left( 1\bigg/\dfrac{\left|x\right| +r}{2} \right)^{n-N_0}\left|a_{N_0}\right|$が得られる。
- 
- 
+$n\geq \exists N_0 \Rightarrow \left|\dfrac{a_n}{a_{n+1}}\right| >\dfrac{\left|x\right| +r}{2} \Leftrightarrow \left|a_{n+1}\right| <\left( 1\bigg/\dfrac{\left|x\right| +r}{2} \right)\left|a_n\right|$よりこれを繰り返し用いて$\left|a_n\right| <\left( 1\bigg/\dfrac{\left|x\right| +r}{2} \right)^{n-N_0}\left|a_{N_0}\right|$が得られる。
+
+
 $$
- \begin{aligned}
+\begin{aligned}
  \sum_{n=0}^{N} \left|a_nx^n\right| <\sum_{n=0}^{N_0-1} \left|a_nx^n\right|+\sum_{n=N_0}^{N} \left( |x|\bigg/\dfrac{\left|x\right| +r}{2} \right)^{n-N_0}\left|a_{N_0}\right|
  \end{aligned}
 $$
 
- であり$\left( |x|\bigg/\dfrac{\left|x\right| +r}{2} \right)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
+であり$\left( |x|\bigg/\dfrac{\left|x\right| +r}{2} \right)<1$より$\sum_{}^{}a_nx^n$は絶対収束するので収束する。
 
 (ii) $|x|>r$のとき\
-  $n\geq \exists N_0 \Rightarrow \left|\dfrac{a_n}{a_{n+1}}\right| <\dfrac{\left|x\right| +r}{2} \Leftrightarrow \left|a_{n+1}\right| >\left( 1\bigg/\dfrac{\left|x\right| +r}{2} \right)\left|a_n\right|$よりこれを繰り返し用いて$\left|a_n\right| >\left( 1\bigg/\dfrac{\left|x\right| +r}{2} \right)^{n-N_0}\left|a_{N_0}\right|$が得られる。よって
- 
- 
+ $n\geq \exists N_0 \Rightarrow \left|\dfrac{a_n}{a_{n+1}}\right| <\dfrac{\left|x\right| +r}{2} \Leftrightarrow \left|a_{n+1}\right| >\left( 1\bigg/\dfrac{\left|x\right| +r}{2} \right)\left|a_n\right|$よりこれを繰り返し用いて$\left|a_n\right| >\left( 1\bigg/\dfrac{\left|x\right| +r}{2} \right)^{n-N_0}\left|a_{N_0}\right|$が得られる。よって
+
+
 $$
- \begin{aligned}
+\begin{aligned}
   \left|a_nx^n\right| >\left( |x|\bigg/\dfrac{\left|x\right| +r}{2} \right)^{n-N_0}\left|a_{N_0}\right| 
   \end{aligned}
 $$
 
-  であり$|x|\bigg/\dfrac{\left|x\right| +r}{2}>1$より左辺は発散する。追い出しの原理より$a_nx^n$が$0$に収束することはないので発散する。
+ であり$|x|\bigg/\dfrac{\left|x\right| +r}{2}>1$より左辺は発散する。追い出しの原理より$a_nx^n$が$0$に収束することはないので発散する。
 
  ◻
 :::
@@ -366,7 +366,7 @@ $$
  \end{aligned}
 $$
 
- であるから$\left\{ a_n \right\}$は単調増加。\
+であるから$\left\{ a_n \right\}$は単調増加。\
 有界性\
 
 $$
@@ -457,7 +457,7 @@ $f:\mathbb{R}\to \mathbb{R}$として$f$は閉区間$[a,b]$上連続とする。
 
 ::: proof
 *Proof.*
-$f\left(a\right) \leq f\left(b\right)$としても一般性を失わない。$c=\displaystyle \sup_{a\leq x\leq b}\l\{ x \:\middle|\: f\left(x\right) \leq k \r\}$とする。$f\left(c\right) \neq k$になると仮定して矛盾を示す。
+$f\left(a\right) \leq f\left(b\right)$としても一般性を失わない。$c=\displaystyle \sup_{a\leq x\leq b}\left\{ x \:\middle|\: f\left(x\right) \leq k \right\}$とする。$f\left(c\right) \neq k$になると仮定して矛盾を示す。
 $f\left(c\right) >k$としても$f\left(c\right) <k$としても($f\left(c\right) >k$のときは$\sup_{}$の性質より)$\displaystyle \lim_{n \to \infty}x_n=c$かつ$f\left(x_n\right) \leq k$となる数列$\left\{ x_n \right\}$が存在する。連続性より$f\left(x_n\right) \to f\left(c\right) \leq k$となる。一方$b$から$c$に近づく数列$\left\{ y_n \right\}$を考えると$f\left(y_n\right) >k$であり連続性より$f\left(y_n\right) \to f\left(c\right) \geq k$となる。
 以上より$f\left(c\right) =k$となるがこれは仮定に矛盾する。背理法より示された。 ◻
 :::
@@ -601,15 +601,15 @@ $$
  \delu{f_1}{y_1}& \dots & \delu{f_1}{y_m}\\ 
  \vdots  & \ddots &  \vdots \\  
  \delu{f_m}{y_1}& \dots & \delu{f_m}{y_m}
- \end{vmatrix}
- \neq 0
+\end{vmatrix}
+\neq 0
  \text{　　特に　　}
- \begin{vmatrix}
- \dfrac{\partial f_{1} }{\partial y_{1}} & \dots & \dfrac{\partial f_{1}}{\partial y_{m}} \\
- \vdots  & \ddots &\vdots \\
- \dfrac{\partial f_{m} }{\partial y_{1}} & \dots & \dfrac{\partial f_{m}}{\partial y_{m}}
- \end{vmatrix}
- \neq 0
+\begin{vmatrix}
+\dfrac{\partial f_{1} }{\partial y_{1}} & \dots & \dfrac{\partial f_{1}}{\partial y_{m}} \\
+\vdots  & \ddots &\vdots \\
+\dfrac{\partial f_{m} }{\partial y_{1}} & \dots & \dfrac{\partial f_{m}}{\partial y_{m}}
+\end{vmatrix}
+\neq 0
 $$
 
 よって$f_{j}(X,y_{1},\dots,y_{m},y_{m+1}) \,(j=1,\dots,m)$は$P(k+1,m)$の仮定を満たすから，ある$\varepsilon_{1}>0$に対し
@@ -641,14 +641,14 @@ $$
  +\dfrac{\partial f_{1} }{\partial y_{m+1}}=0\\
  &\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\vdots\\
  &\dfrac{\partial F_{m} }{\partial y_{m+1}}=
- \dfrac{\partial f_{m} }{\partial y_{1}}\dfrac{\partial \varphi'_{1} }{\partial y_{m+1}}
+  \dfrac{\partial f_{m} }{\partial y_{1}}\dfrac{\partial \varphi'_{1} }{\partial y_{m+1}}
  +\dots
- +\dfrac{\partial f_{m} }{\partial y_{m}}\dfrac {\partial \varphi'_{m} }{\partial y_{m+1}}
+ +\dfrac{\partial f_{m} }{\partial y_{m}}\dfrac{\partial \varphi'_{m} }{\partial y_{m+1}}
  +\dfrac{\partial f_{m} }{\partial y_{m+1}}=0
  \end{split}
 $$
 
- このもとで
+このもとで
 
 $$
 \dfrac{\partial F_{m+1} }{\partial y_{m+1}}=
@@ -658,7 +658,7 @@ $$
  +\dfrac{\partial f_{m+1} }{\partial y_{m+1}}=0
 $$
 
- を仮定すると
+を仮定すると
 
 $$
 \begin{pmatrix}
@@ -729,38 +729,41 @@ $$
 
 $$
 \begin{aligned}
-\pmat{
-{\delu{f_1}{y_1}}& {\dots}& {\delu{f_1}{y_m}}\\
-\vdots& \ddots& \vdots\\
-\delu{f_m}{y_1}& \dots& \delu{f_m}{y_m}}
-\pmat{ \delu{\varphi _1}{x_1}\\ \vdots \\\delu{\varphi _m}{x_1}}
+\begin{pmatrix}
+ {\delu{f_1}{y_1}}& {\dots}& {\delu{f_1}{y_m}}\\
+ \vdots& \ddots& \vdots\\
+ \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m}
+\end{pmatrix}
+\begin{pmatrix}
+\delu{\varphi _1}{x_1}\\ \vdots \\\delu{\varphi _m}{x_1}
+\end{pmatrix}
 =
-- \pmat{
+- \begin{pmatrix}
  \delu{f_1}{x_1}\\ \vdots\\ \delu{f_m}{x_1}
-} \end{aligned}
+\end{pmatrix}\end{aligned}
 $$
 
 $i=2,\dots,k$で同じことを行うと
 
 $$
 \begin{aligned}
-\pmat{
+\begin{pmatrix}
  \delu{f_1}{y_1}& \dots& \delu{f_1}{y_m}\\
  \vdots& \ddots& \vdots\\
  \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m}
-}
-\pmat{
+\end{pmatrix}
+\begin{pmatrix}
 \delu{\varphi _1}{x_1}& \dots& \delu{\varphi _1}{x_k}\\
 \vdots& \ddots& \vdots\\
 \delu{\varphi _m}{x_1}& \dots& \delu{\varphi _m}{x_k} 
-}
+\end{pmatrix}
 =
 -
-\pmat{
+\begin{pmatrix}
  \delu{f_1}{x_1}& \dots& \delu{f_1}{x_k}\\
  \vdots& \ddots & \vdots\\
  \delu{f_m}{x_1}& \dots& \delu{f_m}{x_k}
-}\end{aligned}
+\end{pmatrix}\end{aligned}
 $$
 
 より
@@ -780,26 +783,26 @@ $$
 
 $$
 \begin{aligned}
- \pmat{
+ \begin{pmatrix}
  \delu{\varphi _1}{x_1}& \dots& \delu{\varphi _1}{x_k}\\
  \vdots& \ddots& \vdots\\
  \delu{\varphi _m}{x_1}& \dots& \delu{\varphi _m}{x_k} 
- }
+ \end{pmatrix}
  =
- -\pmat{
+ -\begin{pmatrix}
  \delu{f_1}{y_1}& \dots& \delu{f_1}{y_m}\\
  \vdots& \ddots& \vdots\\
  \delu{f_m}{y_1}& \dots& \delu{f_m}{y_m}
- }^{\raisebox{3zw}[1zw][0zw]{\(-1\)}}
- \pmat{
+ \end{pmatrix}^{\raisebox{3zw}[1zw][0zw]{\(-1\)}}
+ \begin{pmatrix}
  \delu{f_1}{x_1}& \dots& \delu{f_1}{x_k}\\
  \vdots& \ddots& \vdots\\
  \delu{f_m}{x_1}& \dots& \delu{f_m}{x_k}
- }
+ \end{pmatrix}
  \end{aligned}
 $$
 
- 帰納法の概略は下図のようである。\
+帰納法の概略は下図のようである。\
 
 #### 陰関数定理の別証
 
@@ -834,7 +837,7 @@ $$
  &\leq \dfrac{1}{2}\rho+\dfrac{\rho}{3}<\rho
  \end{aligned}
 $$
-  ◻
+ ◻
 :::
 
 ::: theorem
@@ -892,21 +895,21 @@ $$
  \end{aligned}
 $$
 
- すなわち
- 
+すなわち
+
 $$
- \begin{aligned}
- \pmat{
+\begin{aligned}
+ \begin{pmatrix}
  \dfrac{\partial f}{\partial x_1}& \dfrac{\partial g_1}{\partial x_1}& \dots & \dfrac{\partial g_m}{\partial x_1}\\
  \vdots  & \vdots  & \ddots& \vdots  \\
  \dfrac{\partial f}{\partial x_k}& \dfrac{\partial g_1}{\partial x_k}& \dots & \dfrac{\partial g_m}{\partial x_k}\\
  \dfrac{\partial f}{\partial y_1}& \dfrac{\partial g_1}{\partial y_1}& \dots & \dfrac{\partial g_m}{\partial y_1}\\
  \vdots  & \vdots  & \ddots& \vdots  \\
  \dfrac{\partial f}{\partial y_m}& \dfrac{\partial g_1}{\partial y_m}& \dots& \dfrac{\partial g_m}{\partial y_m}
- }
- \pmat{
+ \end{pmatrix}
+ \begin{pmatrix}
  1 \\ -\la_1 \\ \vdots \\ -\la_m
- }=\bm{0}
+ \end{pmatrix}=\bm{0}
  \text{かつ$\bm{g}=\bm{0}$}
  \end{aligned}
 $$
@@ -932,29 +935,29 @@ $$
  \end{aligned}
 $$
 
- 常に$0$なので
- 
+常に$0$なので
+
 $$
- \begin{aligned}
+\begin{aligned}
  \dfrac{\partial G_j}{\partial x_i}=\dfrac{\partial g_j}{\partial x_i}+\dfrac{\partial g_j}{\partial y_1}
  \dfrac{\partial \varphi_1}{\partial x_i} +\dots+\dfrac{\partial g_j}{\partial y_m}
  \dfrac{\partial \varphi_m}{\partial x_i}=0\q(j=1,\dots,m)
  \end{aligned}
 $$
 
- したがって$X=A$において
- 
+したがって$X=A$において
+
 $$
- \begin{aligned}
- \pmat{
+\begin{aligned}
+ \begin{pmatrix}
  \dfrac{\partial f}{\partial x_i} & \dfrac{\partial f}{\partial y_1} & \dots & \dfrac{\partial f}{\partial y_m}\\
  \dfrac{\partial g_1}{\partial x_i} & \dfrac{\partial g_1}{\partial y_1} & \dots & \dfrac{\partial g_1}{\partial y_m}\\
  \vdots& \vdots& \ddots& \vdots\\
  \dfrac{\partial g_m}{\partial x_i} & \dfrac{\partial g_m}{\partial y_1} & \dots & \dfrac{\partial g_m}{\partial y_m}\\
- }
- \pmat{
+ \end{pmatrix}
+ \begin{pmatrix}
  1 \\ \dfrac{\partial \varphi_1}{\partial x_i}\\ \vdots\\ \dfrac{\partial \varphi_m}{\partial x_i}
- }=\bm{0}\q(\text{左の行列$A_i$とおく})
+ \end{pmatrix}=\bm{0}\q(\text{左の行列$A_i$とおく})
  \end{aligned}
 $$
 
@@ -963,15 +966,15 @@ $$
 
 $$
 \begin{aligned}
- \pmat{
+ \begin{pmatrix}
  \dfrac{\partial f}{\partial x_i} & \dfrac{\partial g_1}{\partial x_i} & \dots & \dfrac{\partial g_m}{\partial x_i}\\
  \dfrac{\partial f}{\partial y_1} & \dfrac{\partial g_1}{\partial y_1} & \dots & \dfrac{\partial g_m}{\partial y_1}\\
  \vdots& \vdots& \ddots& \vdots\\
  \dfrac{\partial f}{\partial y_m} & \dfrac{\partial g_1}{\partial y_m} & \dots & \dfrac{\partial g_m}{\partial y_m}\\
- }
- \pmat{
+ \end{pmatrix}
+ \begin{pmatrix}
  \la'_f(i)\\ \la'_1(i)\\ \vdots\\ \la'_m(i) 
- }=\bm{0}
+ \end{pmatrix}=\bm{0}
  \end{aligned}
 $$
 
@@ -981,14 +984,14 @@ $\la'_f(i)\neq 0$を示す。$\la'_f(i)= 0$とすると
 
 $$
 \begin{aligned}
- \pmat{
+ \begin{pmatrix}
  \dfrac{\partial g_1}{\partial y_1} & \dots & \dfrac{\partial g_m}{\partial y_1}\\
  \vdots& \ddots& \vdots\\
   \dfrac{\partial g_1}{\partial y_m} & \dots & \dfrac{\partial g_m}{\partial y_m}\\
- }
- \pmat{
+ \end{pmatrix}
+ \begin{pmatrix}
   \la'_1(i)\\ \vdots\\ \la'_m(i) 
- }=\bm{0}\q\text{すなわち}\q\dfrac{\partial f}{\partial y}\bm{\la'}=\bm{0}
+ \end{pmatrix}=\bm{0}\q\text{すなわち}\q\dfrac{\partial f}{\partial y}\bm{\la'}=\bm{0}
  \end{aligned}
 $$
 
@@ -1000,31 +1003,31 @@ $-\dfrac{\la'_j(i)}{\la'_f(i)}=\la_j(i)$とすると，$i=1,\dots,k$に対し
 $$
 \begin{aligned}
  A_i^ \mathrm{T}
- \pmat{
+ \begin{pmatrix}
  1 \\ -\la_1(i)\\ \vdots\\ -\la_m(i)
- }
+ \end{pmatrix}
  =A_i^ \mathrm{T}
- \pmat{
+ \begin{pmatrix}
  1 \\
- -\bm{\la(i)}}=\bm{0}
+ -\bm{\la(i)}\end{pmatrix}=\bm{0}
  \end{aligned}
 $$
 
- となる。 $\bm{\la(i)}$は$i$によらず，
+となる。 $\bm{\la(i)}$は$i$によらず，
 
 $$
 \begin{aligned}
- \pmat{
+ \begin{pmatrix}
  \dfrac{\partial g_1}{\partial y_1} && \dots && \dfrac{\partial g_m}{\partial y_1}\\
  \vdots&& \ddots&& \vdots\\
   \dfrac{\partial g_1}{\partial y_m} && \dots && \dfrac{\partial g_m}{\partial y_m}\\
- }
- \pmat{
+ \end{pmatrix}
+ \begin{pmatrix}
  t_1\\ \vdots\\t_m
- }=
- \pmat{
+ \end{pmatrix}=
+ \begin{pmatrix}
  \dfrac{\partial f}{\partial y_1}\\ \vdots\\ \dfrac{\partial f}{\partial y_m}
- }
+ \end{pmatrix}
  \end{aligned}
 $$
 
@@ -1041,22 +1044,21 @@ $$
  \end{aligned}
 $$
 
- すなわち 
-
+すなわち
 
 $$
 \begin{aligned}
- \pmat{
+ \begin{pmatrix}
  \dfrac{\partial f}{\partial x_1}& \dfrac{\partial g_1}{\partial x_1}& \dots& \dfrac{\partial g_m}{\partial x_1}\\
  \vdots  & \vdots  & \ddots& \vdots\\
  \dfrac{\partial f}{\partial x_k}& \dfrac{\partial g_1}{\partial x_k}& \dots& \dfrac{\partial g_m}{\partial x_k}\\
  \dfrac{\partial f}{\partial y_1}& \dfrac{\partial g_1}{\partial y_1}& \dots& \dfrac{\partial g_m}{\partial y_1}\\
  \vdots  & \vdots  & \ddots& \vdots\\
  \dfrac{\partial f}{\partial y_m}& \dfrac{\partial g_1}{\partial y_m}& \dots& \dfrac{\partial g_m}{\partial y_m}\\
- }
- \pmat{
+ \end{pmatrix}
+ \begin{pmatrix}
  1 \\ -\la_1 \\ \vdots \\ -\la_m
- }=\bm{0}\q
+ \end{pmatrix}=\bm{0}\q
  \text{かつ}\q 
  \bm{g}=
  (g_1,\dots,g_m)=
@@ -1064,7 +1066,7 @@ $$
  \end{aligned}
 $$
 
- を満たす。 ◻
+を満たす。 ◻
 :::
 
 なお，
@@ -1072,19 +1074,19 @@ $$
 $$
 \begin{aligned}
 \bm{\la}=
-\pmat{
+\begin{pmatrix}
  \la_1\\\vdots\\\la_m
-}
+\end{pmatrix}
 =
-\pmat{
+\begin{pmatrix}
  \delu{g_1}{y_1}&\dots&\delu{g_1}{y_m}\\
  \vdots&\ddots&\vdots\\
  \delu{g_m}{y_1}&\dots&\delu{g_m}{y_m}
-}\left(A,B\right) 
+\end{pmatrix}\left(A,B\right) 
 ^{\raisebox{3zw}[1zw][0zw]{\(-1\)}}
-\pmat{
+\begin{pmatrix}
  \delu{f}{y_1}\\\vdots\\\delu{f}{y_m}
-} \left(A,B\right)\end{aligned}
+\end{pmatrix} \left(A,B\right)\end{aligned}
 $$
 
 である。未定乗数法自体が極値を与える$\left(A,B\right)$を求めるために用いられるものなので$\bm{\la}$は$\left(X,Y\right)$の式として与えられることがほとんどである。
